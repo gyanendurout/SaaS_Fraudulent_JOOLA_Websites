@@ -46,6 +46,10 @@ test.describe('Runtime health', () => {
   }
 
   test('4xx and 5xx responses are not returned for any subresource', async ({ page }) => {
+    // Five full navigations in one test, against dynamic pages, while the rest
+    // of the suite runs in parallel. It needs a budget proportionate to that
+    // work; the default belongs to the single-navigation tests around it.
+    test.slow();
     const bad: string[] = [];
     page.on('response', (res) => {
       if (res.status() >= 400 && !res.url().includes('definitely-not-tracked')) {

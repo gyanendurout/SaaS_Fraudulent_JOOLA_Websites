@@ -57,6 +57,9 @@ interface RawDomain {
   classification?: string;
   discovery_source?: string;
   is_live?: boolean;
+  /** When WE first recorded this domain — not when it was registered. */
+  first_seen_at?: string | null;
+  last_checked_at?: string | null;
   taken_down_at?: string | null;
   notes?: string | null;
   resolved_ips?: string[];
@@ -143,8 +146,11 @@ function enrich(raw: RawDomain, capturedAt: string): DomainRecord {
         : (raw.classification as DomainRecord['classification']) ?? 'suspect',
     discoverySource: (raw.discovery_source as DomainRecord['discoverySource']) ?? 'dns_permutation',
     isLive: raw.is_live ?? false,
-    firstSeenAt: capturedAt,
-    lastCheckedAt: capturedAt,
+    // first_seen_at is the date the domain entered OUR database, which is what
+    // the weekly change report is measured against. Falling back to the capture
+    // time would silently re-date every domain to "today" on every read.
+    firstSeenAt: raw.first_seen_at ?? capturedAt,
+    lastCheckedAt: raw.last_checked_at ?? capturedAt,
     takenDownAt: raw.taken_down_at ?? null,
     notes: raw.notes ?? null,
     infrastructure,
@@ -249,7 +255,9 @@ async function loadSupabase(): Promise<Dataset | null> {
   const [domainsRes, infraRes, snapsRes, productsRes, runsRes] = await Promise.all([
     sb
       .from('bp_domains')
-      .select('id, domain, match_kind, classification, discovery_source, is_live, http_status, taken_down_at, notes, last_checked_at')
+      .select(
+        'id, domain, match_kind, classification, discovery_source, is_live, http_status, first_seen_at, taken_down_at, notes, last_checked_at'
+      )
       .limit(1000),
     sb.from('bp_domain_infrastructure').select('*').limit(2000),
     sb.from('bp_snapshots').select('*').limit(2000),
@@ -313,6 +321,8 @@ async function loadSupabase(): Promise<Dataset | null> {
         classification: row.classification as string,
         discovery_source: row.discovery_source as string,
         is_live: row.is_live as boolean,
+        first_seen_at: row.first_seen_at as string | null,
+        last_checked_at: row.last_checked_at as string | null,
         taken_down_at: row.taken_down_at as string | null,
         notes: row.notes as string | null,
         resolved_ips: (infra?.resolved_ips as string[]) ?? [],
@@ -353,13 +363,37 @@ function sortByThreat(a: DomainRecord, b: DomainRecord): number {
 }
 
 let cache: { at: number; data: Dataset } | null = null;
+/** Underlying data changes on the weekly scan, so a short TTL costs nothing. */
 const CACHE_MS = 30_000;
+
+/**
+ * The load currently in flight, if any.
+ *
+ * Without this, every request arriving on a cold or expired cache starts its own
+ * load — and each load is five Supabase round-trips. A burst of concurrent
+ * requests therefore multiplied into dozens of simultaneous queries, and page
+ * renders slowed until they timed out. Holding the promise means concurrent
+ * callers await the same load and the database sees one.
+ */
+let inFlight: Promise<Dataset> | null = null;
 
 export async function getDataset(): Promise<Dataset> {
   if (cache && Date.now() - cache.at < CACHE_MS) return cache.data;
-  const data = (await loadSupabase()) ?? (await loadFixture());
-  cache = { at: Date.now(), data };
-  return data;
+  if (inFlight) return inFlight;
+
+  inFlight = (async () => {
+    try {
+      const data = (await loadSupabase()) ?? (await loadFixture());
+      cache = { at: Date.now(), data };
+      return data;
+    } finally {
+      // Cleared even on failure, so a transient error does not wedge every
+      // later request onto the same rejected promise.
+      inFlight = null;
+    }
+  })();
+
+  return inFlight;
 }
 
 export async function getDomain(domain: string): Promise<DomainRecord | null> {

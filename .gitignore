@@ -28,7 +28,15 @@ evidence/**/*.zip
 !evidence/**/manifest.json
 !evidence/**/*.md
 
+# ---- weekly scan reports ----
+# Generated per run. Not committed: the repository is public, and a committed
+# history of scan reports publishes our detection cadence and coverage to the
+# operators being tracked. CI keeps them as 90-day build artefacts, and the
+# durable record is bp_discovery_runs in Supabase.
+docs/scans/
+
 # ---- tooling ----
+graphify-out/
 .vercel
 .DS_Store
 Thumbs.db

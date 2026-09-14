@@ -1,5 +1,6 @@
 import { getDataset } from '@/data/repository';
 import { VerdictBadge, RiskMeter, DomainLink, SectionHeading } from '@/components/primitives';
+import { isoDay } from '@/lib/dates';
 
 export const dynamic = 'force-dynamic';
 export const metadata = { title: 'All domains — JOOLA Brand Protection' };
@@ -51,21 +52,28 @@ export default async function DomainsPage() {
             <span id={`${g.key}-heading`}>{g.title}</span>
           </SectionHeading>
           <div className="overflow-x-auto rounded border border-[var(--color-line)]">
-            <table className="w-full min-w-[860px] border-collapse text-left">
+            <table className="w-full min-w-[980px] border-collapse text-left">
               <caption className="sr-only">{g.title}</caption>
               <thead>
                 <tr className="border-b border-[var(--color-line)] bg-[var(--color-surface)]">
-                  {['Domain', 'Registered', 'Platform', 'Builder', 'Abuse contact', 'Status', 'Risk'].map(
-                    (h) => (
-                      <th
-                        key={h}
-                        scope="col"
-                        className="mono px-4 py-2.5 text-[10px] font-medium uppercase tracking-[0.14em] text-[var(--color-ink-faint)]"
-                      >
-                        {h}
-                      </th>
-                    )
-                  )}
+                  {[
+                    'Domain',
+                    'Added to DB',
+                    'Registered',
+                    'Platform',
+                    'Builder',
+                    'Abuse contact',
+                    'Status',
+                    'Risk',
+                  ].map((h) => (
+                    <th
+                      key={h}
+                      scope="col"
+                      className="mono px-4 py-2.5 text-[10px] font-medium uppercase tracking-[0.14em] text-[var(--color-ink-faint)]"
+                    >
+                      {h}
+                    </th>
+                  ))}
                 </tr>
               </thead>
               <tbody>
@@ -76,6 +84,9 @@ export default async function DomainsPage() {
                   >
                     <td className="px-4 py-3">
                       <DomainLink domain={d.domain} className="text-[13px]" />
+                    </td>
+                    <td className="mono px-4 py-3 text-[12px] text-[var(--color-ink-dim)]">
+                      {isoDay(d.firstSeenAt)}
                     </td>
                     <td className="mono px-4 py-3 text-[12px] text-[var(--color-ink-dim)]">
                       {d.infrastructure?.registeredAt ?? '—'}
@@ -102,6 +113,11 @@ export default async function DomainsPage() {
                     </td>
                     <td className="px-4 py-3">
                       <VerdictBadge verdict={d.verdict} />
+                      {d.takenDownAt && (
+                        <span className="mono mt-1 block text-[10px] text-[var(--color-ink-faint)]">
+                          offline since {isoDay(d.takenDownAt)}
+                        </span>
+                      )}
                     </td>
                     <td className="px-4 py-3">
                       <RiskMeter score={d.riskScore} />

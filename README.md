@@ -23,10 +23,10 @@ npm run dev                        # http://localhost:3000
 | Command | What it does |
 |---|---|
 | `npm run dev` / `npm run build` / `npm start` | Next.js 16 app |
-| `npm test` / `npm run test:coverage` | Vitest unit tests (58) |
+| `npm test` / `npm run test:coverage` | Vitest unit tests (64) |
 | `npm run test:e2e` | Playwright, desktop + mobile (112) |
 | `node scripts/recon.mjs` | One discovery sweep → `evidence/recon-<date>.json` |
-| `node scripts/discover.mjs [--dry-run]` | Sweep + **diff vs database** + persist what's new |
+| `node scripts/discover.mjs [--dry-run]` | Sweep + **diff vs database** + persist what's new → `docs/scans/SCAN-<date>.md` |
 | `node scripts/seed-supabase.mjs` | Load an evidence file into `bp_*` |
 | `node scripts/capture-evidence.mjs` | Screenshot + HTML + SHA-256 of live sites |
 | `node scripts/migrate.mjs [--status]` | Apply / inspect migrations |
@@ -42,6 +42,7 @@ npm run dev                        # http://localhost:3000
 | 0 | Schema, env, migrations | ✅ applied to Supabase |
 | 1 | Discovery + passive enrichment | ✅ 50 domains tracked, 11-domain campaign found |
 | 1b | Supabase persistence | ✅ seeded, RLS verified |
+| 1c | Weekly scheduled scan (Mon 08:00 IST) | ✅ GitHub Actions, change report per run |
 | 2 | Evidence capture (Playwright) | ✅ 10/10 live sites captured with hashes |
 | 3 | Next.js 16 UI | ✅ built, 30 E2E tests passing |
 | 4 | Claude risk scoring | ⏸️ deterministic scoring live; LLM layer behind `ANTHROPIC_API_KEY` |
@@ -125,6 +126,35 @@ Until then `scripts/discover.mjs` provides the same *outcome* on a schedule:
 sweep, diff against the database, report new domains, domains that came back
 online, and domains that stopped resolving.
 
+### The weekly scan
+
+`.github/workflows/weekly-scan.yml` runs the sweep **every Monday at 08:00 IST**
+(`30 2 * * 1` UTC — IST observes no DST, so the local time does not drift), and
+on demand via *Actions → Weekly discovery scan → Run workflow*.
+
+Each run writes `docs/scans/SCAN-<date>.md`: what is new, what went offline, what
+came back, each with **the date we added it** alongside the date it was
+registered. Those are different facts and the report keeps them apart —
+`first_seen_at` is our detection date and belongs to us, `registered_at` comes
+from the registry and belongs in a complaint.
+
+Two things the schedule requires, and one it deliberately does not do:
+
+- Repository secrets `NEXT_PUBLIC_SUPABASE_URL` and `SUPABASE_SECRET_KEY` must
+  be set (*Settings → Secrets and variables → Actions*), or the run fails at the
+  first database read.
+- GitHub disables scheduled workflows after **60 days with no repository
+  activity**, and emails the owner. A quiet quarter silently stops the scanning.
+- The report is uploaded as a build artefact (90-day retention), **not committed
+  back to the repository**, because the repo is public and a committed report
+  would publish our detection cadence and coverage to the operators being
+  tracked. Once the repo is private, committing it is the better option.
+
+`taken_down_at` is stamped only on the live → dead transition, so it records when
+a domain *first* went down rather than the most recent sweep that saw it down.
+Coming back online clears it, because a takedown that did not hold is not a
+takedown.
+
 ### Matching: domain labels only, never path or query
 
 `matchBrandDomain()` parses to the registrable domain and inspects only labels.
@@ -193,11 +223,25 @@ Found later by the exploratory audit suite (`e2e/audit.spec.ts`):
    `app/icon.svg`, and `app/robots.ts` disallowing all crawlers, because pages
    naming domains under active investigation must never be search-indexed.
 
+Found while building the weekly scan — both would have made the schedule report
+confidently wrong:
+
+6. **`firstSeenAt` was never read from the database.** The loader did not select
+   `first_seen_at` and filled the field with the snapshot capture time, so every
+   domain claimed to have been discovered *today*, on every page load. "What is
+   new since last week" is the entire point of a weekly scan, and that made it
+   unanswerable. Now selected, plumbed through, and shown as its own column.
+7. **The E2E suite graded whatever server happened to be on :3000.**
+   `reuseExistingServer: true` let a stale `next start` from an earlier build
+   answer the tests: one run reported 31 failures against code that no longer
+   existed. A suite that tests the wrong build is worse than no suite, because it
+   is believed. Reuse is off; a busy port now fails loudly.
+
 ## Test suites
 
 | Suite | Count | Purpose |
 |---|---|---|
-| `src/lib/*.test.ts` (Vitest) | 58 | Matching rules, fingerprinting, pricing, claim discipline |
+| `src/lib/*.test.ts` (Vitest) | 64 | Matching rules, fingerprinting, pricing, claim discipline |
 | `e2e/investigation.spec.ts` | 30 | Intended behaviour: scan, dossier, campaign, takedown |
 | `e2e/audit.spec.ts` | 82 | Adversarial: console errors, failed requests, link integrity, duplicate DOM ids, dangling ARIA refs, unnamed controls, partial-data domains, malformed params, overflow at 6 widths, tap-target sizes, date-shift and price-duplication regressions |
 

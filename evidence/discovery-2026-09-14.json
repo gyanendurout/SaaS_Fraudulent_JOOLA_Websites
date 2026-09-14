@@ -1,9 +1,9 @@
 {
-  "run_id": "77a0c7f6-27e2-4efe-a8fc-c2399b481ee4",
-  "finished_at": "2026-09-14T08:13:37.899Z",
+  "run_id": "25c85615-2ac4-4af8-9356-47aaba8ef517",
+  "finished_at": "2026-09-14T10:25:18.942Z",
   "new_domains": [],
-  "went_live": [],
-  "went_dark": [
+  "went_live": [
     "joolastore.com"
-  ]
+  ],
+  "went_dark": []
 }

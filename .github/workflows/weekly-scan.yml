@@ -1,0 +1,61 @@
+name: Weekly discovery scan
+
+# Monday 08:00 IST. GitHub cron is UTC-only and has no DST handling, but IST has
+# no DST either, so 02:30 UTC is 08:00 IST all year round.
+#
+# Scheduled runs can start late when GitHub is busy — treat the timestamp inside
+# the report as authoritative, not the schedule.
+on:
+  schedule:
+    - cron: '30 2 * * 1'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Sweep and report without writing to the database'
+        type: boolean
+        default: false
+
+concurrency:
+  group: weekly-scan
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - run: npm ci
+
+      - name: Run discovery sweep
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
+        run: node scripts/discover.mjs ${{ inputs.dry_run && '--dry-run' || '' }}
+
+      # Published as a build artefact rather than committed back to the repo.
+      # The repository is public: committing the weekly report would publish our
+      # detection cadence and coverage to the operators being tracked. Once the
+      # repo is private this can become a commit step if a git-tracked history
+      # is preferred.
+      - name: Upload scan report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: scan-report-${{ github.run_id }}
+          path: |
+            docs/scans/
+            evidence/discovery-*.json
+            evidence/recon-*.json
+          retention-days: 90
+          if-no-files-found: warn
