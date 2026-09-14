@@ -1,0 +1,3401 @@
+{
+  "generated_at": "2026-09-14T08:12:47.575Z",
+  "finished_at": "2026-09-14T08:13:37.899Z",
+  "brand": "joola",
+  "candidates_tested": 1519,
+  "candidates_resolved": 49,
+  "domains": [
+    {
+      "domain": "joolasport.co",
+      "match_kind": "prefix",
+      "discovery_source": "dns_permutation",
+      "classification": "suspect",
+      "is_live": true,
+      "resolved_ips": [
+        "23.227.38.65"
+      ],
+      "infrastructure": null,
+      "snapshot": {
+        "http_status": 200,
+        "final_url": "https://joolasport.co/",
+        "response_headers": {
+          "accept-ch": "Sec-CH-Viewport-Width",
+          "alt-svc": "h3=\":443\"; ma=86400",
+          "cdn-cache-control": "no-cache, no-store",
+          "cf-cache-status": "DYNAMIC",
+          "cf-ray": "a3adee499f999d73-MAA",
+          "connection": "keep-alive",
+          "content-encoding": "br",
+          "content-language": "en-IN",
+          "content-length": "129738",
+          "content-security-policy": "block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Mon, 14 Sep 2026 08:13:10 GMT",
+          "etag": "\"page_cache:72871641223:IndexController:05cc971bada607bb33beb66e6bfee76e:675d2093a039b416798a44346c509f26\"",
+          "link": "<https://cdn.shopify.com>; rel=\"preconnect\", <https://cdn.shopify.com>; rel=\"preconnect\"; crossorigin, <//joolasport.co/cdn/shop/t/1/assets/base.css?v=80415010869825589501774283228>; as=\"style\"; rel=\"preload\", <//joolasport.co/cdn/shop/t/1/assets/overflow-list.css?v=16727044177065489451774283228>; as=\"style\"; rel=\"preload\", <https://joolasport.co/cdn/shopifycloud/portable-wallets/latest/accelerated-checkout-backwards-compat.css>; as=\"style\"; rel=\"preload\"; crossorigin, <//joolasport.co/cdn/shop/t/1/compiled_assets/styles.css?v=125301912436134415981778261393&subset=AAZgAAAABAAAwAAAAEAAEgBBgQMA4AABEIgIEwQQ>; as=\"style\"; rel=\"preload\"; crossorigin",
+          "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}",
+          "powered-by": "Shopify",
+          "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=A8E0XV50xA5mmHCBjTmypu10BvG2vnz3aqBk6gqnrqB6JCmnSy2J0FgIW7E2xm65Xy56nd9Oot5reK%2FYf1OYdT7GaXUPvNXSM1UHpwrfbnhAipJwmtwMb1j1%2BKnHACs%3D\"}]}",
+          "server": "cloudflare",
+          "server-timing": "processing;dur=290;desc=\"gc:8\", db;dur=28, db_async;dur=25.881, render;dur=116, asn;desc=\"24309\", edge;desc=\"MAA\", country;desc=\"IN\", theme;desc=\"148563853447\", pageType;desc=\"index\", servedBy;desc=\"98ns\", requestID;desc=\"a8353a07-afd3-4f37-8c28-3dac38ee2cfe-1789373590\", _y;desc=\"a2baa9de-ed7d-4d56-9158-425b74b17601\", _s;desc=\"5b27dc02-a4f9-4d88-aafb-3ecfe51d3b6a\", _cmp;desc=\"3.AMPS_INKA_f_f_PK0NFqcXS1ShjqhLxJUitw\", compressionLevel;desc=\"5\", compressionTime;dur=35.676",
+          "set-cookie": "_shopify_marketing=:AaCe-iuGAAEASOwDymVf7Z1Cs_du_MBLqSeK0GTC64AIx9M_i0qrvRdpTdrugajfIdeQR-mfgU1flYEk4jvmBhVJvBux-YevpACdZNQxu6zKk5oXCUfPvoxhPkmEJpTpYypn6Z7WutaSUU-DUEiyyPNGCLA:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax",
+          "shopify-complexity-score": "2820",
+          "shopify-complexity-score-v2": "282",
+          "strict-transport-security": "max-age=7889238",
+          "vary": "Accept, accept-encoding",
+          "x-content-type-options": "nosniff",
+          "x-dc": "gcp-asia-southeast1,gcp-asia-southeast1,gcp-asia-southeast1",
+          "x-download-options": "noopen",
+          "x-frame-options": "DENY",
+          "x-permitted-cross-domain-policies": "none",
+          "x-request-id": "a8353a07-afd3-4f37-8c28-3dac38ee2cfe-1789373590",
+          "x-xss-protection": "1; mode=block"
+        },
+        "html_bytes": 1988384,
+        "html_sha256": "d06d812adf1052d0c1d50d4b0f97b222800e84c58d100751847d6879a4f095b7",
+        "tech_stack": {
+          "cms": "shopify",
+          "ecommerce": "shopify",
+          "page_builder": null,
+          "page_builder_version": null
+        },
+        "currency": "THB",
+        "price_ladder": [],
+        "brand_mentions": 826
+      }
+    },
+    {
+      "domain": "joola.co",
+      "match_kind": "exact_label",
+      "discovery_source": "dns_permutation",
+      "classification": "suspect",
+      "is_live": true,
+      "resolved_ips": [
+        "2606:4700:3033::6815:4c4f",
+        "2606:4700:3031::ac43:bf69",
+        "104.21.76.79",
+        "172.67.191.105"
+      ],
+      "infrastructure": null,
+      "snapshot": {
+        "http_status": 200,
+        "final_url": "https://joola.co/",
+        "response_headers": {
+          "alt-svc": "h3=\":443\"; ma=86400",
+          "cache-control": "no-cache",
+          "cf-cache-status": "DYNAMIC",
+          "cf-ray": "a3adee5a2c193c4f-MAA",
+          "connection": "keep-alive",
+          "content-encoding": "br",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Mon, 14 Sep 2026 08:13:12 GMT",
+          "expires": "Thu, 01 Jan 1970 00:00:01 GMT",
+          "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+          "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=VeMm1Gnle3WsCFSe%2FTt8ZD4ipVEdIh7UfiHh2gJPMqQJo1r0Qd5QMCEOoGBOsR2OekDvHa4GX%2FiTeMVdCf9jBlpnnq2emLHnOKjc%2FMXIN28t6ixzxx0T2i8Qww%3D%3D\"}]}",
+          "server": "cloudflare",
+          "transfer-encoding": "chunked",
+          "vary": "Accept-Encoding",
+          "x-powered-by": "Express"
+        },
+        "html_bytes": 23473,
+        "html_sha256": "8bb0d6737fe4fc7d7dcad0aa701521a4331a3da3602f6f00cd59e0b6450548b2",
+        "tech_stack": {
+          "cms": null,
+          "ecommerce": null,
+          "page_builder": null,
+          "page_builder_version": null
+        },
+        "currency": null,
+        "price_ladder": [],
+        "brand_mentions": 14
+      }
+    },
+    {
+      "domain": "joola.de",
+      "match_kind": "exact_label",
+      "discovery_source": "manual",
+      "classification": "legitimate",
+      "is_live": true,
+      "resolved_ips": [
+        "2620:127:f00f:5::",
+        "23.227.38.65"
+      ],
+      "infrastructure": null,
+      "snapshot": {
+        "http_status": 200,
+        "final_url": "https://joola.de/",
+        "response_headers": {
+          "accept-ch": "Sec-CH-Viewport-Width",
+          "alt-svc": "h3=\":443\"; ma=86400",
+          "cdn-cache-control": "no-cache, no-store",
+          "cf-cache-status": "DYNAMIC",
+          "cf-ray": "a3adee5c28bc968e-MAA",
+          "connection": "keep-alive",
+          "content-encoding": "br",
+          "content-language": "de-DE",
+          "content-length": "123400",
+          "content-security-policy": "block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Mon, 14 Sep 2026 08:13:13 GMT",
+          "etag": "\"page_cache:87962517807:IndexController:cf0d940d69d26feb83a9d6835f070d75:62b1a0a3e6f38515e1ba729bee211379\"",
+          "link": "<https://cdn.shopify.com>; rel=\"preconnect\", <https://cdn.shopify.com>; rel=\"preconnect\"; crossorigin, <//joola.de/cdn/shop/files/pandectes-rules.js?v=8354183470071906>; as=\"script\"; rel=\"preload\", <//joola.de/cdn/shop/t/5/assets/theme.css?v=140338211211407047401786352205>; as=\"style\"; rel=\"preload\", <//joola.de/cdn/shop/t/5/assets/custom.css?v=23585151683551248931786527186>; as=\"style\"; rel=\"preload\", <//joola.de/cdn/shop/t/5/assets/swiper-bundle.min.css?v=72775568390888561781722584844>; as=\"style\"; rel=\"preload\", <https://cdn.shopify.com/extensions/01a01e7f-1a7a-7c42-bdad-60caf9b2318b/joola-b2b-mindestbestellwert-5/assets/b2b-opening-fee.css>; as=\"style\"; rel=\"preload\", <https://cdn.shopify.com/extensions/01a08f9d-cd30-7cfa-beb4-29c9bb7948d4/orbe-geolocation-499/assets/md-app-modal.min.css>; as=\"style\"; rel=\"preload\", <//joola.de/cdn/shop/t/5/assets/us-component-card.css?v=51772672833195081031722584844>; as=\"style\"; rel=\"preload\", <//joola.de/cdn/shop/t/5/assets/us-tab-featured-collection.css?v=145724393807418401811723193869>; as=\"style\"; rel=\"preload\", <//joola.de/cdn/shop/t/5/assets/us-collections-list.css?v=159192359026018132141730989989>; as=\"style\"; rel=\"preload\", <//joola.de/cdn/shop/t/5/assets/video-featured-collection.css?v=12444635250256159801730989990>; as=\"style\"; rel=\"preload\"",
+          "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}",
+          "powered-by": "Shopify",
+          "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=XHmqRbUNe%2FPwlLE22S9CRtKuwuxU2JNV6dGGYtvCFKMYIldBFUe4hgoUMm5dcVCpYtrkvJfshwzbR%2BW4w5msqwLow94uRlo886Zg4Q8LKUFNhijTYKEnOg8d\"}]}",
+          "server": "cloudflare",
+          "server-timing": "processing;dur=44;desc=\"gc:3\", db;dur=11, db_async;dur=1.228, asn;desc=\"24309\", edge;desc=\"MAA\", country;desc=\"IN\", theme;desc=\"169885335855\", pageType;desc=\"index\", servedBy;desc=\"bgcj\", requestID;desc=\"7c7ec233-79b8-4e19-a82a-845e046f1107-1789373592\", _y;desc=\"00000000-0000-0000-5000-000000000000\", _s;desc=\"00000000-0000-0000-5000-000000000000\", _cmp;desc=\"3.ampS_INKA_t_f_1T86bd7XQ4OLugZP1q-OtA\", compressionLevel;desc=\"5\"",
+          "set-cookie": "_shopify_essential=:AaCe-jZIAAEAvxgDqouSJ4h0PjEWC72amUg8V8NeG6DiMjDsj-ZUKHeUKOSTNOdudWzdqFObBKq9DIQi9T-BULg04pqDtPXxaKF0Z97Ck3Iu4Rak5x0hMeRzn4QfKygExbvZ9v-Z85mvfJo6jiYw99MzQNUKVqPGH5YePNGHbBkV_N0LkZVOkckkOLwtY9sPg-0ls1xB_1Ty1tPqPEo_izaEjA872cS8pP2VvEm8utxm01iTGtA_3W8Jyt9AuMkBkb5LA2taxDiU0JzbEsH5TqRp2E0MDDAJpVXUOh0RqJbWBZQHcTwmbXCQMldcay5kvbQgbkK2i51f9FJGqm06uCzYr2j09vDEBh-6_wF4bMQEktrSUln1PgdCxjHSlrkdFLUOTBSOvZ8wh7HJne2u3rbAEKc6BgY4PsKtmZ4F3xXjHmjvuZ8_eJ9PzeDsrYZ-rBedL_9GxVlKGRgOsoTjm8K9kZVayS7bTgj-7lg:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax",
+          "shopify-complexity-score": "380",
+          "shopify-complexity-score-v2": "38",
+          "strict-transport-security": "max-age=7889238",
+          "vary": "Accept, accept-encoding",
+          "x-content-type-options": "nosniff",
+          "x-dc": "gcp-asia-southeast1,gcp-us-west1,gcp-us-west1",
+          "x-download-options": "noopen",
+          "x-frame-options": "DENY",
+          "x-permitted-cross-domain-policies": "none",
+          "x-request-id": "7c7ec233-79b8-4e19-a82a-845e046f1107-1789373592",
+          "x-xss-protection": "1; mode=block"
+        },
+        "html_bytes": 980702,
+        "html_sha256": "7cc85948b3bbc6143cfc74437ef90f02fb1cf8cd5aa9c90c948388111d9e60df",
+        "tech_stack": {
+          "cms": "shopify",
+          "ecommerce": "shopify",
+          "page_builder": null,
+          "page_builder_version": null
+        },
+        "currency": "EUR",
+        "price_ladder": [],
+        "brand_mentions": 2484
+      }
+    },
+    {
+      "domain": "joola.com",
+      "match_kind": "exact_label",
+      "discovery_source": "manual",
+      "classification": "legitimate",
+      "is_live": true,
+      "resolved_ips": [
+        "2620:127:f00f:5::",
+        "23.227.38.65"
+      ],
+      "infrastructure": {
+        "registrar_name": "GoDaddy.com, LLC",
+        "registrar_iana_id": 146,
+        "registrar_abuse_email": "abuse@godaddy.com",
+        "registrar_abuse_phone": "480-624-2505",
+        "registered_at": "1999-08-30",
+        "expires_at": "2028-08-30",
+        "domain_status": [
+          "client delete prohibited",
+          "client renew prohibited",
+          "client transfer prohibited",
+          "client update prohibited"
+        ],
+        "nameservers": [
+          "ns69.domaincontrol.com",
+          "ns70.domaincontrol.com"
+        ],
+        "dns_provider": "domaincontrol"
+      },
+      "snapshot": {
+        "http_status": 200,
+        "final_url": "https://joola.com/",
+        "response_headers": {
+          "accept-ch": "Sec-CH-Viewport-Width",
+          "alt-svc": "h3=\":443\"; ma=86400",
+          "cdn-cache-control": "no-cache, no-store",
+          "cf-cache-status": "DYNAMIC",
+          "cf-ray": "a3adee5369c67f4b-MAA",
+          "connection": "keep-alive",
+          "content-encoding": "br",
+          "content-language": "en-US",
+          "content-length": "142240",
+          "content-security-policy": "block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Mon, 14 Sep 2026 08:13:11 GMT",
+          "etag": "\"page_cache:68569432278:IndexController:01c1c7f0542be244e47483d314a9a5a0:ff89c8ed3729c541bf62a31295ce9ef1\"",
+          "link": "<https://cdn.shopify.com>; rel=\"preconnect\", <https://cdn.shopify.com>; rel=\"preconnect\"; crossorigin, <https://wait.crowdhandler.com>; rel=\"preconnect\", <https://wait.crowdhandler.com/js/latest/main.js?id=5c9936d937da273a85384bafa4d13e1858c16ea12e0e329171911c348e19bd1e>; as=\"script\"; rel=\"preload\", <//joola.com/cdn/shop/t/74/assets/global.css?v=41740475877211877881783513167>; as=\"style\"; rel=\"preload\", <//joola.com/cdn/shop/t/74/assets/utilities.css?v=119202267115246030661741970598>; as=\"style\"; rel=\"preload\", <//joola.com/cdn/shop/t/74/assets/grid-spacing.css?v=26662933437216492221761145568>; as=\"style\"; rel=\"preload\", <//joola.com/cdn/shop/t/74/assets/button-color.css?v=144852533257374201831779379685>; as=\"style\"; rel=\"preload\", <//joola.com/cdn/shop/t/74/assets/global-header.css?v=166631219028314134671778260698>; as=\"style\"; rel=\"preload\", <//joola.com/cdn/shop/t/74/assets/form.css?v=72839446600193140191741970597>; as=\"style\"; rel=\"preload\", <//joola.com/cdn/shop/t/74/assets/card.css?v=70579468811431864111741970598>; as=\"style\"; rel=\"preload\", <//joola.com/cdn/shop/t/74/assets/swiper-bundle.min.css?v=7781337513855297801741970596>; as=\"style\"; rel=\"preload\", <//joola.com/cdn/shop/t/74/assets/flatpicker-date.min.css?v=76191120879363651971741970597>; as=\"style\"; rel=\"preload\"",
+          "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}",
+          "powered-by": "Shopify",
+          "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=X9H26EZw%2BSgHnmHcQglX4dV699rjab4VbslFoPzXQFJaw7ihooR3bCGXBfVaC5avKYXh97%2BI3vjCEKkLQn7C0x6hGKxE5QqNvI5En6oh2cVPWk1W6F%2FAjkIfhw%3D%3D\"}]}",
+          "server": "cloudflare",
+          "server-timing": "processing;dur=30, db;dur=6, db_async;dur=1.0, asn;desc=\"24309\", edge;desc=\"MAA\", country;desc=\"IN\", theme;desc=\"148712915158\", pageType;desc=\"index\", servedBy;desc=\"chwh\", requestID;desc=\"77dbfba9-592b-4c04-8efb-ad2db1190a6c-1789373591\", _y;desc=\"60964d84-9bdf-4f8f-8584-9437585a46d0\", _s;desc=\"15fdcb7c-24c6-4ac8-bbc5-f32eaf948f6c\", _cmp;desc=\"3.AMPS_INKA_f_f_HL8Oo9DQRcetTSv*lsRiYg\", compressionLevel;desc=\"5\"",
+          "set-cookie": "_shopify_marketing=:AaCe-jCLAAEAffbqcG7Or7EZ_xZrgy3FQXFz6X9qMtChpOiDapvuVwWxL0zgCQzIF2sQ9Cq6iNNXmQqgww8Fu_0aCTDUpPdZ8p0xiTR4Vf671YhVBKBZwVGUjjM2Gs1bsS-c2Ca8LD1MogmUHp_6FnIpWOs:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax",
+          "shopify-complexity-score": "230",
+          "shopify-complexity-score-v2": "23",
+          "strict-transport-security": "max-age=7889238",
+          "vary": "Accept, accept-encoding",
+          "x-content-type-options": "nosniff",
+          "x-dc": "gcp-asia-southeast1,gcp-asia-southeast1,gcp-asia-southeast1",
+          "x-download-options": "noopen",
+          "x-frame-options": "DENY",
+          "x-permitted-cross-domain-policies": "none",
+          "x-request-id": "77dbfba9-592b-4c04-8efb-ad2db1190a6c-1789373591",
+          "x-xss-protection": "1; mode=block"
+        },
+        "html_bytes": 1132621,
+        "html_sha256": "4ae2ae686faea39574cfd42092a1f1abf1cbe3e864c520a45fcef148ae300f64",
+        "tech_stack": {
+          "cms": "shopify",
+          "ecommerce": "shopify",
+          "page_builder": null,
+          "page_builder_version": null
+        },
+        "currency": "USD",
+        "price_ladder": [],
+        "brand_mentions": 2004
+      }
+    },
+    {
+      "domain": "joola.net",
+      "match_kind": "exact_label",
+      "discovery_source": "dns_permutation",
+      "classification": "suspect",
+      "is_live": true,
+      "resolved_ips": [
+        "78.47.83.215"
+      ],
+      "infrastructure": {
+        "registrar_name": "Hetzner Online GmbH",
+        "registrar_iana_id": 828,
+        "registrar_abuse_email": "abuse@hetzner.com",
+        "registrar_abuse_phone": "+49 9831 5050",
+        "registered_at": "2000-02-18",
+        "expires_at": "2027-02-18",
+        "domain_status": [
+          "active"
+        ],
+        "nameservers": [
+          "ns.second-ns.com",
+          "ns1.your-server.de",
+          "ns3.second-ns.de"
+        ],
+        "dns_provider": "second-ns"
+      },
+      "snapshot": {
+        "http_status": 200,
+        "final_url": "https://joola.de/en",
+        "response_headers": {
+          "accept-ch": "Sec-CH-Viewport-Width",
+          "alt-svc": "h3=\":443\"; ma=86400",
+          "cdn-cache-control": "no-cache, no-store",
+          "cf-cache-status": "DYNAMIC",
+          "cf-ray": "a3adee599d2cc08d-MAA",
+          "connection": "keep-alive",
+          "content-encoding": "br",
+          "content-language": "en-DE",
+          "content-length": "129344",
+          "content-security-policy": "block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Mon, 14 Sep 2026 08:13:13 GMT",
+          "etag": "\"page_cache:87962517807:IndexController:918f2b02b1657fe2f069744aeccb5316:62b1a0a3e6f38515e1ba729bee211379\"",
+          "link": "<https://cdn.shopify.com>; rel=\"preconnect\", <https://cdn.shopify.com>; rel=\"preconnect\"; crossorigin, <//joola.de/cdn/shop/files/pandectes-rules.js?v=8354183470071906>; as=\"script\"; rel=\"preload\", <//joola.de/cdn/shop/t/5/assets/theme.css?v=140338211211407047401786352205>; as=\"style\"; rel=\"preload\", <//joola.de/cdn/shop/t/5/assets/custom.css?v=23585151683551248931786527186>; as=\"style\"; rel=\"preload\", <//joola.de/cdn/shop/t/5/assets/swiper-bundle.min.css?v=72775568390888561781722584844>; as=\"style\"; rel=\"preload\", <https://cdn.shopify.com/extensions/01a08f9d-cd30-7cfa-beb4-29c9bb7948d4/orbe-geolocation-499/assets/md-app-modal.min.css>; as=\"style\"; rel=\"preload\", <https://cdn.shopify.com/extensions/01a01e7f-1a7a-7c42-bdad-60caf9b2318b/joola-b2b-mindestbestellwert-5/assets/b2b-opening-fee.css>; as=\"style\"; rel=\"preload\", <//joola.de/cdn/shop/t/5/assets/us-component-card.css?v=51772672833195081031722584844>; as=\"style\"; rel=\"preload\", <//joola.de/cdn/shop/t/5/assets/us-tab-featured-collection.css?v=145724393807418401811723193869>; as=\"style\"; rel=\"preload\", <//joola.de/cdn/shop/t/5/assets/us-collections-list.css?v=159192359026018132141730989989>; as=\"style\"; rel=\"preload\", <//joola.de/cdn/shop/t/5/assets/video-featured-collection.css?v=12444635250256159801730989990>; as=\"style\"; rel=\"preload\"",
+          "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}",
+          "powered-by": "Shopify",
+          "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=uVcJ6ldFvxmUVsgg5NXPzv6FkB%2FVNkPoTy12wb%2FyT9KUR%2F3%2BZ1Uavpez8dkeW5pk6Pj8m1rA2pqHqvOiS3gxiGPPpVZg%2B6FL7oGRWQv3Mybl1DAzLSQd6Fwk\"}]}",
+          "server": "cloudflare",
+          "server-timing": "processing;dur=340;desc=\"gc:18\", db;dur=44, db_async;dur=67.867, render;dur=164, asn;desc=\"24309\", edge;desc=\"MAA\", country;desc=\"IN\", theme;desc=\"169885335855\", pageType;desc=\"index\", servedBy;desc=\"j5rk\", requestID;desc=\"55b08abd-807b-4ed9-921b-7cc38a9dd6c8-1789373592\", _y;desc=\"00000000-0000-0000-5000-000000000000\", _s;desc=\"00000000-0000-0000-5000-000000000000\", _cmp;desc=\"3.ampS_INKA_t_f_Iwk5H26TSaCTcKqy6OK7sw\", compressionLevel;desc=\"5\", compressionTime;dur=25.088",
+          "set-cookie": "_shopify_essential=:AaCe-jSsAAEAkXKkQd9D4pEx-WVzVAST0obxbZjV9rNL75-uVhgY9BBkB-RhG8UPN72xigoFs_ljw0F2LthUj7iGhBFhxQX3R4C3Dq3SU2wRjdbvtcDwu_Xa7qHe2TJymujmKXyT8jmT4-7fnR-meQVgT6JxxPiS0-qmx0dxqgnVy57spKhlgcvKo7S5OVQlsGu-5xh6BXX1s0Rb4okk6WUr_I8xb2VN_0tk0JE0qe3wxGZc81tPuEl35enmNLuDBbuPjn7_3TVbxfOX74niMWlTe4uwOHjc4_NaGkCoVX4ogY7-0cXxsunN-k4towdS6u6_nQlDIwbaNU7dekoBghZqBjJYZp7_DEGPYV1DdyazP2XWo0WudqxJ2EVAwkIM7NgMaEyh7WGdHFHQCogxywegMo5T2Qo3OvPItGTfRJW3Mxd7_KF0hOGK3sy0409BckGd6HqlkBot9WBHXIVN_mcKxLlWEEO4wpX_RiEV:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax",
+          "shopify-complexity-score": "3340",
+          "shopify-complexity-score-v2": "334",
+          "strict-transport-security": "max-age=7889238",
+          "vary": "Accept, accept-encoding",
+          "x-content-type-options": "nosniff",
+          "x-dc": "gcp-asia-southeast1,gcp-us-west1,gcp-us-west1",
+          "x-download-options": "noopen",
+          "x-frame-options": "DENY",
+          "x-permitted-cross-domain-policies": "none",
+          "x-request-id": "55b08abd-807b-4ed9-921b-7cc38a9dd6c8-1789373592",
+          "x-xss-protection": "1; mode=block"
+        },
+        "html_bytes": 1013320,
+        "html_sha256": "cb6b9d469d7bfe95737f1b16e29fc0a42047370f01dfcbf66dd01b38ca5598d7",
+        "tech_stack": {
+          "cms": "shopify",
+          "ecommerce": "shopify",
+          "page_builder": null,
+          "page_builder_version": null
+        },
+        "currency": "EUR",
+        "price_ladder": [],
+        "brand_mentions": 2537
+      }
+    },
+    {
+      "domain": "joolausa.com",
+      "match_kind": "prefix",
+      "discovery_source": "manual",
+      "classification": "legitimate",
+      "is_live": true,
+      "resolved_ips": [
+        "2620:127:f00f:5::",
+        "23.227.38.68"
+      ],
+      "infrastructure": {
+        "registrar_name": "GoDaddy.com, LLC",
+        "registrar_iana_id": 146,
+        "registrar_abuse_email": "abuse@godaddy.com",
+        "registrar_abuse_phone": "480-624-2505",
+        "registered_at": "2006-12-05",
+        "expires_at": "2029-05-22",
+        "domain_status": [
+          "client delete prohibited",
+          "client renew prohibited",
+          "client transfer prohibited",
+          "client update prohibited"
+        ],
+        "nameservers": [
+          "ns51.domaincontrol.com",
+          "ns52.domaincontrol.com"
+        ],
+        "dns_provider": "domaincontrol"
+      },
+      "snapshot": {
+        "http_status": 200,
+        "final_url": "https://joola.com/",
+        "response_headers": {
+          "accept-ch": "Sec-CH-Viewport-Width",
+          "alt-svc": "h3=\":443\"; ma=86400",
+          "cdn-cache-control": "no-cache, no-store",
+          "cf-cache-status": "DYNAMIC",
+          "cf-ray": "a3adedfcaae57f0c-MAA",
+          "connection": "keep-alive",
+          "content-encoding": "br",
+          "content-language": "en-US",
+          "content-length": "142240",
+          "content-security-policy": "block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Mon, 14 Sep 2026 08:12:57 GMT",
+          "etag": "\"page_cache:68569432278:IndexController:01c1c7f0542be244e47483d314a9a5a0:9c3c8aa0068cb78e69f91941369cf64b\"",
+          "link": "<https://cdn.shopify.com>; rel=\"preconnect\", <https://cdn.shopify.com>; rel=\"preconnect\"; crossorigin, <https://wait.crowdhandler.com>; rel=\"preconnect\", <https://wait.crowdhandler.com/js/latest/main.js?id=5c9936d937da273a85384bafa4d13e1858c16ea12e0e329171911c348e19bd1e>; as=\"script\"; rel=\"preload\", <//joola.com/cdn/shop/t/74/assets/global.css?v=41740475877211877881783513167>; as=\"style\"; rel=\"preload\", <//joola.com/cdn/shop/t/74/assets/utilities.css?v=119202267115246030661741970598>; as=\"style\"; rel=\"preload\", <//joola.com/cdn/shop/t/74/assets/grid-spacing.css?v=26662933437216492221761145568>; as=\"style\"; rel=\"preload\", <//joola.com/cdn/shop/t/74/assets/button-color.css?v=144852533257374201831779379685>; as=\"style\"; rel=\"preload\", <//joola.com/cdn/shop/t/74/assets/global-header.css?v=166631219028314134671778260698>; as=\"style\"; rel=\"preload\", <//joola.com/cdn/shop/t/74/assets/form.css?v=72839446600193140191741970597>; as=\"style\"; rel=\"preload\", <//joola.com/cdn/shop/t/74/assets/card.css?v=70579468811431864111741970598>; as=\"style\"; rel=\"preload\", <//joola.com/cdn/shop/t/74/assets/swiper-bundle.min.css?v=7781337513855297801741970596>; as=\"style\"; rel=\"preload\", <//joola.com/cdn/shop/t/74/assets/flatpicker-date.min.css?v=76191120879363651971741970597>; as=\"style\"; rel=\"preload\"",
+          "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}",
+          "powered-by": "Shopify",
+          "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=k6NYB8e2BCi8sLw3I3JyrOPHVhePZLXMiJrI1aoUlPeqERSZEOrtKP9KnoXLRP7n7iiDnfnS%2Bxnl8bzmzJ8Haz%2FycqNvTgHtpVC7Xx59LW04IWA6p3z8mHaWew%3D%3D\"}]}",
+          "server": "cloudflare",
+          "server-timing": "processing;dur=61;desc=\"gc:1\", db;dur=19, db_async;dur=2.978, asn;desc=\"24309\", edge;desc=\"MAA\", country;desc=\"IN\", theme;desc=\"148712915158\", pageType;desc=\"index\", servedBy;desc=\"4ddl\", requestID;desc=\"eb7682b8-7429-4d03-80a7-be46a166617f-1789373577\", _y;desc=\"e239a755-79b0-4067-99a4-c8b3cc76589c\", _s;desc=\"45c1c072-07df-4014-a056-8c1f891f8062\", _cmp;desc=\"3.AMPS_INKA_f_f_-ZCTukUwQMuTPuP-Q2bQtA\", compressionLevel;desc=\"5\"",
+          "set-cookie": "_shopify_marketing=:AaCe-fp3AAEAdHFuVJQ6Oag1wWG79nWATX8ocklZre_Mog7fCHEL9JVgGx4-kx5h27TN9cZwhfuWkZT0ZY6BVo-EBDvGK4SXfyyFr2XlO66j7lEWMJ6rlmlfo7g_u4kzZWqCh2srQ6MdbsMvuFn8tislkKU:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax",
+          "shopify-complexity-score": "470",
+          "shopify-complexity-score-v2": "47",
+          "strict-transport-security": "max-age=7889238",
+          "vary": "Accept, accept-encoding",
+          "x-content-type-options": "nosniff",
+          "x-dc": "gcp-asia-southeast1,gcp-asia-southeast1,gcp-asia-southeast1",
+          "x-download-options": "noopen",
+          "x-frame-options": "DENY",
+          "x-permitted-cross-domain-policies": "none",
+          "x-request-id": "eb7682b8-7429-4d03-80a7-be46a166617f-1789373577",
+          "x-xss-protection": "1; mode=block"
+        },
+        "html_bytes": 1132621,
+        "html_sha256": "bfbdfbc91d59541fd712d66abbdfc191b41dea0e9398fad4c10e91d35e9424aa",
+        "tech_stack": {
+          "cms": "shopify",
+          "ecommerce": "shopify",
+          "page_builder": null,
+          "page_builder_version": null
+        },
+        "currency": "USD",
+        "price_ladder": [],
+        "brand_mentions": 2004
+      }
+    },
+    {
+      "domain": "joolacanada.com",
+      "match_kind": "prefix",
+      "discovery_source": "dns_permutation",
+      "classification": "suspect",
+      "is_live": true,
+      "resolved_ips": [
+        "3.33.251.168",
+        "15.197.225.128"
+      ],
+      "infrastructure": {
+        "registrar_name": "GoDaddy.com, LLC",
+        "registrar_iana_id": 146,
+        "registrar_abuse_email": "abuse@godaddy.com",
+        "registrar_abuse_phone": "480-624-2505",
+        "registered_at": "2006-12-05",
+        "expires_at": "2029-05-22",
+        "domain_status": [
+          "client delete prohibited",
+          "client renew prohibited",
+          "client transfer prohibited",
+          "client update prohibited"
+        ],
+        "nameservers": [
+          "ns19.domaincontrol.com",
+          "ns20.domaincontrol.com"
+        ],
+        "dns_provider": "domaincontrol"
+      },
+      "snapshot": {
+        "http_status": 200,
+        "final_url": "https://joola.com/",
+        "response_headers": {
+          "accept-ch": "Sec-CH-Viewport-Width",
+          "alt-svc": "h3=\":443\"; ma=86400",
+          "cdn-cache-control": "no-cache, no-store",
+          "cf-cache-status": "DYNAMIC",
+          "cf-ray": "a3adee29bd26c69f-MAA",
+          "connection": "keep-alive",
+          "content-encoding": "br",
+          "content-language": "en-US",
+          "content-length": "142240",
+          "content-security-policy": "block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Mon, 14 Sep 2026 08:13:05 GMT",
+          "etag": "\"page_cache:68569432278:IndexController:01c1c7f0542be244e47483d314a9a5a0:8d11d96ab92b49848f47eeeec876a7cd\"",
+          "link": "<https://cdn.shopify.com>; rel=\"preconnect\", <https://cdn.shopify.com>; rel=\"preconnect\"; crossorigin, <https://wait.crowdhandler.com>; rel=\"preconnect\", <https://wait.crowdhandler.com/js/latest/main.js?id=5c9936d937da273a85384bafa4d13e1858c16ea12e0e329171911c348e19bd1e>; as=\"script\"; rel=\"preload\", <//joola.com/cdn/shop/t/74/assets/global.css?v=41740475877211877881783513167>; as=\"style\"; rel=\"preload\", <//joola.com/cdn/shop/t/74/assets/utilities.css?v=119202267115246030661741970598>; as=\"style\"; rel=\"preload\", <//joola.com/cdn/shop/t/74/assets/grid-spacing.css?v=26662933437216492221761145568>; as=\"style\"; rel=\"preload\", <//joola.com/cdn/shop/t/74/assets/button-color.css?v=144852533257374201831779379685>; as=\"style\"; rel=\"preload\", <//joola.com/cdn/shop/t/74/assets/global-header.css?v=166631219028314134671778260698>; as=\"style\"; rel=\"preload\", <//joola.com/cdn/shop/t/74/assets/form.css?v=72839446600193140191741970597>; as=\"style\"; rel=\"preload\", <//joola.com/cdn/shop/t/74/assets/card.css?v=70579468811431864111741970598>; as=\"style\"; rel=\"preload\", <//joola.com/cdn/shop/t/74/assets/swiper-bundle.min.css?v=7781337513855297801741970596>; as=\"style\"; rel=\"preload\", <//joola.com/cdn/shop/t/74/assets/flatpicker-date.min.css?v=76191120879363651971741970597>; as=\"style\"; rel=\"preload\"",
+          "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}",
+          "powered-by": "Shopify",
+          "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=fMCTAmGD1zcEolC1a4%2FwL6aGnTB6wGDXV8nXM6U%2B1oduQTKRG5SUcVlWx5tnAB3PTHzyTjZkbJB%2FEAllqWbUPgcNBzLctxdqtbPPFZT7GBjKwsbjKs%2BVnqREIw%3D%3D\"}]}",
+          "server": "cloudflare",
+          "server-timing": "processing;dur=33;desc=\"gc:3\", db;dur=6, db_async;dur=0.839, asn;desc=\"24309\", edge;desc=\"MAA\", country;desc=\"IN\", theme;desc=\"148712915158\", pageType;desc=\"index\", servedBy;desc=\"lpz7\", requestID;desc=\"ba4fd421-1a95-4ee6-aa42-ead5a9e6a28a-1789373584\", _y;desc=\"49f46e0f-f826-494b-aac3-9992da58fc70\", _s;desc=\"a4aeb378-60bc-492c-a3b4-425ee28d8fea\", _cmp;desc=\"3.AMPS_INKA_f_f_3wZW5K6QSGSGUDq-EElffw\", compressionLevel;desc=\"5\"",
+          "set-cookie": "_shopify_marketing=:AaCe-haDAAEACFa4PRiEIOWz7L3tKjjNEHOJ2dZyqW215wIOfJY3Pn4wqyTb8ujWwJRrymgcVGd3PYO7i46pv7b9oSbsdLFYfSBzb5i8mkWK5vdYF8gUfL5mYqEOkIsRS9hMRh6slMo_4t3YHaEyacGGF6E:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax",
+          "shopify-complexity-score": "240",
+          "shopify-complexity-score-v2": "24",
+          "strict-transport-security": "max-age=7889238",
+          "vary": "Accept, accept-encoding",
+          "x-content-type-options": "nosniff",
+          "x-dc": "gcp-asia-southeast1,gcp-asia-southeast1,gcp-asia-southeast1",
+          "x-download-options": "noopen",
+          "x-frame-options": "DENY",
+          "x-permitted-cross-domain-policies": "none",
+          "x-request-id": "ba4fd421-1a95-4ee6-aa42-ead5a9e6a28a-1789373584",
+          "x-xss-protection": "1; mode=block"
+        },
+        "html_bytes": 1132621,
+        "html_sha256": "9c868bf37089feb1d4e12abc3404e114b53fcdce946095dcfae71ceda919e8ed",
+        "tech_stack": {
+          "cms": "shopify",
+          "ecommerce": "shopify",
+          "page_builder": null,
+          "page_builder_version": null
+        },
+        "currency": "USD",
+        "price_ladder": [],
+        "brand_mentions": 2004
+      }
+    },
+    {
+      "domain": "joolabrazil.com",
+      "match_kind": "prefix",
+      "discovery_source": "dns_permutation",
+      "classification": "suspect",
+      "is_live": true,
+      "resolved_ips": [
+        "15.197.148.33",
+        "3.33.130.190"
+      ],
+      "infrastructure": {
+        "registrar_name": "GoDaddy.com, LLC",
+        "registrar_iana_id": 146,
+        "registrar_abuse_email": "abuse@godaddy.com",
+        "registrar_abuse_phone": "480-624-2505",
+        "registered_at": "2016-08-11",
+        "expires_at": "2027-05-22",
+        "domain_status": [
+          "client delete prohibited",
+          "client renew prohibited",
+          "client transfer prohibited",
+          "client update prohibited"
+        ],
+        "nameservers": [
+          "ns05.domaincontrol.com",
+          "ns06.domaincontrol.com"
+        ],
+        "dns_provider": "domaincontrol"
+      },
+      "snapshot": {
+        "http_status": 200,
+        "final_url": "https://joolabrazil.com/",
+        "response_headers": {
+          "content-length": "114",
+          "content-type": "text/html",
+          "date": "Mon, 14 Sep 2026 08:13:03 GMT"
+        },
+        "html_bytes": 114,
+        "html_sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023",
+        "tech_stack": {
+          "cms": null,
+          "ecommerce": null,
+          "page_builder": null,
+          "page_builder_version": null
+        },
+        "currency": null,
+        "price_ladder": [],
+        "brand_mentions": 0
+      }
+    },
+    {
+      "domain": "joola.shop",
+      "match_kind": "exact_label",
+      "discovery_source": "dns_permutation",
+      "classification": "suspect",
+      "is_live": true,
+      "resolved_ips": [
+        "2620:127:f00f:5::",
+        "23.227.38.65"
+      ],
+      "infrastructure": {
+        "registrar_name": "united-domains GmbH",
+        "registrar_iana_id": 1408,
+        "registrar_abuse_email": "abuse@united-domains.de",
+        "registrar_abuse_phone": "+49.8151368670",
+        "registered_at": "2018-06-11",
+        "expires_at": "2027-06-11",
+        "domain_status": [
+          "client transfer prohibited"
+        ],
+        "nameservers": [
+          "ns1.your-server.de",
+          "ns.second-ns.com",
+          "ns3.second-ns.de"
+        ],
+        "dns_provider": "your-server"
+      },
+      "snapshot": {
+        "http_status": 200,
+        "final_url": "https://joola.de/",
+        "response_headers": {
+          "accept-ch": "Sec-CH-Viewport-Width",
+          "alt-svc": "h3=\":443\"; ma=86400",
+          "cdn-cache-control": "no-cache, no-store",
+          "cf-cache-status": "DYNAMIC",
+          "cf-ray": "a3adee59b9fd1ae3-MAA",
+          "connection": "keep-alive",
+          "content-encoding": "br",
+          "content-language": "de-DE",
+          "content-length": "123400",
+          "content-security-policy": "block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Mon, 14 Sep 2026 08:13:12 GMT",
+          "etag": "\"page_cache:87962517807:IndexController:cf0d940d69d26feb83a9d6835f070d75:62b1a0a3e6f38515e1ba729bee211379\"",
+          "link": "<https://cdn.shopify.com>; rel=\"preconnect\", <https://cdn.shopify.com>; rel=\"preconnect\"; crossorigin, <//joola.de/cdn/shop/files/pandectes-rules.js?v=8354183470071906>; as=\"script\"; rel=\"preload\", <//joola.de/cdn/shop/t/5/assets/theme.css?v=140338211211407047401786352205>; as=\"style\"; rel=\"preload\", <//joola.de/cdn/shop/t/5/assets/custom.css?v=23585151683551248931786527186>; as=\"style\"; rel=\"preload\", <//joola.de/cdn/shop/t/5/assets/swiper-bundle.min.css?v=72775568390888561781722584844>; as=\"style\"; rel=\"preload\", <https://cdn.shopify.com/extensions/01a01e7f-1a7a-7c42-bdad-60caf9b2318b/joola-b2b-mindestbestellwert-5/assets/b2b-opening-fee.css>; as=\"style\"; rel=\"preload\", <https://cdn.shopify.com/extensions/01a08f9d-cd30-7cfa-beb4-29c9bb7948d4/orbe-geolocation-499/assets/md-app-modal.min.css>; as=\"style\"; rel=\"preload\", <//joola.de/cdn/shop/t/5/assets/us-component-card.css?v=51772672833195081031722584844>; as=\"style\"; rel=\"preload\", <//joola.de/cdn/shop/t/5/assets/us-tab-featured-collection.css?v=145724393807418401811723193869>; as=\"style\"; rel=\"preload\", <//joola.de/cdn/shop/t/5/assets/us-collections-list.css?v=159192359026018132141730989989>; as=\"style\"; rel=\"preload\", <//joola.de/cdn/shop/t/5/assets/video-featured-collection.css?v=12444635250256159801730989990>; as=\"style\"; rel=\"preload\"",
+          "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}",
+          "powered-by": "Shopify",
+          "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=xV6%2Bus9MteDNCyFFYqbXPIergz%2BDteznvCdDnB5TAoNspe0KcixI381Ydqx7XBL1utU5pq82EkuqsCBzw7HgVt4k8Uk9IVbngolrv%2BKhkFVLFAsC5DcLhEob\"}]}",
+          "server": "cloudflare",
+          "server-timing": "processing;dur=29;desc=\"gc:1\", db;dur=6, db_async;dur=0.974, asn;desc=\"24309\", edge;desc=\"MAA\", country;desc=\"IN\", theme;desc=\"169885335855\", pageType;desc=\"index\", servedBy;desc=\"qlqx\", requestID;desc=\"2bb17d72-fb35-45d7-9b9c-df3898750fde-1789373592\", _y;desc=\"00000000-0000-0000-5000-000000000000\", _s;desc=\"00000000-0000-0000-5000-000000000000\", _cmp;desc=\"3.ampS_INKA_t_f_8kgMLJR0Sr-ZtjS-h7TSLA\", compressionLevel;desc=\"5\"",
+          "set-cookie": "_shopify_essential=:AaCe-jSvAAEAhkkWG_ZEpAd8F0x8yghlgKbq6CK6Lkb3Y1cVVlwrkfrr6gvdQglvY_5-CZtxzOuTjEVpW_uZTcdDfHPaCLknfpBn-0IW6C9s1zjWDy2zv-lDv8BO9klaiG7o7RyVMzAMZzBoGXKHjB8T5BLKnZJR_bu88Y31penIAwcYqE05iZvYBnbD5tMpBh6TOX9PYHtMcLPY_QB7WUW7wZOeTZvYii7STIsLktW6eM99IE5KUJalD79LTOtCM3PafWhcTMzoZnyq9kycP-ggICNWxUrXS-SHXfnd6FvjJ134gSPA51f_ws5x7EJiiiHUVEkB_v49GUIxqjPk7vAcPOGiMHo45htvLT9ZLdmRhNDPmsHWI33JWm-TsxCxyMLgrNxdvpHzhvEo5zXl_3Ju1pGnJX0mx3_Q_cyqy0HKAUCmEd444DNZ34kD4GXxJNUpE68ryLUjbtHmCENE67fblCPn0mfJeq7kzNhE:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax",
+          "shopify-complexity-score": "250",
+          "shopify-complexity-score-v2": "25",
+          "strict-transport-security": "max-age=7889238",
+          "vary": "Accept, accept-encoding",
+          "x-content-type-options": "nosniff",
+          "x-dc": "gcp-asia-southeast1,gcp-us-west1,gcp-us-west1",
+          "x-download-options": "noopen",
+          "x-frame-options": "DENY",
+          "x-permitted-cross-domain-policies": "none",
+          "x-request-id": "2bb17d72-fb35-45d7-9b9c-df3898750fde-1789373592",
+          "x-xss-protection": "1; mode=block"
+        },
+        "html_bytes": 980702,
+        "html_sha256": "81106d0d71d661ac22847d3d9190995fdd84d9072f7cd9b3aba8133d883d886f",
+        "tech_stack": {
+          "cms": "shopify",
+          "ecommerce": "shopify",
+          "page_builder": null,
+          "page_builder_version": null
+        },
+        "currency": "EUR",
+        "price_ladder": [],
+        "brand_mentions": 2484
+      }
+    },
+    {
+      "domain": "joolapickleball.com",
+      "match_kind": "prefix",
+      "discovery_source": "dns_permutation",
+      "classification": "suspect",
+      "is_live": true,
+      "resolved_ips": [
+        "3.33.251.168",
+        "15.197.225.128"
+      ],
+      "infrastructure": {
+        "registrar_name": "GoDaddy.com, LLC",
+        "registrar_iana_id": 146,
+        "registrar_abuse_email": "abuse@godaddy.com",
+        "registrar_abuse_phone": "480-624-2505",
+        "registered_at": "2021-08-23",
+        "expires_at": "2031-08-23",
+        "domain_status": [
+          "client delete prohibited",
+          "client renew prohibited",
+          "client transfer prohibited",
+          "client update prohibited"
+        ],
+        "nameservers": [
+          "ns67.domaincontrol.com",
+          "ns68.domaincontrol.com"
+        ],
+        "dns_provider": "domaincontrol"
+      },
+      "snapshot": {
+        "http_status": 200,
+        "final_url": "https://joola.com/",
+        "response_headers": {
+          "accept-ch": "Sec-CH-Viewport-Width",
+          "alt-svc": "h3=\":443\"; ma=86400",
+          "cdn-cache-control": "no-cache, no-store",
+          "cf-cache-status": "DYNAMIC",
+          "cf-ray": "a3adee54ce935b70-MAA",
+          "connection": "keep-alive",
+          "content-encoding": "br",
+          "content-language": "en-US",
+          "content-length": "142240",
+          "content-security-policy": "block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Mon, 14 Sep 2026 08:13:12 GMT",
+          "etag": "\"page_cache:68569432278:IndexController:01c1c7f0542be244e47483d314a9a5a0:a534dd195395738645666c75ee6d54df\"",
+          "link": "<https://cdn.shopify.com>; rel=\"preconnect\", <https://cdn.shopify.com>; rel=\"preconnect\"; crossorigin, <https://wait.crowdhandler.com>; rel=\"preconnect\", <https://wait.crowdhandler.com/js/latest/main.js?id=5c9936d937da273a85384bafa4d13e1858c16ea12e0e329171911c348e19bd1e>; as=\"script\"; rel=\"preload\", <//joola.com/cdn/shop/t/74/assets/global.css?v=41740475877211877881783513167>; as=\"style\"; rel=\"preload\", <//joola.com/cdn/shop/t/74/assets/utilities.css?v=119202267115246030661741970598>; as=\"style\"; rel=\"preload\", <//joola.com/cdn/shop/t/74/assets/grid-spacing.css?v=26662933437216492221761145568>; as=\"style\"; rel=\"preload\", <//joola.com/cdn/shop/t/74/assets/button-color.css?v=144852533257374201831779379685>; as=\"style\"; rel=\"preload\", <//joola.com/cdn/shop/t/74/assets/global-header.css?v=166631219028314134671778260698>; as=\"style\"; rel=\"preload\", <//joola.com/cdn/shop/t/74/assets/form.css?v=72839446600193140191741970597>; as=\"style\"; rel=\"preload\", <//joola.com/cdn/shop/t/74/assets/card.css?v=70579468811431864111741970598>; as=\"style\"; rel=\"preload\", <//joola.com/cdn/shop/t/74/assets/swiper-bundle.min.css?v=7781337513855297801741970596>; as=\"style\"; rel=\"preload\", <//joola.com/cdn/shop/t/74/assets/flatpicker-date.min.css?v=76191120879363651971741970597>; as=\"style\"; rel=\"preload\"",
+          "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}",
+          "powered-by": "Shopify",
+          "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=YPoY1tujb76r0DnJ9bY85j%2Ffsy7LQukip11Un3V%2B%2Bh7oDbwz6YgZTAYiGWSQVK8OYzT%2BuceZD6vZmrhwXyBonZesasXhGibyf2hwZdRzXjHbk6%2FmBw9x5ui71w%3D%3D\"}]}",
+          "server": "cloudflare",
+          "server-timing": "processing;dur=28, db;dur=6, db_async;dur=0.844, asn;desc=\"24309\", edge;desc=\"MAA\", country;desc=\"IN\", theme;desc=\"148712915158\", pageType;desc=\"index\", servedBy;desc=\"jlnw\", requestID;desc=\"3dba8132-606b-4e8b-97e4-d741975ecd6b-1789373591\", _y;desc=\"c25642fe-571b-4e8d-93f7-738a20d4b574\", _s;desc=\"28c12596-3c29-4c1f-9fba-3c51b9841f40\", _cmp;desc=\"3.AMPS_INKA_f_f_Uskb9NEqTAmJ0USENvETtA\", compressionLevel;desc=\"5\"",
+          "set-cookie": "_shopify_marketing=:AaCe-jGQAAEAcfZSt9Pxn2SGUUGlSTeyX-xrMJ9ttSQ_UcfI0L_XmRt60HS25je7vaD2pDDLXC27Ap9EERPIsMHkYoq1DSOvyh2PawPTq07-Zech2A6jTHJ04G9vgxemLE5dDQnM-Ts6UY-0S65uM1PUGF8:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax",
+          "shopify-complexity-score": "220",
+          "shopify-complexity-score-v2": "22",
+          "strict-transport-security": "max-age=7889238",
+          "vary": "Accept, accept-encoding",
+          "x-content-type-options": "nosniff",
+          "x-dc": "gcp-asia-southeast1,gcp-asia-southeast1,gcp-asia-southeast1",
+          "x-download-options": "noopen",
+          "x-frame-options": "DENY",
+          "x-permitted-cross-domain-policies": "none",
+          "x-request-id": "3dba8132-606b-4e8b-97e4-d741975ecd6b-1789373591",
+          "x-xss-protection": "1; mode=block"
+        },
+        "html_bytes": 1132621,
+        "html_sha256": "c85e895d9a7d415f2481bc66774d6304dff3eb25a259deac34b1f67dfb6c5d6b",
+        "tech_stack": {
+          "cms": "shopify",
+          "ecommerce": "shopify",
+          "page_builder": null,
+          "page_builder_version": null
+        },
+        "currency": "USD",
+        "price_ladder": [],
+        "brand_mentions": 2004
+      }
+    },
+    {
+      "domain": "pickleball-joola.com",
+      "match_kind": "suffix",
+      "discovery_source": "dns_permutation",
+      "classification": "suspect",
+      "is_live": false,
+      "resolved_ips": [
+        "212.25.160.10"
+      ],
+      "infrastructure": {
+        "registrar_name": "Tucows Domains Inc.",
+        "registrar_iana_id": 69,
+        "registrar_abuse_email": "domainabuse@tucows.com",
+        "registrar_abuse_phone": "+1.4165350123",
+        "registered_at": "2023-01-25",
+        "expires_at": "2027-01-25",
+        "domain_status": [
+          "active"
+        ],
+        "nameservers": [
+          "dns.seeweb.it",
+          "dns2.seeweb.it"
+        ],
+        "dns_provider": "seeweb"
+      },
+      "snapshot": null
+    },
+    {
+      "domain": "shopjoola.com",
+      "match_kind": "suffix",
+      "discovery_source": "dns_permutation",
+      "classification": "suspect",
+      "is_live": true,
+      "resolved_ips": [
+        "15.197.148.33",
+        "3.33.130.190"
+      ],
+      "infrastructure": {
+        "registrar_name": "GoDaddy.com, LLC",
+        "registrar_iana_id": 146,
+        "registrar_abuse_email": "abuse@godaddy.com",
+        "registrar_abuse_phone": "480-624-2505",
+        "registered_at": "2023-03-25",
+        "expires_at": "2027-03-25",
+        "domain_status": [
+          "client delete prohibited",
+          "client renew prohibited",
+          "client transfer prohibited",
+          "client update prohibited"
+        ],
+        "nameservers": [
+          "ns13.domaincontrol.com",
+          "ns14.domaincontrol.com"
+        ],
+        "dns_provider": "domaincontrol"
+      },
+      "snapshot": {
+        "http_status": 200,
+        "final_url": "http://shopjoola.com/",
+        "response_headers": {
+          "content-length": "114",
+          "content-type": "text/html",
+          "date": "Mon, 14 Sep 2026 08:13:07 GMT"
+        },
+        "html_bytes": 114,
+        "html_sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023",
+        "tech_stack": {
+          "cms": null,
+          "ecommerce": null,
+          "page_builder": null,
+          "page_builder_version": null
+        },
+        "currency": null,
+        "price_ladder": [],
+        "brand_mentions": 0
+      }
+    },
+    {
+      "domain": "joola-hk.com",
+      "match_kind": "prefix",
+      "discovery_source": "dns_permutation",
+      "classification": "suspect",
+      "is_live": true,
+      "resolved_ips": [
+        "185.230.63.171",
+        "185.230.63.107",
+        "185.230.63.186"
+      ],
+      "infrastructure": {
+        "registrar_name": "Wix.com Ltd.",
+        "registrar_iana_id": 3817,
+        "registrar_abuse_email": "domain-abuse@wix.com",
+        "registrar_abuse_phone": "+14154291173",
+        "registered_at": "2023-11-16",
+        "expires_at": "2027-11-16",
+        "domain_status": [
+          "client transfer prohibited",
+          "client update prohibited"
+        ],
+        "nameservers": [
+          "ns6.wixdns.net",
+          "ns7.wixdns.net"
+        ],
+        "dns_provider": "wixdns"
+      },
+      "snapshot": {
+        "http_status": 200,
+        "final_url": "https://www.joola-hk.com/",
+        "response_headers": {
+          "accept-ranges": "bytes",
+          "age": "2601",
+          "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+          "cache-control": "public,max-age=0,must-revalidate",
+          "content-encoding": "br",
+          "content-language": "en-US",
+          "content-length": "332897",
+          "content-type": "text/html; charset=UTF-8",
+          "date": "Mon, 14 Sep 2026 08:13:06 GMT",
+          "etag": "W/\"2ed8dc6d15cf98b3b4a0ad0fad155c99\"",
+          "glb-x-seen-by": "bS8wRlGzu0Hc+WrYuHB8QIg44yfcdCMJRkBoQ1h6Vjc=",
+          "link": "<https://static.parastorage.com/>; rel=preconnect; crossorigin, <https://static.parastorage.com/>; rel=preconnect, <https://static.wixstatic.com/>; rel=preconnect; crossorigin, <https://static.wixstatic.com/>; rel=preconnect, <https://siteassets.parastorage.com>; rel=preconnect; crossorigin",
+          "server": "Pepyaka",
+          "server-timing": "cache;desc=hit, varnish;desc=hit_hit_stale, dc;desc=fastly_g",
+          "set-cookie": "ssr-caching=cache#desc=hit#varnish=hit_hit_stale#dc#desc=fastly_g; max-age=20",
+          "strict-transport-security": "max-age=31556952",
+          "vary": "Accept-Encoding",
+          "via": "1.1 google",
+          "x-cache": "HIT",
+          "x-cache-status": "HIT",
+          "x-content-type-options": "nosniff",
+          "x-seen-by": "yvSunuo/8ld62ehjr5B7kA==,WD1HRWp6HtwVKpzxLkVT7rxkNjrXdwdgtu6E0yACibU=,7U7NzZSqfMgd9YnjHLtUa7xkNjrXdwdgtu6E0yACibU=,Ua1iSBCTq7qSXjmRCGE1N4feoYTRoJfcfypLnnw8YY4SKOjxCcbbwy6oAJUmYFQEHg7BELI99pG9//pIrgbIJO6Sj/OhVrs3hrJ3tzca3j3lUvseLIIvJkO6XLLWnNdw,2d58ifebGbosy5xc+FRalokJ2dsFLyghRWZ+33TwXC7p7+gSfIaDz1HD0BZQ18ivml/7FTYq76RIHi43D+9zhacaakr2c1lF5fVhujIjogw=,2UNV7KOq4oGjA5+PKsX47P2WsnMQkzaqaUb8Y1bjGakqUshVO4awhZVCZMTGn/DQ,2UNV7KOq4oGjA5+PKsX47MT3AU7Fw0a1PXpOpt10u9IqUshVO4awhZVCZMTGn/DQ",
+          "x-served-by": "cache-bom-vanm7210027-BOM",
+          "x-wix-request-id": "1789373586.441138660055653768"
+        },
+        "html_bytes": 2318393,
+        "html_sha256": "e90602a56172cbc85cea2623ca82a379f9e9b01d342895c9c4b19b39793379ac",
+        "tech_stack": {
+          "cms": "wix",
+          "ecommerce": null,
+          "page_builder": null,
+          "page_builder_version": null
+        },
+        "currency": "USD",
+        "price_ladder": [],
+        "brand_mentions": 166
+      }
+    },
+    {
+      "domain": "joolavn.com",
+      "match_kind": "prefix",
+      "discovery_source": "dns_permutation",
+      "classification": "suspect",
+      "is_live": true,
+      "resolved_ips": [
+        "13.248.169.48",
+        "76.223.54.146"
+      ],
+      "infrastructure": {
+        "registrar_name": "GoDaddy.com, LLC",
+        "registrar_iana_id": 146,
+        "registrar_abuse_email": "abuse@godaddy.com",
+        "registrar_abuse_phone": "480-624-2505",
+        "registered_at": "2024-01-03",
+        "expires_at": "2028-01-03",
+        "domain_status": [
+          "client delete prohibited",
+          "client renew prohibited",
+          "client transfer prohibited",
+          "client update prohibited"
+        ],
+        "nameservers": [
+          "ns3.afternic.com",
+          "ns4.afternic.com"
+        ],
+        "dns_provider": "afternic"
+      },
+      "snapshot": {
+        "http_status": 200,
+        "final_url": "https://joolavn.com/",
+        "response_headers": {
+          "content-length": "114",
+          "content-type": "text/html",
+          "date": "Mon, 14 Sep 2026 08:13:04 GMT"
+        },
+        "html_bytes": 114,
+        "html_sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023",
+        "tech_stack": {
+          "cms": null,
+          "ecommerce": null,
+          "page_builder": null,
+          "page_builder_version": null
+        },
+        "currency": null,
+        "price_ladder": [],
+        "brand_mentions": 0
+      }
+    },
+    {
+      "domain": "joolasports.com",
+      "match_kind": "prefix",
+      "discovery_source": "dns_permutation",
+      "classification": "suspect",
+      "is_live": true,
+      "resolved_ips": [
+        "3.33.130.190",
+        "15.197.148.33",
+        "106.51.92.211"
+      ],
+      "infrastructure": {
+        "registrar_name": "GoDaddy.com, LLC",
+        "registrar_iana_id": 146,
+        "registrar_abuse_email": "abuse@godaddy.com",
+        "registrar_abuse_phone": "480-624-2505",
+        "registered_at": "2024-07-09",
+        "expires_at": "2027-07-09",
+        "domain_status": [
+          "client delete prohibited",
+          "client renew prohibited",
+          "client transfer prohibited",
+          "client update prohibited"
+        ],
+        "nameservers": [
+          "ns15.domaincontrol.com",
+          "ns16.domaincontrol.com"
+        ],
+        "dns_provider": "domaincontrol"
+      },
+      "snapshot": {
+        "http_status": 200,
+        "final_url": "http://joolasports.com/",
+        "response_headers": {
+          "content-length": "114",
+          "content-type": "text/html",
+          "date": "Mon, 14 Sep 2026 08:13:10 GMT"
+        },
+        "html_bytes": 114,
+        "html_sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023",
+        "tech_stack": {
+          "cms": null,
+          "ecommerce": null,
+          "page_builder": null,
+          "page_builder_version": null
+        },
+        "currency": null,
+        "price_ladder": [],
+        "brand_mentions": 0
+      }
+    },
+    {
+      "domain": "joolaphilippines.com",
+      "match_kind": "prefix",
+      "discovery_source": "dns_permutation",
+      "classification": "suspect",
+      "is_live": true,
+      "resolved_ips": [
+        "15.197.225.128",
+        "3.33.251.168"
+      ],
+      "infrastructure": {
+        "registrar_name": "GoDaddy.com, LLC",
+        "registrar_iana_id": 146,
+        "registrar_abuse_email": "abuse@godaddy.com",
+        "registrar_abuse_phone": "480-624-2505",
+        "registered_at": "2024-09-10",
+        "expires_at": "2027-09-10",
+        "domain_status": [
+          "client delete prohibited",
+          "client renew prohibited",
+          "client transfer prohibited",
+          "client update prohibited"
+        ],
+        "nameservers": [
+          "ns47.domaincontrol.com",
+          "ns48.domaincontrol.com"
+        ],
+        "dns_provider": "domaincontrol"
+      },
+      "snapshot": {
+        "http_status": 200,
+        "final_url": "https://www.pickleballph.com/",
+        "response_headers": {
+          "accept-ch": "Sec-CH-Viewport-Width",
+          "alt-svc": "h3=\":443\"; ma=86400",
+          "cdn-cache-control": "no-cache, no-store",
+          "cf-cache-status": "DYNAMIC",
+          "cf-ray": "a3adedf79fb51d45-MAA",
+          "connection": "keep-alive",
+          "content-encoding": "br",
+          "content-language": "en-PH",
+          "content-length": "148135",
+          "content-security-policy": "block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Mon, 14 Sep 2026 08:12:57 GMT",
+          "etag": "\"page_cache:52488765606:IndexController:30bda5ce72c3041272e3141d47898521:6f201cf2d7b2d4a5ee30d7adb864d8bc\"",
+          "link": "<https://cdn.shopify.com>; rel=\"preconnect\", <https://cdn.shopify.com>; rel=\"preconnect\"; crossorigin, <//www.pickleballph.com/cdn/shop/t/14/assets/theme.css?v=67844715326120473541785151699>; as=\"style\"; rel=\"preload\", <//www.pickleballph.com/cdn/shop/t/14/assets/buttons.css?v=153050960260856216031785150669>; as=\"style\"; rel=\"preload\", <//www.pickleballph.com/cdn/shop/t/14/assets/product-review.css?v=151978924494604097971785150669>; as=\"style\"; rel=\"preload\", <//cdn.shopify.com/extensions/01a06ab4-e3aa-7e65-84ae-c8737db6a04f/ot-section-builder-7-107/assets/otsb-style.min.css>; as=\"style\"; rel=\"preload\", <https://cdn.shopify.com/extensions/01a018a8-1dd8-7d3a-b0ce-719c4f3fbeea/sectionhub-theme-sections-31/assets/sh-base.css>; as=\"style\"; rel=\"preload\", <https://cdn.shopify.com/extensions/01a018a8-1dd8-7d3a-b0ce-719c4f3fbeea/sectionhub-theme-sections-31/assets/sh-swiper-bundle.min.css>; as=\"style\"; rel=\"preload\", <https://cdn.shopify.com/extensions/01a018a8-1dd8-7d3a-b0ce-719c4f3fbeea/sectionhub-theme-sections-31/assets/sh-swiper-bundle.min.js>; as=\"script\"; rel=\"preload\", <https://cdn.shopify.com/extensions/01a08fe4-b5ff-786b-835d-1abf359b1ef6/gsc-instagram-feed-83/assets/gsc-instafeed-widget.css>; as=\"style\"; rel=\"preload\"",
+          "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}",
+          "powered-by": "Shopify",
+          "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=P4kSwr6%2FYDYp3JYhKLkKCm%2Ba7kzeiRRbHKiCn5Lb8l1qk9rruZlWEpSJ7sYsyF3wx1B0%2BvH%2B1NOM%2Ffp0QqRdInaXpwv3%2FKmB9NYmxA33ACQDcgB%2BXYwW5P4hDfJiS9MdN%2BM2phfI\"}]}",
+          "server": "cloudflare",
+          "server-timing": "processing;dur=88, db;dur=42, db_async;dur=4.202, asn;desc=\"24309\", edge;desc=\"MAA\", country;desc=\"IN\", theme;desc=\"196364501158\", pageType;desc=\"index\", servedBy;desc=\"7vls\", requestID;desc=\"da6aa90a-a7a7-4a73-b52a-67be19aac06a-1789373576\", _y;desc=\"23cc5a91-f62b-4132-ac66-0197906eced5\", _s;desc=\"1d3da1c7-1281-4c19-a3fe-513959377c42\", _cmp;desc=\"3.AMPS_INKA_f_f_cgrkgdiIRTazW-bewj9TdQ\", compressionLevel;desc=\"5\"",
+          "set-cookie": "_shopify_marketing=:AaCe-ffuAAEAmW_4LP2z6Dhf-vm5qob35AvmQKaZ5qAPPdfZDDbOgwIkBG07vP6ptbYNnr3T4ELqlyrY9GJ_IEhLpGiI70FwmvVLpwEg5TbF-3HMzLaf7vdtTEBrrpOu6fRQyXeq-cBu9hVfD7idNxSj8PI:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax",
+          "shopify-complexity-score": "680",
+          "shopify-complexity-score-v2": "68",
+          "strict-transport-security": "max-age=7889238",
+          "vary": "Accept, accept-encoding",
+          "x-content-type-options": "nosniff",
+          "x-dc": "gcp-asia-southeast1,gcp-asia-southeast1,gcp-asia-southeast1",
+          "x-download-options": "noopen",
+          "x-frame-options": "DENY",
+          "x-permitted-cross-domain-policies": "none",
+          "x-request-id": "da6aa90a-a7a7-4a73-b52a-67be19aac06a-1789373576",
+          "x-xss-protection": "1; mode=block"
+        },
+        "html_bytes": 2007661,
+        "html_sha256": "2fd96c3fed5e786c4fa5a0e9f1e82be9ee080eec545b29ffb09345a9d6784a6f",
+        "tech_stack": {
+          "cms": "shopify",
+          "ecommerce": "shopify",
+          "page_builder": null,
+          "page_builder_version": null
+        },
+        "currency": "IDR",
+        "price_ladder": [],
+        "brand_mentions": 613
+      }
+    },
+    {
+      "domain": "joolaph.com",
+      "match_kind": "prefix",
+      "discovery_source": "dns_permutation",
+      "classification": "suspect",
+      "is_live": true,
+      "resolved_ips": [
+        "3.33.251.168",
+        "15.197.225.128"
+      ],
+      "infrastructure": {
+        "registrar_name": "GoDaddy.com, LLC",
+        "registrar_iana_id": 146,
+        "registrar_abuse_email": "abuse@godaddy.com",
+        "registrar_abuse_phone": "480-624-2505",
+        "registered_at": "2024-09-10",
+        "expires_at": "2027-09-10",
+        "domain_status": [
+          "client delete prohibited",
+          "client renew prohibited",
+          "client transfer prohibited",
+          "client update prohibited"
+        ],
+        "nameservers": [
+          "ns47.domaincontrol.com",
+          "ns48.domaincontrol.com"
+        ],
+        "dns_provider": "domaincontrol"
+      },
+      "snapshot": {
+        "http_status": 200,
+        "final_url": "https://www.pickleballph.com/",
+        "response_headers": {
+          "accept-ch": "Sec-CH-Viewport-Width",
+          "alt-svc": "h3=\":443\"; ma=86400",
+          "cdn-cache-control": "no-cache, no-store",
+          "cf-cache-status": "DYNAMIC",
+          "cf-ray": "a3adee2eec9024f5-MAA",
+          "connection": "keep-alive",
+          "content-encoding": "br",
+          "content-language": "en-PH",
+          "content-length": "148135",
+          "content-security-policy": "block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Mon, 14 Sep 2026 08:13:05 GMT",
+          "etag": "\"page_cache:52488765606:IndexController:30bda5ce72c3041272e3141d47898521:a70f6bfce7d44d8c1a988b2747af6f96\"",
+          "link": "<https://cdn.shopify.com>; rel=\"preconnect\", <https://cdn.shopify.com>; rel=\"preconnect\"; crossorigin, <//www.pickleballph.com/cdn/shop/t/14/assets/theme.css?v=67844715326120473541785151699>; as=\"style\"; rel=\"preload\", <//www.pickleballph.com/cdn/shop/t/14/assets/buttons.css?v=153050960260856216031785150669>; as=\"style\"; rel=\"preload\", <//www.pickleballph.com/cdn/shop/t/14/assets/product-review.css?v=151978924494604097971785150669>; as=\"style\"; rel=\"preload\", <//cdn.shopify.com/extensions/01a06ab4-e3aa-7e65-84ae-c8737db6a04f/ot-section-builder-7-107/assets/otsb-style.min.css>; as=\"style\"; rel=\"preload\", <https://cdn.shopify.com/extensions/01a018a8-1dd8-7d3a-b0ce-719c4f3fbeea/sectionhub-theme-sections-31/assets/sh-base.css>; as=\"style\"; rel=\"preload\", <https://cdn.shopify.com/extensions/01a018a8-1dd8-7d3a-b0ce-719c4f3fbeea/sectionhub-theme-sections-31/assets/sh-swiper-bundle.min.css>; as=\"style\"; rel=\"preload\", <https://cdn.shopify.com/extensions/01a018a8-1dd8-7d3a-b0ce-719c4f3fbeea/sectionhub-theme-sections-31/assets/sh-swiper-bundle.min.js>; as=\"script\"; rel=\"preload\", <https://cdn.shopify.com/extensions/01a08fe4-b5ff-786b-835d-1abf359b1ef6/gsc-instagram-feed-83/assets/gsc-instafeed-widget.css>; as=\"style\"; rel=\"preload\"",
+          "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}",
+          "powered-by": "Shopify",
+          "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=bCyMNCzYqiQJIRstKtN86gbr%2FQcWqmRu4KkTcs6c0Q7zTlVFhIlupG5%2BdvoA90lvDMMAuB640Lmzwa6gQTrzjvENlMwb9JfFqt1BSk0FLp62hJAzST9gjnH3eUZBnKxNPUMhtXzT\"}]}",
+          "server": "cloudflare",
+          "server-timing": "processing;dur=39, db;dur=7, db_async;dur=0.872, asn;desc=\"24309\", edge;desc=\"MAA\", country;desc=\"IN\", theme;desc=\"196364501158\", pageType;desc=\"index\", servedBy;desc=\"ckcm\", requestID;desc=\"4a8abf88-3776-4e93-b02c-1ee7a5d3adfa-1789373585\", _y;desc=\"db4cc277-51c4-4059-86a7-50600c7f205a\", _s;desc=\"8ee9784d-c897-4342-a307-ac292f6c75e8\", _cmp;desc=\"3.AMPS_INKA_f_f_WjMl5znBQuaHQ7A0MImCug\", compressionLevel;desc=\"5\"",
+          "set-cookie": "_shopify_marketing=:AaCe-hnMAAEAiU6pIq3yPfc_RWQn7VTl9SujxSjrIyS6qCZoZTed9LmfI5SlS5-meSgj1FWcXyh_l2HG-8fSIzE1Q3Pu7xBxtLTjP6tTR0kUgtYaNaLtO-XJUInX885w1m1VEK8p5GR5VvykHWl7p0zB6R4:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax",
+          "shopify-complexity-score": "320",
+          "shopify-complexity-score-v2": "32",
+          "strict-transport-security": "max-age=7889238",
+          "vary": "Accept, accept-encoding",
+          "x-content-type-options": "nosniff",
+          "x-dc": "gcp-asia-southeast1,gcp-asia-southeast1,gcp-asia-southeast1",
+          "x-download-options": "noopen",
+          "x-frame-options": "DENY",
+          "x-permitted-cross-domain-policies": "none",
+          "x-request-id": "4a8abf88-3776-4e93-b02c-1ee7a5d3adfa-1789373585",
+          "x-xss-protection": "1; mode=block"
+        },
+        "html_bytes": 2007661,
+        "html_sha256": "75f96a27df49ce78c626fecd0fb9d5d7b56322ab2df57195fb80a53083b81225",
+        "tech_stack": {
+          "cms": "shopify",
+          "ecommerce": "shopify",
+          "page_builder": null,
+          "page_builder_version": null
+        },
+        "currency": "IDR",
+        "price_ladder": [],
+        "brand_mentions": 613
+      }
+    },
+    {
+      "domain": "joolacambodia.com",
+      "match_kind": "prefix",
+      "discovery_source": "dns_permutation",
+      "classification": "suspect",
+      "is_live": true,
+      "resolved_ips": [
+        "198.49.23.144"
+      ],
+      "infrastructure": {
+        "registrar_name": "Squarespace Domains II LLC",
+        "registrar_iana_id": 895,
+        "registrar_abuse_email": "abuse-complaints@squarespace.com",
+        "registrar_abuse_phone": "+1.6466935324",
+        "registered_at": "2025-03-31",
+        "expires_at": "2027-03-31",
+        "domain_status": [
+          "client delete prohibited",
+          "client transfer prohibited"
+        ],
+        "nameservers": [
+          "ns-cloud-c1.googledomains.com",
+          "ns-cloud-c2.googledomains.com",
+          "ns-cloud-c3.googledomains.com",
+          "ns-cloud-c4.googledomains.com"
+        ],
+        "dns_provider": "googledomains"
+      },
+      "snapshot": {
+        "http_status": 200,
+        "final_url": "https://joolacambodia.com/",
+        "response_headers": {
+          "accept-ranges": "bytes",
+          "age": "1629",
+          "content-encoding": "gzip",
+          "content-length": "1101",
+          "content-type": "text/html;charset=utf-8",
+          "date": "Mon, 14 Sep 2026 05:47:14 GMT",
+          "expires": "Thu, 01 Jan 1970 00:00:00 GMT",
+          "server": "Squarespace",
+          "set-cookie": "crumb=BcVyP9goYdbyNWU5ZDg5N2VjZDMwOWUyNzc2YjZiZDQ2MzVmNWQ1;Secure;Path=/",
+          "strict-transport-security": "max-age=15552000",
+          "vary": "Accept-Encoding",
+          "x-content-type-options": "nosniff",
+          "x-contextid": "dlFeEt6V/XyWHUMkC",
+          "x-frame-options": "SAMEORIGIN"
+        },
+        "html_bytes": 3138,
+        "html_sha256": "8e9cc0aa1169899479fe313bb0d2bfebd75cf171ff14ea30b9149c6ffc48753a",
+        "tech_stack": {
+          "cms": "squarespace",
+          "ecommerce": null,
+          "page_builder": null,
+          "page_builder_version": null
+        },
+        "currency": null,
+        "price_ladder": [],
+        "brand_mentions": 1
+      }
+    },
+    {
+      "domain": "joolavn.online",
+      "match_kind": "prefix",
+      "discovery_source": "dns_permutation",
+      "classification": "suspect",
+      "is_live": false,
+      "resolved_ips": [
+        "13.229.38.226"
+      ],
+      "infrastructure": {
+        "registrar_name": "MAT BAO CORPORATION",
+        "registrar_iana_id": 1586,
+        "registrar_abuse_email": "abuse@matbao.com",
+        "registrar_abuse_phone": "+84.2836229999",
+        "registered_at": "2025-05-18",
+        "expires_at": "2027-05-18",
+        "domain_status": [
+          "client transfer prohibited"
+        ],
+        "nameservers": [
+          "ns1.matbao.com",
+          "ns2.matbao.com"
+        ],
+        "dns_provider": "matbao"
+      },
+      "snapshot": null
+    },
+    {
+      "domain": "joolaindia.com",
+      "match_kind": "prefix",
+      "discovery_source": "dns_permutation",
+      "classification": "suspect",
+      "is_live": true,
+      "resolved_ips": [
+        "2.57.91.91",
+        "2a02:4780:84::32"
+      ],
+      "infrastructure": {
+        "registrar_name": "HOSTINGER operations, UAB",
+        "registrar_iana_id": 1636,
+        "registrar_abuse_email": "abuse-tracker@hostinger.com",
+        "registrar_abuse_phone": "+37064503378",
+        "registered_at": "2025-07-03",
+        "expires_at": "2027-07-03",
+        "domain_status": [
+          "client transfer prohibited"
+        ],
+        "nameservers": [
+          "ns1.dns-parking.com",
+          "ns2.dns-parking.com"
+        ],
+        "dns_provider": "dns-parking"
+      },
+      "snapshot": {
+        "http_status": 200,
+        "final_url": "https://sportsnextdoor.com/collections/pickleball-paddle/?filter_brand=joola&orderby=price-desc&query_type_brand=or",
+        "response_headers": {
+          "accept-ch": "Sec-CH-Viewport-Width",
+          "alt-svc": "h3=\":443\"; ma=86400",
+          "cdn-cache-control": "no-cache, no-store",
+          "cf-cache-status": "DYNAMIC",
+          "cf-ray": "a3adedf7af4d9144-MAA",
+          "connection": "keep-alive",
+          "content-encoding": "br",
+          "content-language": "en-IN",
+          "content-length": "112732",
+          "content-security-policy": "block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Mon, 14 Sep 2026 08:12:57 GMT",
+          "etag": "\"page_cache:98892972402:CollectionDetailsController:7a72e7a6864df473b78ba091a03b3eee:306d20054750314293e5072dc7a492b7\"",
+          "link": "<https://cdn.shopify.com>; rel=\"preconnect\", <https://cdn.shopify.com>; rel=\"preconnect\"; crossorigin, <//sportsnextdoor.com/cdn/shop/t/11/assets/base.css?v=16853264282100043371789020622>; as=\"style\"; rel=\"preload\", <https://cdn.shopify.com/extensions/01a09da9-7c70-7d18-9fa4-f403732be7dc/digital-appointments-543/assets/style.css>; as=\"style\"; rel=\"preload\", <//sportsnextdoor.com/cdn/shop/t/11/assets/overflow-list.css?v=16727044177065489451789020622>; as=\"style\"; rel=\"preload\", <//sportsnextdoor.com/cdn/shop/t/11/compiled_assets/styles.css?v=27924289237898021701789020644&subset=AGAAAAAAAAEAEAAAAAAAAAAAAQAAAAAFuDsJhhTAAGPXqAiuCUEWABo>; as=\"style\"; rel=\"preload\"; crossorigin, <//sportsnextdoor.com/cdn/fonts/inter/inter_n4.b2a3f24c19b4de56e8871f609e73ca7f6d2e2bb9.woff2>; as=\"font\"; type=\"font/woff2\"; fetchpriority=\"low\"; crossorigin; rel=\"preload\", <//sportsnextdoor.com/cdn/fonts/inter/inter_n5.d7101d5e168594dd06f56f290dd759fba5431d97.woff2>; as=\"font\"; type=\"font/woff2\"; fetchpriority=\"low\"; crossorigin; rel=\"preload\", <//sportsnextdoor.com/cdn/fonts/inter/inter_n7.02711e6b374660cfc7915d1afc1c204e633421e4.woff2>; as=\"font\"; type=\"font/woff2\"; fetchpriority=\"low\"; crossorigin; rel=\"preload\"",
+          "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}",
+          "powered-by": "Shopify",
+          "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=CHRabMaQgioqM%2Fiu8Dk%2FsDMSk32chyVM%2F8bl1r9zhNmF6j5uWHV2cTIKQi4LT8%2BYM8oH6Zb5aB1vds7zR9PFdlZCZEKqD%2BcSKwpDAhw%2FtrrRCvfRnWwqx%2Fxhb4dzq5ZwJ6QT5w%3D%3D\"}]}",
+          "server": "cloudflare",
+          "server-timing": "processing;dur=50;desc=\"gc:1\", db;dur=16, db_async;dur=2.662, asn;desc=\"24309\", edge;desc=\"MAA\", country;desc=\"IN\", theme;desc=\"193601339762\", pageType;desc=\"collection\", servedBy;desc=\"jlnw\", requestID;desc=\"a0d244fe-b192-45da-af78-fa53ae82c6f2-1789373576\", _y;desc=\"f5ba1028-52e3-4d8a-a4d2-980545ac060f\", _s;desc=\"cc8b8226-c82a-4c44-87f5-61670e64d29b\", _cmp;desc=\"3.AMPS_INKA_f_f_EMGLcEwXS-iKK8K6zce57A\", compressionLevel;desc=\"5\"",
+          "set-cookie": "_shopify_marketing=:AaCe-fdSAAEAox0D9uz2ovOd0e32oqbv_MAjtk0Lb-Amvox5VVleTsj9VFWw5IbYL5EtoEv2kSMqGhyXrWt8L_T93xMdv3-zPmfQQ3vJINnO-upMwxrxMjCI78PIDiN_dWMhKb05qdinO9PBGqEPQTZP73U:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax",
+          "shopify-complexity-score": "390",
+          "shopify-complexity-score-v2": "39",
+          "strict-transport-security": "max-age=7889238",
+          "vary": "Accept, accept-encoding",
+          "x-content-type-options": "nosniff",
+          "x-dc": "gcp-asia-southeast1,gcp-asia-southeast1,gcp-asia-southeast1",
+          "x-download-options": "noopen",
+          "x-frame-options": "DENY",
+          "x-permitted-cross-domain-policies": "none",
+          "x-request-id": "a0d244fe-b192-45da-af78-fa53ae82c6f2-1789373576",
+          "x-xss-protection": "1; mode=block"
+        },
+        "html_bytes": 1085272,
+        "html_sha256": "db2f8892bd8e5ce69d380c2d964571810016a90f182ba1a9248e51f3a572af56",
+        "tech_stack": {
+          "cms": "shopify",
+          "ecommerce": "shopify",
+          "page_builder": null,
+          "page_builder_version": null
+        },
+        "currency": "MYR",
+        "price_ladder": [],
+        "brand_mentions": 476
+      }
+    },
+    {
+      "domain": "joolastore.com",
+      "match_kind": "prefix",
+      "discovery_source": "dns_permutation",
+      "classification": "suspect",
+      "is_live": false,
+      "resolved_ips": [
+        "103.224.212.142"
+      ],
+      "infrastructure": {
+        "registrar_name": "Dynadot Inc",
+        "registrar_iana_id": 472,
+        "registrar_abuse_email": "abuse@dynadot.com",
+        "registrar_abuse_phone": "+16502620100",
+        "registered_at": "2025-08-14",
+        "expires_at": "2027-08-14",
+        "domain_status": [
+          "client transfer prohibited"
+        ],
+        "nameservers": [
+          "5014.ns1.abovedomains.com",
+          "5014.ns2.abovedomains.com"
+        ],
+        "dns_provider": "abovedomains"
+      },
+      "snapshot": null
+    },
+    {
+      "domain": "joolasport.com",
+      "match_kind": "prefix",
+      "discovery_source": "dns_permutation",
+      "classification": "suspect",
+      "is_live": true,
+      "resolved_ips": [
+        "23.227.38.65"
+      ],
+      "infrastructure": {
+        "registrar_name": "NameCheap, Inc.",
+        "registrar_iana_id": 1068,
+        "registrar_abuse_email": "abuse@namecheap.com",
+        "registrar_abuse_phone": "+1.6613102107",
+        "registered_at": "2025-09-19",
+        "expires_at": "2026-09-19",
+        "domain_status": [
+          "client transfer prohibited"
+        ],
+        "nameservers": [
+          "dns1.registrar-servers.com",
+          "dns2.registrar-servers.com"
+        ],
+        "dns_provider": "registrar-servers"
+      },
+      "snapshot": {
+        "http_status": 409,
+        "final_url": "http://joolasport.com/",
+        "response_headers": {
+          "cache-control": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+          "cf-ray": "a3adee48ba4c17aa-MAA",
+          "connection": "close",
+          "content-length": "6453",
+          "content-type": "text/html; charset=UTF-8",
+          "date": "Mon, 14 Sep 2026 08:13:09 GMT",
+          "expires": "Thu, 01 Jan 1970 00:00:01 GMT",
+          "referrer-policy": "same-origin",
+          "server": "cloudflare",
+          "vary": "Accept-Encoding",
+          "x-frame-options": "SAMEORIGIN"
+        },
+        "html_bytes": 6453,
+        "html_sha256": "d2dbde1957a591701ea0ebea5c4f6d0fccc3a301d7da94b5cb2ab4c1409d7ba1",
+        "tech_stack": {
+          "cms": null,
+          "ecommerce": null,
+          "page_builder": null,
+          "page_builder_version": null
+        },
+        "currency": null,
+        "price_ladder": [],
+        "brand_mentions": 3
+      }
+    },
+    {
+      "domain": "joolashop.com",
+      "match_kind": "prefix",
+      "discovery_source": "dns_permutation",
+      "classification": "suspect",
+      "is_live": false,
+      "resolved_ips": [
+        "3.16.117.18"
+      ],
+      "infrastructure": {
+        "registrar_name": "NameCheap, Inc.",
+        "registrar_iana_id": 1068,
+        "registrar_abuse_email": "abuse@namecheap.com",
+        "registrar_abuse_phone": "+1.6613102107",
+        "registered_at": "2025-09-30",
+        "expires_at": "2026-09-30",
+        "domain_status": [
+          "client transfer prohibited"
+        ],
+        "nameservers": [
+          "dns1.registrar-servers.com",
+          "dns2.registrar-servers.com"
+        ],
+        "dns_provider": "registrar-servers"
+      },
+      "snapshot": null
+    },
+    {
+      "domain": "joolapaddle.com",
+      "match_kind": "prefix",
+      "discovery_source": "dns_permutation",
+      "classification": "suspect",
+      "is_live": false,
+      "resolved_ips": [
+        "3.16.117.18"
+      ],
+      "infrastructure": {
+        "registrar_name": "NameCheap, Inc.",
+        "registrar_iana_id": 1068,
+        "registrar_abuse_email": "abuse@namecheap.com",
+        "registrar_abuse_phone": "+1.6613102107",
+        "registered_at": "2025-10-02",
+        "expires_at": "2026-10-02",
+        "domain_status": [
+          "client transfer prohibited"
+        ],
+        "nameservers": [
+          "dns1.registrar-servers.com",
+          "dns2.registrar-servers.com"
+        ],
+        "dns_provider": "registrar-servers"
+      },
+      "snapshot": null
+    },
+    {
+      "domain": "joolaau.com",
+      "match_kind": "prefix",
+      "discovery_source": "dns_permutation",
+      "classification": "suspect",
+      "is_live": true,
+      "resolved_ips": [
+        "23.227.38.65"
+      ],
+      "infrastructure": {
+        "registrar_name": "Name.com, Inc.",
+        "registrar_iana_id": 625,
+        "registrar_abuse_email": "abuse@name.com",
+        "registrar_abuse_phone": "7202492374",
+        "registered_at": "2025-10-09",
+        "expires_at": "2027-10-09",
+        "domain_status": [
+          "client transfer prohibited"
+        ],
+        "nameservers": [
+          "ns1dnx.name.com",
+          "ns2fkr.name.com",
+          "ns3jnr.name.com",
+          "ns4bfy.name.com"
+        ],
+        "dns_provider": "name"
+      },
+      "snapshot": {
+        "http_status": 200,
+        "final_url": "https://joolaau.com/",
+        "response_headers": {
+          "accept-ch": "Sec-CH-Viewport-Width",
+          "alt-svc": "h3=\":443\"; ma=86400",
+          "cdn-cache-control": "no-cache, no-store",
+          "cf-cache-status": "DYNAMIC",
+          "cf-ray": "a3adee2edef97f17-MAA",
+          "connection": "keep-alive",
+          "content-encoding": "br",
+          "content-language": "en-IN",
+          "content-length": "53991",
+          "content-security-policy": "block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Mon, 14 Sep 2026 08:13:05 GMT",
+          "etag": "\"page_cache:78466187454:IndexController:5cf036e62266443e481c52de475251e7:1eaca3c2731a06b6a44b97cbbd86078a\"",
+          "link": "<https://cdn.shopify.com>; rel=\"preconnect\", <https://cdn.shopify.com>; rel=\"preconnect\"; crossorigin, <//joolaau.com/cdn/shop/t/2/assets/base.css?v=141902850752187814751789098522>; as=\"style\"; rel=\"preload\", <//joolaau.com/cdn/shop/t/2/assets/overflow-list.css?v=16727044177065489451789045339>; as=\"style\"; rel=\"preload\", <https://joolaau.com/cdn/shopifycloud/portable-wallets/latest/accelerated-checkout-backwards-compat.css>; as=\"style\"; rel=\"preload\"; crossorigin, <//joolaau.com/cdn/shop/t/2/compiled_assets/styles.css?v=105304358758450276061789045343>; as=\"style\"; rel=\"preload\", <//joolaau.com/cdn/fonts/inter/inter_n4.b2a3f24c19b4de56e8871f609e73ca7f6d2e2bb9.woff2>; as=\"font\"; type=\"font/woff2\"; fetchpriority=\"low\"; crossorigin; rel=\"preload\", <//joolaau.com/cdn/fonts/inter/inter_n5.d7101d5e168594dd06f56f290dd759fba5431d97.woff2>; as=\"font\"; type=\"font/woff2\"; fetchpriority=\"low\"; crossorigin; rel=\"preload\", <//joolaau.com/cdn/fonts/inter/inter_n7.02711e6b374660cfc7915d1afc1c204e633421e4.woff2>; as=\"font\"; type=\"font/woff2\"; fetchpriority=\"low\"; crossorigin; rel=\"preload\"",
+          "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}",
+          "powered-by": "Shopify",
+          "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=TuvziYQMVkKc3ZFgQPWKULMEkdhLLcajyfcI0A8qzkNlMRwbUMHRBeslShv3CdXf0kAVInlwSglm4%2FgKMqqZu9p6MyMmnhiJNxC2gmtDAPk8OLM45BdvNNxKPIOd\"}]}",
+          "server": "cloudflare",
+          "server-timing": "processing;dur=43, db;dur=10, db_async;dur=2.185, asn;desc=\"24309\", edge;desc=\"MAA\", country;desc=\"IN\", theme;desc=\"157748003006\", pageType;desc=\"index\", servedBy;desc=\"p5kz\", requestID;desc=\"b7184271-daec-4368-841a-7dd0b4bfdcee-1789373585\", _y;desc=\"7aeeed01-281e-4a8a-8774-311d8bd32df5\", _s;desc=\"3f836735-14cd-4f24-baca-174ac415f496\", _cmp;desc=\"3.AMPS_INKA_f_f_11lmoN7yT4y*6W*xSTgMzw\", compressionLevel;desc=\"5\"",
+          "set-cookie": "_shopify_marketing=:AaCe-hm4AAEA3nqELWM_B4DSfiiVnAZqYDsGv43FmZqlgFGe48VEuZrfVwQcjGvZxDxABOSOq_2Wqr2DhKkSVniARtqT3je8eUV2uDRCEXYGlKdxXOoonmqL6uhq38VCK3yEdyLYvoy-iu1aT0KcPcvh_w8:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax",
+          "shopify-complexity-score": "360",
+          "shopify-complexity-score-v2": "36",
+          "strict-transport-security": "max-age=7889238",
+          "vary": "Accept, accept-encoding",
+          "x-content-type-options": "nosniff",
+          "x-dc": "gcp-asia-southeast1,gcp-asia-southeast1,gcp-asia-southeast1",
+          "x-download-options": "noopen",
+          "x-frame-options": "DENY",
+          "x-permitted-cross-domain-policies": "none",
+          "x-request-id": "b7184271-daec-4368-841a-7dd0b4bfdcee-1789373585",
+          "x-xss-protection": "1; mode=block"
+        },
+        "html_bytes": 831533,
+        "html_sha256": "002ecc1e637498eed18f56096589351d4770f92a42d7b16fc072d7f15ba2c4f2",
+        "tech_stack": {
+          "cms": "shopify",
+          "ecommerce": "shopify",
+          "page_builder": null,
+          "page_builder_version": null
+        },
+        "currency": "USD",
+        "price_ladder": [],
+        "brand_mentions": 244
+      }
+    },
+    {
+      "domain": "joolasale.shop",
+      "match_kind": "prefix",
+      "discovery_source": "dns_permutation",
+      "classification": "suspect",
+      "is_live": true,
+      "resolved_ips": [
+        "104.16.211.68"
+      ],
+      "infrastructure": {
+        "registrar_name": "Xinnet Technology Corporation",
+        "registrar_iana_id": 120,
+        "registrar_abuse_email": null,
+        "registrar_abuse_phone": null,
+        "registered_at": "2025-10-20",
+        "expires_at": "2026-10-20",
+        "domain_status": [
+          "active"
+        ],
+        "nameservers": [
+          "ns1.alidns.com",
+          "ns2.alidns.com"
+        ],
+        "dns_provider": "alidns"
+      },
+      "snapshot": {
+        "http_status": 409,
+        "final_url": "http://joolasale.shop/",
+        "response_headers": {
+          "cache-control": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+          "cf-ray": "a3adee443f663c00-BLR",
+          "connection": "close",
+          "content-length": "6453",
+          "content-type": "text/html; charset=UTF-8",
+          "date": "Mon, 14 Sep 2026 08:13:09 GMT",
+          "expires": "Thu, 01 Jan 1970 00:00:01 GMT",
+          "referrer-policy": "same-origin",
+          "server": "cloudflare",
+          "vary": "Accept-Encoding",
+          "x-frame-options": "SAMEORIGIN"
+        },
+        "html_bytes": 6453,
+        "html_sha256": "232e60a34f30e18eaafcbdcf6ee65755d3fd213bc55acc4d221f7d77658ec7ad",
+        "tech_stack": {
+          "cms": null,
+          "ecommerce": null,
+          "page_builder": null,
+          "page_builder_version": null
+        },
+        "currency": null,
+        "price_ladder": [],
+        "brand_mentions": 3
+      }
+    },
+    {
+      "domain": "joolavn.store",
+      "match_kind": "prefix",
+      "discovery_source": "dns_permutation",
+      "classification": "suspect",
+      "is_live": true,
+      "resolved_ips": [
+        "103.28.36.94"
+      ],
+      "infrastructure": {
+        "registrar_name": "Nhan Hoa Software Company Ltd",
+        "registrar_iana_id": 1710,
+        "registrar_abuse_email": "hdung@nhanhoa.com",
+        "registrar_abuse_phone": "+84.473086680",
+        "registered_at": "2025-10-24",
+        "expires_at": "2026-10-24",
+        "domain_status": [
+          "client transfer prohibited"
+        ],
+        "nameservers": [
+          "ns1.zonedns.vn",
+          "ns2.zonedns.vn",
+          "ns3.zonedns.vn",
+          "ns4.zonedns.vn"
+        ],
+        "dns_provider": "zonedns"
+      },
+      "snapshot": {
+        "http_status": 200,
+        "final_url": "https://www.joolavn.store/",
+        "response_headers": {
+          "cache-control": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0, max-age=0",
+          "connection": "keep-alive",
+          "content-encoding": "br",
+          "content-security-policy": "upgrade-insecure-requests; default-src data: 'unsafe-inline' 'unsafe-eval' https:; script-src data: 'unsafe-inline' 'unsafe-eval' https: blob: https://www.googleanalytics.com https://www.google-analytics.com https://www.googleoptimize.com https://optimize.google.com https://td.doubleclick.net https://fburl.com https://www.facebook.com https://connect.facebook.net; style-src data: 'unsafe-inline' https: https://optimize.google.com https://fonts.googleapis.com https://w.ladicdn.com https://s.ladicdn.com; img-src data: https: blob: android-webview-video-poster: https://www.google-analytics.com https://www.googletagmanager.com https://optimize.google.com https://w.ladicdn.com https://s.ladicdn.com; font-src data: https: https://fonts.gstatic.com https://w.ladicdn.com https://s.ladicdn.com; connect-src https: wss: blob:; media-src data: https: blob:; object-src https:; child-src https: data: blob:; form-action https:; frame-ancestors 'self' https://popupx.ladi.me https://*.ladi.me https://s.ladicdn.com https://g.ladicdn.com https://w.ladicdn.com https://*.ladicdn.com https://www.facebook.com https://*.facebook.com",
+          "content-type": "text/html",
+          "date": "Mon, 14 Sep 2026 08:13:07 GMT",
+          "server": "openresty",
+          "set-cookie": "d_brotli=1; Path=/",
+          "statuscode": "502",
+          "strict-transport-security": "max-age=31536000; includeSubDomains",
+          "transfer-encoding": "chunked",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "SAMEORIGIN",
+          "x-ldp": "linode",
+          "x-xss-protection": "1; mode=block"
+        },
+        "html_bytes": 25319,
+        "html_sha256": "3b8a21beff2c38dad1d682f7876cf1233fd7a8325b99292400828b6d9c4b3c38",
+        "tech_stack": {
+          "cms": null,
+          "ecommerce": null,
+          "page_builder": null,
+          "page_builder_version": null
+        },
+        "currency": null,
+        "price_ladder": [],
+        "brand_mentions": 0
+      }
+    },
+    {
+      "domain": "joolastore.shop",
+      "match_kind": "prefix",
+      "discovery_source": "dns_permutation",
+      "classification": "suspect",
+      "is_live": true,
+      "resolved_ips": [
+        "104.18.18.207"
+      ],
+      "infrastructure": {
+        "registrar_name": "Xinnet Technology Corporation",
+        "registrar_iana_id": 120,
+        "registrar_abuse_email": null,
+        "registrar_abuse_phone": null,
+        "registered_at": "2025-10-31",
+        "expires_at": "2026-10-31",
+        "domain_status": [
+          "active"
+        ],
+        "nameservers": [
+          "ns1.alidns.com",
+          "ns2.alidns.com"
+        ],
+        "dns_provider": "alidns"
+      },
+      "snapshot": {
+        "http_status": 200,
+        "final_url": "https://joolastore.shop/",
+        "response_headers": {
+          "cf-cache-status": "DYNAMIC",
+          "cf-ray": "a3adee3dddbb7fb3-MAA",
+          "connection": "keep-alive",
+          "content-encoding": "gzip",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Mon, 14 Sep 2026 08:13:08 GMT",
+          "execution-time": "0.0436558723",
+          "server": "cloudflare",
+          "set-cookie": "__cf_bm=lMJ8XlksHYhKAIcXEEKoeenzj4dv4d8S1afulPqleQc-1789373588.1385894-1.0.1.1-M3aiI3lg43Kw.etzC0DzUaFksB5JwRISYhFA1RUIsQTXN0XZSZcAVz0STF3dr2oZL.uFT7eA.jnpl06_jc0F1N5n0cICZO0atzCmQ_Q2jkr.ezjWRIQqxoyjrpUQi5oO; HttpOnly; SameSite=None; Secure; Path=/; Domain=joolastore.shop; Expires=Mon, 14 Sep 2026 08:43:08 GMT",
+          "trace_id": "FC1AE74E-5687-3213-BD56-11AACFD8D28C",
+          "transfer-encoding": "chunked",
+          "vary": "Accept-Encoding"
+        },
+        "html_bytes": 397336,
+        "html_sha256": "7a6f7e04a78b9bce24968448cc4cee34e400db7ea8853d393013f93607f56ed8",
+        "tech_stack": {
+          "cms": null,
+          "ecommerce": null,
+          "page_builder": null,
+          "page_builder_version": null
+        },
+        "currency": "USD",
+        "price_ladder": [],
+        "brand_mentions": 3
+      }
+    },
+    {
+      "domain": "joola-sale.shop",
+      "match_kind": "prefix",
+      "discovery_source": "dns_permutation",
+      "classification": "suspect",
+      "is_live": false,
+      "resolved_ips": [
+        "34.107.197.191"
+      ],
+      "infrastructure": {
+        "registrar_name": "NameSilo",
+        "registrar_iana_id": 1479,
+        "registrar_abuse_email": "abuse@namesilo.com",
+        "registrar_abuse_phone": "+1.4805240066",
+        "registered_at": "2025-12-13",
+        "expires_at": "2026-12-13",
+        "domain_status": [
+          "client transfer prohibited"
+        ],
+        "nameservers": [
+          "ns1.dnsowl.com",
+          "ns2.dnsowl.com",
+          "ns3.dnsowl.com"
+        ],
+        "dns_provider": "dnsowl"
+      },
+      "snapshot": null
+    },
+    {
+      "domain": "joolausa.shop",
+      "match_kind": "prefix",
+      "discovery_source": "dns_permutation",
+      "classification": "suspect",
+      "is_live": false,
+      "resolved_ips": [
+        "188.244.119.61"
+      ],
+      "infrastructure": {
+        "registrar_name": "Spaceship, Inc.",
+        "registrar_iana_id": 3862,
+        "registrar_abuse_email": "abuse@spaceship.com",
+        "registrar_abuse_phone": "+1.6613102107",
+        "registered_at": "2026-03-18",
+        "expires_at": "2027-03-18",
+        "domain_status": [
+          "client transfer prohibited"
+        ],
+        "nameservers": [
+          "amos.ns.cloudflare.com",
+          "millie.ns.cloudflare.com"
+        ],
+        "dns_provider": "cloudflare"
+      },
+      "snapshot": null
+    },
+    {
+      "domain": "joolamexico.com",
+      "match_kind": "prefix",
+      "discovery_source": "dns_permutation",
+      "classification": "suspect",
+      "is_live": true,
+      "resolved_ips": [
+        "2.57.91.91"
+      ],
+      "infrastructure": {
+        "registrar_name": "HOSTINGER operations, UAB",
+        "registrar_iana_id": 1636,
+        "registrar_abuse_email": "abuse-tracker@hostinger.com",
+        "registrar_abuse_phone": "+37064503378",
+        "registered_at": "2026-03-20",
+        "expires_at": "2027-03-20",
+        "domain_status": [
+          "client transfer prohibited"
+        ],
+        "nameservers": [
+          "ns1.dns-parking.com",
+          "ns2.dns-parking.com"
+        ],
+        "dns_provider": "dns-parking"
+      },
+      "snapshot": {
+        "http_status": 200,
+        "final_url": "https://joolamexico.com/",
+        "response_headers": {
+          "alt-svc": "h3=\":443\"; ma=86400",
+          "cache-control": "no-store",
+          "connection": "close",
+          "content-encoding": "br",
+          "content-type": "text/html",
+          "date": "Mon, 14 Sep 2026 08:13:03 GMT",
+          "server": "hcdn",
+          "transfer-encoding": "chunked",
+          "x-hcdn-request-id": "3f2596273d1d7a193d5a53bdcbee1d99-mum-edge9"
+        },
+        "html_bytes": 32079,
+        "html_sha256": "b3036a68ba717a3a1f9b27f8cadca8788c5eec85d0372330284cd7370afc6b73",
+        "tech_stack": {
+          "cms": null,
+          "ecommerce": null,
+          "page_builder": null,
+          "page_builder_version": null
+        },
+        "currency": "USD",
+        "price_ladder": [],
+        "brand_mentions": 0
+      }
+    },
+    {
+      "domain": "joolashop.shop",
+      "match_kind": "prefix",
+      "discovery_source": "dns_permutation",
+      "classification": "suspect",
+      "is_live": true,
+      "resolved_ips": [
+        "162.222.90.3"
+      ],
+      "infrastructure": {
+        "registrar_name": "Dynadot Inc.",
+        "registrar_iana_id": 472,
+        "registrar_abuse_email": "abuse@dynadot.com",
+        "registrar_abuse_phone": "+1.6502620100",
+        "registered_at": "2026-04-17",
+        "expires_at": "2027-04-17",
+        "domain_status": [
+          "client transfer prohibited"
+        ],
+        "nameservers": [
+          "bradley.ns.cloudflare.com",
+          "lana.ns.cloudflare.com"
+        ],
+        "dns_provider": "cloudflare"
+      },
+      "snapshot": {
+        "http_status": 200,
+        "final_url": "https://joolashop.shop/",
+        "response_headers": {
+          "alt-svc": "h3=\":443\"; ma=2592000",
+          "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+          "content-encoding": "gzip",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Mon, 14 Sep 2026 08:13:08 GMT",
+          "link": "</_s/_next/static/css/6b4b372a5c6052ba.css>; rel=preload; as=\"style\"",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "set-cookie": "_site_domain=joolashop.shop; Path=/; Expires=Tue, 14 Sep 2027 08:13:08 GMT; Max-Age=31536000",
+          "transfer-encoding": "chunked",
+          "vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Accept-Encoding",
+          "via": "1.1 Caddy",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "SAMEORIGIN",
+          "x-xss-protection": "1; mode=block"
+        },
+        "html_bytes": 228583,
+        "html_sha256": "dd8d1cb41037d25f7b98ab3c82d756e01e380371c41ba436f20f92433fb434e1",
+        "tech_stack": {
+          "cms": null,
+          "ecommerce": "woocommerce",
+          "page_builder": null,
+          "page_builder_version": null
+        },
+        "currency": "EUR",
+        "price_ladder": [],
+        "brand_mentions": 275
+      }
+    },
+    {
+      "domain": "joolaonline.shop",
+      "match_kind": "prefix",
+      "discovery_source": "dns_permutation",
+      "classification": "suspect",
+      "is_live": true,
+      "resolved_ips": [
+        "23.252.79.157"
+      ],
+      "infrastructure": {
+        "registrar_name": "Dynadot Inc.",
+        "registrar_iana_id": 472,
+        "registrar_abuse_email": "abuse@dynadot.com",
+        "registrar_abuse_phone": "+1.6502620100",
+        "registered_at": "2026-05-20",
+        "expires_at": "2027-05-20",
+        "domain_status": [
+          "client transfer prohibited"
+        ],
+        "nameservers": [
+          "arturo.ns.cloudflare.com",
+          "surina.ns.cloudflare.com"
+        ],
+        "dns_provider": "cloudflare"
+      },
+      "snapshot": {
+        "http_status": 200,
+        "final_url": "https://joolaonline.shop/",
+        "response_headers": {
+          "alt-svc": "h3=\":443\"; ma=2592000",
+          "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+          "content-encoding": "gzip",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Mon, 14 Sep 2026 08:13:10 GMT",
+          "link": "</_s/_next/static/css/6b4b372a5c6052ba.css>; rel=preload; as=\"style\"",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "set-cookie": "_site_domain=joolaonline.shop; Path=/; Expires=Tue, 14 Sep 2027 08:13:10 GMT; Max-Age=31536000",
+          "transfer-encoding": "chunked",
+          "vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Accept-Encoding",
+          "via": "1.1 Caddy",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "SAMEORIGIN",
+          "x-xss-protection": "1; mode=block"
+        },
+        "html_bytes": 285579,
+        "html_sha256": "bfe6cefbf2dc6dcb86546c4d290f1556e64dd077a6c2a6f59264dd7626c20131",
+        "tech_stack": {
+          "cms": null,
+          "ecommerce": "woocommerce",
+          "page_builder": null,
+          "page_builder_version": null
+        },
+        "currency": "EUR",
+        "price_ladder": [],
+        "brand_mentions": 239
+      }
+    },
+    {
+      "domain": "joolasport.store",
+      "match_kind": "prefix",
+      "discovery_source": "dns_permutation",
+      "classification": "suspect",
+      "is_live": true,
+      "resolved_ips": [
+        "23.227.38.65"
+      ],
+      "infrastructure": {
+        "registrar_name": "NameCheap, Inc.",
+        "registrar_iana_id": 1068,
+        "registrar_abuse_email": "abuse@namecheap.com",
+        "registrar_abuse_phone": "+1.9854014545",
+        "registered_at": "2026-06-08",
+        "expires_at": "2027-06-08",
+        "domain_status": [
+          "client transfer prohibited"
+        ],
+        "nameservers": [
+          "dns1.registrar-servers.com",
+          "dns2.registrar-servers.com"
+        ],
+        "dns_provider": "registrar-servers"
+      },
+      "snapshot": {
+        "http_status": 404,
+        "final_url": "https://joolasport.store/",
+        "response_headers": {
+          "alt-svc": "h3=\":443\"; ma=86400",
+          "cache-control": "private, no-store",
+          "cdn-cache-control": "no-cache, no-store",
+          "cf-cache-status": "DYNAMIC",
+          "cf-ray": "a3adee4978771f33-MAA",
+          "connection": "keep-alive",
+          "content-encoding": "br",
+          "content-language": "en-IN",
+          "content-length": "48520",
+          "content-security-policy": "block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Mon, 14 Sep 2026 08:13:10 GMT",
+          "etag": "\"page_cache:101063033198:NotFoundController:dd5451f24a9a0b88d4e1b8547d8a38e9:198a497ebbb9a6af7a6ac115b57ee338\"",
+          "link": "<https://cdn.shopify.com>; rel=\"preconnect\", <https://cdn.shopify.com>; rel=\"preconnect\"; crossorigin, <//joolasport.store/cdn/shop/t/2/assets/cart-drawer-premium.css?v=123429935593902555511784974780>; as=\"style\"; rel=\"preload\", <//joolasport.store/cdn/shop/t/2/assets/base.css?v=1612939799648242751784973548>; as=\"style\"; rel=\"preload\"",
+          "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}",
+          "powered-by": "Shopify",
+          "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=0uL1dx6DRrBF9A45kEknchnaFqfXwh9soiE8n0saHnhKzMH65fhoZ7zYT0EtcvO4wDnkVtw%2Bg%2FKqZQqDjjUs0NAEzTPVStCdsLd7XvY6M0Gb%2BtS8puYddDB0faEqtZuzuHc%3D\"}]}",
+          "server": "cloudflare",
+          "server-timing": "processing;dur=115, db;dur=29, db_async;dur=47.954, asn;desc=\"24309\", edge;desc=\"MAA\", country;desc=\"IN\", theme;desc=\"192444825966\", pageType;desc=\"404\", servedBy;desc=\"wzz6\", requestID;desc=\"5b7fbf78-09fe-4af0-ac2b-6e78cacaa27e-1789373589\", _y;desc=\"660aa6d1-15b1-4f1f-9962-63370797fd7c\", _s;desc=\"612cfd1c-ec92-4789-98ec-1af876b89fac\", _cmp;desc=\"3.AMPS_INKA_f_f_YjoV3PMZS2asX2-uaIKsnA\", compressionLevel;desc=\"5\"",
+          "set-cookie": "_shopify_marketing=:AaCe-iqoAAEA1VuyB782BBGX-dLsakwAn_fBT5nipHqTjm-VKlP1EautGsEOnbENI9dsx1HXd6TQ7oWVCkONN1tKl5DHxhQEZWkhcFRlvRAjRW8DSKkJuexCzlvaV02kHDqDPgPKVuvg9BzK0MAfIPabXdo:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax",
+          "shopify-complexity-score": "2160",
+          "shopify-complexity-score-v2": "216",
+          "strict-transport-security": "max-age=7889238",
+          "vary": "Accept, accept-encoding",
+          "x-content-type-options": "nosniff",
+          "x-dc": "gcp-asia-southeast1,gcp-asia-southeast1,gcp-asia-southeast1",
+          "x-download-options": "noopen",
+          "x-frame-options": "DENY",
+          "x-permitted-cross-domain-policies": "none",
+          "x-request-id": "5b7fbf78-09fe-4af0-ac2b-6e78cacaa27e-1789373589",
+          "x-xss-protection": "1; mode=block"
+        },
+        "html_bytes": 362666,
+        "html_sha256": "8720ea76f52d012d18c16c4c22d81b5eebe7e0cb42f79c6b4c2306cba54fd792",
+        "tech_stack": {
+          "cms": "shopify",
+          "ecommerce": "shopify",
+          "page_builder": null,
+          "page_builder_version": null
+        },
+        "currency": "USD",
+        "price_ladder": [],
+        "brand_mentions": 937
+      }
+    },
+    {
+      "domain": "joolapickleball.shop",
+      "match_kind": "prefix",
+      "discovery_source": "dns_permutation",
+      "classification": "suspect",
+      "is_live": false,
+      "resolved_ips": [
+        "13.229.38.226"
+      ],
+      "infrastructure": {
+        "registrar_name": "Namecheap, Inc.",
+        "registrar_iana_id": 1068,
+        "registrar_abuse_email": "abuse@namecheap.com",
+        "registrar_abuse_phone": "+1.6613102107",
+        "registered_at": "2026-07-03",
+        "expires_at": "2027-07-03",
+        "domain_status": [
+          "client transfer prohibited"
+        ],
+        "nameservers": [
+          "dns1.registrar-servers.com",
+          "dns2.registrar-servers.com"
+        ],
+        "dns_provider": "registrar-servers"
+      },
+      "snapshot": null
+    },
+    {
+      "domain": "joola-sport.com",
+      "match_kind": "prefix",
+      "discovery_source": "dns_permutation",
+      "classification": "suspect",
+      "is_live": true,
+      "resolved_ips": [
+        "23.227.38.65"
+      ],
+      "infrastructure": {
+        "registrar_name": "NameCheap, Inc.",
+        "registrar_iana_id": 1068,
+        "registrar_abuse_email": "abuse@namecheap.com",
+        "registrar_abuse_phone": "+1.6613102107",
+        "registered_at": "2026-07-14",
+        "expires_at": "2027-07-14",
+        "domain_status": [
+          "client transfer prohibited"
+        ],
+        "nameservers": [
+          "dns1.registrar-servers.com",
+          "dns2.registrar-servers.com"
+        ],
+        "dns_provider": "registrar-servers"
+      },
+      "snapshot": {
+        "http_status": 404,
+        "final_url": "https://joola-sport.com/",
+        "response_headers": {
+          "alt-svc": "h3=\":443\"; ma=86400",
+          "cache-control": "private, no-store",
+          "cdn-cache-control": "no-cache, no-store",
+          "cf-cache-status": "DYNAMIC",
+          "cf-ray": "a3adee46ca35d5ee-MAA",
+          "connection": "keep-alive",
+          "content-encoding": "br",
+          "content-language": "en-AU",
+          "content-length": "54851",
+          "content-security-policy": "block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Mon, 14 Sep 2026 08:13:09 GMT",
+          "etag": "\"page_cache:82843336958:NotFoundController:e4e52567f10f121c56bb9c3e7ebc1292:1da21ba87dc5c4fcaeecc9927066f209\"",
+          "link": "<https://cdn.shopify.com>; rel=\"preconnect\", <https://cdn.shopify.com>; rel=\"preconnect\"; crossorigin, <//joola-sport.com/cdn/shop/t/2/assets/cart-drawer-premium.css?v=123429935593902555511788346165>; as=\"style\"; rel=\"preload\", <//joola-sport.com/cdn/shop/t/2/assets/base.css?v=1612939799648242751788346165>; as=\"style\"; rel=\"preload\", <https://joola-sport.com/cdn/shopifycloud/portable-wallets/latest/accelerated-checkout-backwards-compat.css>; as=\"style\"; rel=\"preload\"; crossorigin",
+          "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}",
+          "powered-by": "Shopify",
+          "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=0UYuGZ4PycC4rnk2TC80k7P%2FHD35fjMTrTi6%2FbhxlWfqM0%2FsPGf%2FIbSKiZPZjld48zizBgXMBKXOf%2BvyV91CQyZFZH96BdC288ocoQ10InYkUQcx55ADtLV7EV1CZ%2F3W0g%3D%3D\"}]}",
+          "server": "cloudflare",
+          "server-timing": "processing;dur=153;desc=\"gc:2\", db;dur=60, db_async;dur=48.316, asn;desc=\"24309\", edge;desc=\"MAA\", country;desc=\"IN\", theme;desc=\"161809596670\", pageType;desc=\"404\", servedBy;desc=\"29ht\", requestID;desc=\"a51a30d5-46ae-4c7e-a0ba-2063eba9c46d-1789373589\", _y;desc=\"42af0fb5-c092-4fa1-a2b8-ec96a0da8e97\", _s;desc=\"63cc3b27-e262-4e45-9e41-a07df2a5f6d6\", _cmp;desc=\"3.AMPS_INKA_f_f_-axQVsQ-T3m44fv3dV0BLg\", compressionLevel;desc=\"5\"",
+          "set-cookie": "_shopify_marketing=:AaCe-ikbAAEAj1nyxR4AU_BR5Yby1DBjrfgCH3NDwG4UUSw4xFCqOBF_1DPw2KGkKbQS27Sns9MzgqzqvSW_I7S_ucWYVqUtLfzZj-BkRRq2wABNhhpSOtagxDpvbNPw2eV28QZRJ47uCZQBoKgZSxf7MkA:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax",
+          "shopify-complexity-score": "2840",
+          "shopify-complexity-score-v2": "284",
+          "strict-transport-security": "max-age=7889238",
+          "vary": "Accept, accept-encoding",
+          "x-content-type-options": "nosniff",
+          "x-dc": "gcp-asia-southeast1,gcp-asia-southeast1,gcp-asia-southeast1",
+          "x-download-options": "noopen",
+          "x-frame-options": "DENY",
+          "x-permitted-cross-domain-policies": "none",
+          "x-request-id": "a51a30d5-46ae-4c7e-a0ba-2063eba9c46d-1789373589",
+          "x-xss-protection": "1; mode=block"
+        },
+        "html_bytes": 389258,
+        "html_sha256": "e1ff6b4ac5fa535f877b54b33f6aca4af5e522fbd79748911214c2c5bccd0ede",
+        "tech_stack": {
+          "cms": "shopify",
+          "ecommerce": "shopify",
+          "page_builder": null,
+          "page_builder_version": null
+        },
+        "currency": "USD",
+        "price_ladder": [],
+        "brand_mentions": 1021
+      }
+    },
+    {
+      "domain": "joolauk.com",
+      "match_kind": "prefix",
+      "discovery_source": "dns_permutation",
+      "classification": "suspect",
+      "is_live": true,
+      "resolved_ips": [
+        "104.160.5.144"
+      ],
+      "infrastructure": {
+        "registrar_name": "Hongkong Kouming International Limited",
+        "registrar_iana_id": 3972,
+        "registrar_abuse_email": "abuse@kouming.com",
+        "registrar_abuse_phone": "852 55737874",
+        "registered_at": "2026-07-20",
+        "expires_at": "2027-07-20",
+        "domain_status": [
+          "active"
+        ],
+        "nameservers": [
+          "lovisa.ns.cloudflare.com",
+          "memphis.ns.cloudflare.com"
+        ],
+        "dns_provider": "cloudflare"
+      },
+      "snapshot": {
+        "http_status": 200,
+        "final_url": "https://www.joolauk.com/",
+        "response_headers": {
+          "connection": "Keep-Alive",
+          "content-type": "text/html; charset=UTF-8",
+          "date": "Mon, 14 Sep 2026 08:13:00 GMT",
+          "keep-alive": "timeout=5, max=100",
+          "server": "Apache",
+          "transfer-encoding": "chunked"
+        },
+        "html_bytes": 303868,
+        "html_sha256": "5fc4845ecdf113f911bd9090912bacec89f5030373bed93f25774f5ca15b815d",
+        "tech_stack": {
+          "cms": "wordpress",
+          "ecommerce": "woocommerce",
+          "page_builder": "elementor",
+          "page_builder_version": "3.35.6"
+        },
+        "currency": null,
+        "price_ladder": [
+          {
+            "regular_price": 218.2,
+            "sale_price": 93.12,
+            "discount_pct": 57.32
+          },
+          {
+            "regular_price": 167.28,
+            "sale_price": 83.64,
+            "discount_pct": 50
+          },
+          {
+            "regular_price": 167.28,
+            "sale_price": 83.64,
+            "discount_pct": 50
+          },
+          {
+            "regular_price": 167.28,
+            "sale_price": 83.64,
+            "discount_pct": 50
+          },
+          {
+            "regular_price": 72.71,
+            "sale_price": 50.9,
+            "discount_pct": 30
+          },
+          {
+            "regular_price": 218.2,
+            "sale_price": 93.12,
+            "discount_pct": 57.32
+          },
+          {
+            "regular_price": 72.71,
+            "sale_price": 50.9,
+            "discount_pct": 30
+          },
+          {
+            "regular_price": 72.71,
+            "sale_price": 50.9,
+            "discount_pct": 30
+          },
+          {
+            "regular_price": 72.71,
+            "sale_price": 50.9,
+            "discount_pct": 30
+          },
+          {
+            "regular_price": 94.53,
+            "sale_price": 61.45,
+            "discount_pct": 34.99
+          },
+          {
+            "regular_price": 43.61,
+            "sale_price": 32.71,
+            "discount_pct": 24.99
+          },
+          {
+            "regular_price": 43.61,
+            "sale_price": 32.71,
+            "discount_pct": 24.99
+          }
+        ],
+        "brand_mentions": 1873
+      }
+    },
+    {
+      "domain": "joola-malaysia.com",
+      "match_kind": "prefix",
+      "discovery_source": "dns_permutation",
+      "classification": "suspect",
+      "is_live": true,
+      "resolved_ips": [
+        "2606:4700:3034::6815:5a40",
+        "2606:4700:3035::ac43:99a6",
+        "104.21.90.64",
+        "172.67.153.166"
+      ],
+      "infrastructure": {
+        "registrar_name": "Guizhou Zhongyu Zhike Network Technology Co., Ltd.",
+        "registrar_iana_id": 3814,
+        "registrar_abuse_email": "abuse3814@brandfocus.cn",
+        "registrar_abuse_phone": "+86.1065083477",
+        "registered_at": "2026-07-21",
+        "expires_at": "2027-07-21",
+        "domain_status": [
+          "active"
+        ],
+        "nameservers": [
+          "arely.ns.cloudflare.com",
+          "guss.ns.cloudflare.com"
+        ],
+        "dns_provider": "cloudflare"
+      },
+      "snapshot": {
+        "http_status": 200,
+        "final_url": "https://www.joola-malaysia.com/",
+        "response_headers": {
+          "alt-svc": "h3=\":443\"; ma=86400",
+          "cf-cache-status": "DYNAMIC",
+          "cf-ray": "a3adee000848ad28-MAA",
+          "connection": "keep-alive",
+          "content-encoding": "br",
+          "content-type": "text/html; charset=UTF-8",
+          "date": "Mon, 14 Sep 2026 08:13:02 GMT",
+          "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+          "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=tUGbdQqEjSnvF5Ef1ISnyEaMJyboZEVZZu8KdYK5qgjDi3jhLNbXbo%2BDtCADMu5pCu5nPYYDNGDBMV9KLgofXA89pngsxzpy1Nu8zvp%2FIGLTgBS77CVqyWzIyDOijV%2FW%2FRZhsSEcSiQs\"}]}",
+          "server": "cloudflare",
+          "transfer-encoding": "chunked"
+        },
+        "html_bytes": 323783,
+        "html_sha256": "8d23e5ab6bfa9329f32962c33c9a5a68a20fd8d27950bde5d7eac439763c1354",
+        "tech_stack": {
+          "cms": "wordpress",
+          "ecommerce": "woocommerce",
+          "page_builder": "elementor",
+          "page_builder_version": "3.35.6"
+        },
+        "currency": "MYR",
+        "price_ladder": [
+          {
+            "regular_price": 1268.03,
+            "sale_price": 541.11,
+            "discount_pct": 57.33
+          },
+          {
+            "regular_price": 972.1,
+            "sale_price": 486.03,
+            "discount_pct": 50
+          },
+          {
+            "regular_price": 972.1,
+            "sale_price": 486.03,
+            "discount_pct": 50
+          },
+          {
+            "regular_price": 972.1,
+            "sale_price": 486.03,
+            "discount_pct": 50
+          },
+          {
+            "regular_price": 422.53,
+            "sale_price": 295.8,
+            "discount_pct": 29.99
+          },
+          {
+            "regular_price": 1268.03,
+            "sale_price": 541.11,
+            "discount_pct": 57.33
+          },
+          {
+            "regular_price": 422.53,
+            "sale_price": 295.8,
+            "discount_pct": 29.99
+          },
+          {
+            "regular_price": 422.53,
+            "sale_price": 295.8,
+            "discount_pct": 29.99
+          },
+          {
+            "regular_price": 422.53,
+            "sale_price": 295.8,
+            "discount_pct": 29.99
+          },
+          {
+            "regular_price": 549.36,
+            "sale_price": 357.09,
+            "discount_pct": 35
+          },
+          {
+            "regular_price": 253.44,
+            "sale_price": 190.07,
+            "discount_pct": 25
+          },
+          {
+            "regular_price": 253.44,
+            "sale_price": 190.07,
+            "discount_pct": 25
+          }
+        ],
+        "brand_mentions": 1877
+      }
+    },
+    {
+      "domain": "joola-philippines.com",
+      "match_kind": "prefix",
+      "discovery_source": "dns_permutation",
+      "classification": "suspect",
+      "is_live": true,
+      "resolved_ips": [
+        "2606:4700:3033::6815:1fe7",
+        "2606:4700:3035::ac43:b4bc",
+        "172.67.180.188",
+        "104.21.31.231"
+      ],
+      "infrastructure": {
+        "registrar_name": "Hongkong Kouming International Limited",
+        "registrar_iana_id": 3972,
+        "registrar_abuse_email": "abuse@kouming.com",
+        "registrar_abuse_phone": "852 55737874",
+        "registered_at": "2026-07-22",
+        "expires_at": "2027-07-22",
+        "domain_status": [
+          "active"
+        ],
+        "nameservers": [
+          "diva.ns.cloudflare.com",
+          "osmar.ns.cloudflare.com"
+        ],
+        "dns_provider": "cloudflare"
+      },
+      "snapshot": {
+        "http_status": 200,
+        "final_url": "https://www.joola-philippines.com/",
+        "response_headers": {
+          "alt-svc": "h3=\":443\"; ma=86400",
+          "cf-cache-status": "DYNAMIC",
+          "cf-ray": "a3adee01dd8d1ed1-MAA",
+          "connection": "keep-alive",
+          "content-encoding": "br",
+          "content-type": "text/html; charset=UTF-8",
+          "date": "Mon, 14 Sep 2026 08:13:02 GMT",
+          "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+          "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=ZPtcXMMy8u%2BpD0x9%2FMajRJ2rDcQhXu%2Bh%2F5xnuexp5OgcS0H%2BmPZ3gWNM%2BuVucL2zlMLTeBURlrHzVhKIW5fN2Li%2FlB49tN51mukwE8Mwt68zmXwrXeGpgBcH3JIJ0dO3%2BHwoH0vWn4OG3SxI\"}]}",
+          "server": "cloudflare",
+          "transfer-encoding": "chunked"
+        },
+        "html_bytes": 318437,
+        "html_sha256": "49a28dc0c798dd0aef6327364d2914d03ee8d920bd87f2332aafad669ec28b11",
+        "tech_stack": {
+          "cms": "wordpress",
+          "ecommerce": "woocommerce",
+          "page_builder": "elementor",
+          "page_builder_version": "3.35.6"
+        },
+        "currency": "PHP",
+        "price_ladder": [
+          {
+            "regular_price": 16979,
+            "sale_price": 7246,
+            "discount_pct": 57.32
+          },
+          {
+            "regular_price": 13017,
+            "sale_price": 6508,
+            "discount_pct": 50
+          },
+          {
+            "regular_price": 13017,
+            "sale_price": 6508,
+            "discount_pct": 50
+          },
+          {
+            "regular_price": 13017,
+            "sale_price": 6508,
+            "discount_pct": 50
+          },
+          {
+            "regular_price": 5658,
+            "sale_price": 3961,
+            "discount_pct": 29.99
+          },
+          {
+            "regular_price": 16979,
+            "sale_price": 7246,
+            "discount_pct": 57.32
+          },
+          {
+            "regular_price": 5658,
+            "sale_price": 3961,
+            "discount_pct": 29.99
+          },
+          {
+            "regular_price": 5658,
+            "sale_price": 3961,
+            "discount_pct": 29.99
+          },
+          {
+            "regular_price": 5658,
+            "sale_price": 3961,
+            "discount_pct": 29.99
+          },
+          {
+            "regular_price": 7356,
+            "sale_price": 4782,
+            "discount_pct": 34.99
+          },
+          {
+            "regular_price": 3394,
+            "sale_price": 2545,
+            "discount_pct": 25.01
+          },
+          {
+            "regular_price": 3394,
+            "sale_price": 2545,
+            "discount_pct": 25.01
+          }
+        ],
+        "brand_mentions": 1762
+      }
+    },
+    {
+      "domain": "joola-india.com",
+      "match_kind": "prefix",
+      "discovery_source": "dns_permutation",
+      "classification": "suspect",
+      "is_live": true,
+      "resolved_ips": [
+        "2606:4700:3033::6815:57e3",
+        "2606:4700:3037::ac43:93cb",
+        "104.21.87.227",
+        "172.67.147.203"
+      ],
+      "infrastructure": {
+        "registrar_name": "Hongkong Kouming International Limited",
+        "registrar_iana_id": 3972,
+        "registrar_abuse_email": "abuse@kouming.com",
+        "registrar_abuse_phone": "852 55737874",
+        "registered_at": "2026-07-22",
+        "expires_at": "2027-07-22",
+        "domain_status": [
+          "active"
+        ],
+        "nameservers": [
+          "lloyd.ns.cloudflare.com",
+          "shubhi.ns.cloudflare.com"
+        ],
+        "dns_provider": "cloudflare"
+      },
+      "snapshot": {
+        "http_status": 200,
+        "final_url": "https://www.joola-india.com/",
+        "response_headers": {
+          "alt-svc": "h3=\":443\"; ma=86400",
+          "cf-cache-status": "DYNAMIC",
+          "cf-ray": "a3adee011aab38e6-MAA",
+          "connection": "keep-alive",
+          "content-encoding": "br",
+          "content-type": "text/html; charset=UTF-8",
+          "date": "Mon, 14 Sep 2026 08:13:02 GMT",
+          "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+          "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=BMRGz5t%2F9J9m0aviL9xcdN%2FxRzA6E2Lsma4%2Fw%2BDpiyR%2FTQCQZR1w6MO%2BLK9z8Pix0IYAr8BFwO7t0XHZzGsMhpIS8ezS0z3sJxizvtxHvw%2FCEGTkLEQq%2F2pNmzEQsQFM%2BZN9o0HP\"}]}",
+          "server": "cloudflare",
+          "transfer-encoding": "chunked"
+        },
+        "html_bytes": 318315,
+        "html_sha256": "f986e7f324381dfdd9bb7bafcf4c6ed5b229db0a7688b68f8d13a0e290e578ec",
+        "tech_stack": {
+          "cms": "wordpress",
+          "ecommerce": "woocommerce",
+          "page_builder": "elementor",
+          "page_builder_version": "3.35.6"
+        },
+        "currency": "INR",
+        "price_ladder": [
+          {
+            "regular_price": 25651,
+            "sale_price": 10946,
+            "discount_pct": 57.33
+          },
+          {
+            "regular_price": 19665,
+            "sale_price": 9832,
+            "discount_pct": 50
+          },
+          {
+            "regular_price": 19665,
+            "sale_price": 9832,
+            "discount_pct": 50
+          },
+          {
+            "regular_price": 19665,
+            "sale_price": 9832,
+            "discount_pct": 50
+          },
+          {
+            "regular_price": 8548,
+            "sale_price": 5984,
+            "discount_pct": 30
+          },
+          {
+            "regular_price": 25651,
+            "sale_price": 10946,
+            "discount_pct": 57.33
+          },
+          {
+            "regular_price": 8548,
+            "sale_price": 5984,
+            "discount_pct": 30
+          },
+          {
+            "regular_price": 8548,
+            "sale_price": 5984,
+            "discount_pct": 30
+          },
+          {
+            "regular_price": 8548,
+            "sale_price": 5984,
+            "discount_pct": 30
+          },
+          {
+            "regular_price": 11113,
+            "sale_price": 7224,
+            "discount_pct": 35
+          },
+          {
+            "regular_price": 5127,
+            "sale_price": 3845,
+            "discount_pct": 25
+          },
+          {
+            "regular_price": 5127,
+            "sale_price": 3845,
+            "discount_pct": 25
+          }
+        ],
+        "brand_mentions": 1879
+      }
+    },
+    {
+      "domain": "joolanz.com",
+      "match_kind": "prefix",
+      "discovery_source": "dns_permutation",
+      "classification": "suspect",
+      "is_live": true,
+      "resolved_ips": [
+        "2606:4700:3030::6815:558f",
+        "2606:4700:3033::ac43:cea8",
+        "104.21.85.143",
+        "172.67.206.168"
+      ],
+      "infrastructure": {
+        "registrar_name": "CNOBIN INFORMATION TECHNOLOGY LIMITED",
+        "registrar_iana_id": 3254,
+        "registrar_abuse_email": "abuse@ordertld.com",
+        "registrar_abuse_phone": "+852.30501810",
+        "registered_at": "2026-07-22",
+        "expires_at": "2027-07-22",
+        "domain_status": [
+          "client transfer prohibited"
+        ],
+        "nameservers": [
+          "connie.ns.cloudflare.com",
+          "quinton.ns.cloudflare.com"
+        ],
+        "dns_provider": "cloudflare"
+      },
+      "snapshot": {
+        "http_status": 200,
+        "final_url": "https://www.joolanz.com/",
+        "response_headers": {
+          "alt-svc": "h3=\":443\"; ma=86400",
+          "cf-cache-status": "DYNAMIC",
+          "cf-ray": "a3adee3e7ae25d24-MAA",
+          "connection": "keep-alive",
+          "content-encoding": "br",
+          "content-type": "text/html; charset=UTF-8",
+          "date": "Mon, 14 Sep 2026 08:13:10 GMT",
+          "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+          "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=XZDGm2Ic5y62lHNO75MZCeIsoCUp3pmxgSUdSx7arlMe8fe1kvu2nZM8UUPPsDXhwgQpdQ%2FJ30KHz%2FPTZ8XlwjId0p6kHPwqo9pD5ye5%2FRk0HZZpoUdZmLueZyl005GngIU%3D\"}]}",
+          "server": "cloudflare",
+          "transfer-encoding": "chunked"
+        },
+        "html_bytes": 311016,
+        "html_sha256": "c52f4dc4d5349c365524dbfd30ab6fe07515bcc26dd50d871100bd16d104b351",
+        "tech_stack": {
+          "cms": "wordpress",
+          "ecommerce": "woocommerce",
+          "page_builder": "elementor",
+          "page_builder_version": "3.35.6"
+        },
+        "currency": "USD",
+        "price_ladder": [
+          {
+            "regular_price": 494.06,
+            "sale_price": 210.83,
+            "discount_pct": 57.33
+          },
+          {
+            "regular_price": 378.76,
+            "sale_price": 189.37,
+            "discount_pct": 50
+          },
+          {
+            "regular_price": 378.76,
+            "sale_price": 189.37,
+            "discount_pct": 50
+          },
+          {
+            "regular_price": 378.76,
+            "sale_price": 189.37,
+            "discount_pct": 50
+          },
+          {
+            "regular_price": 164.63,
+            "sale_price": 115.25,
+            "discount_pct": 29.99
+          },
+          {
+            "regular_price": 494.06,
+            "sale_price": 210.83,
+            "discount_pct": 57.33
+          },
+          {
+            "regular_price": 164.63,
+            "sale_price": 115.25,
+            "discount_pct": 29.99
+          },
+          {
+            "regular_price": 164.63,
+            "sale_price": 115.25,
+            "discount_pct": 29.99
+          },
+          {
+            "regular_price": 164.63,
+            "sale_price": 115.25,
+            "discount_pct": 29.99
+          },
+          {
+            "regular_price": 214.05,
+            "sale_price": 139.13,
+            "discount_pct": 35
+          },
+          {
+            "regular_price": 98.75,
+            "sale_price": 74.06,
+            "discount_pct": 25
+          },
+          {
+            "regular_price": 98.75,
+            "sale_price": 74.06,
+            "discount_pct": 25
+          }
+        ],
+        "brand_mentions": 1862
+      }
+    },
+    {
+      "domain": "joolaindonesia.com",
+      "match_kind": "prefix",
+      "discovery_source": "dns_permutation",
+      "classification": "suspect",
+      "is_live": true,
+      "resolved_ips": [
+        "2606:4700:3037::6815:23b7",
+        "2606:4700:3034::ac43:b294",
+        "104.21.35.183",
+        "172.67.178.148"
+      ],
+      "infrastructure": {
+        "registrar_name": "Vantage of Convergence (Chengdu) Technology Co., Ltd.",
+        "registrar_iana_id": 3869,
+        "registrar_abuse_email": "abuse@kh86.cn",
+        "registrar_abuse_phone": "+86.4000769938",
+        "registered_at": "2026-07-23",
+        "expires_at": "2027-07-23",
+        "domain_status": [
+          "active"
+        ],
+        "nameservers": [
+          "arvind.ns.cloudflare.com",
+          "romina.ns.cloudflare.com"
+        ],
+        "dns_provider": "cloudflare"
+      },
+      "snapshot": {
+        "http_status": 200,
+        "final_url": "https://www.joolaindonesia.com/",
+        "response_headers": {
+          "alt-svc": "h3=\":443\"; ma=86400",
+          "cf-cache-status": "DYNAMIC",
+          "cf-ray": "a3adee01191f7fd7-MAA",
+          "connection": "keep-alive",
+          "content-encoding": "br",
+          "content-type": "text/html; charset=UTF-8",
+          "date": "Mon, 14 Sep 2026 08:13:02 GMT",
+          "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+          "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=VRihc3hZy7zX7gcpSdkTwOoszHIZtzUsB8iYSY3LPKlMolswpPPd7GYvg9mjJu6ateYnVZUwhG7B4TgOEKts8irBtPiPFRi2mwBsfxfuAk9LI7OpkHyMNdRe3AOMqVjvdGQjrT1Am7xp\"}]}",
+          "server": "cloudflare",
+          "transfer-encoding": "chunked"
+        },
+        "html_bytes": 323026,
+        "html_sha256": "71f728e632e97021982fd60eabd2f64814e1924cb5b28232e096f07b98687ddc",
+        "tech_stack": {
+          "cms": "wordpress",
+          "ecommerce": "woocommerce",
+          "page_builder": "elementor",
+          "page_builder_version": "3.35.6"
+        },
+        "currency": "IDR",
+        "price_ladder": [
+          {
+            "regular_price": 4862360,
+            "sale_price": 2074953,
+            "discount_pct": 57.33
+          },
+          {
+            "regular_price": 3727620,
+            "sale_price": 1863729,
+            "discount_pct": 50
+          },
+          {
+            "regular_price": 3727620,
+            "sale_price": 1863729,
+            "discount_pct": 50
+          },
+          {
+            "regular_price": 3727620,
+            "sale_price": 1863729,
+            "discount_pct": 50
+          },
+          {
+            "regular_price": 1620246,
+            "sale_price": 1134253,
+            "discount_pct": 30
+          },
+          {
+            "regular_price": 4862360,
+            "sale_price": 2074953,
+            "discount_pct": 57.33
+          },
+          {
+            "regular_price": 1620246,
+            "sale_price": 1134253,
+            "discount_pct": 30
+          },
+          {
+            "regular_price": 1620246,
+            "sale_price": 1134253,
+            "discount_pct": 30
+          },
+          {
+            "regular_price": 1620246,
+            "sale_price": 1134253,
+            "discount_pct": 30
+          },
+          {
+            "regular_price": 2106563,
+            "sale_price": 1369307,
+            "discount_pct": 35
+          },
+          {
+            "regular_price": 971824,
+            "sale_price": 728827,
+            "discount_pct": 25
+          },
+          {
+            "regular_price": 971824,
+            "sale_price": 728827,
+            "discount_pct": 25
+          }
+        ],
+        "brand_mentions": 1856
+      }
+    },
+    {
+      "domain": "joola-vietnam.com",
+      "match_kind": "prefix",
+      "discovery_source": "dns_permutation",
+      "classification": "suspect",
+      "is_live": true,
+      "resolved_ips": [
+        "2606:4700:3034::6815:485f",
+        "2606:4700:3034::ac43:b3c8",
+        "104.21.72.95",
+        "172.67.179.200"
+      ],
+      "infrastructure": {
+        "registrar_name": "Vantage of Convergence (Chengdu) Technology Co., Ltd.",
+        "registrar_iana_id": 3869,
+        "registrar_abuse_email": "abuse@kh86.cn",
+        "registrar_abuse_phone": "+86.4000769938",
+        "registered_at": "2026-07-23",
+        "expires_at": "2027-07-23",
+        "domain_status": [
+          "active"
+        ],
+        "nameservers": [
+          "dell.ns.cloudflare.com",
+          "syeef.ns.cloudflare.com"
+        ],
+        "dns_provider": "cloudflare"
+      },
+      "snapshot": {
+        "http_status": 200,
+        "final_url": "https://www.joola-vietnam.com/",
+        "response_headers": {
+          "alt-svc": "h3=\":443\"; ma=86400",
+          "cf-cache-status": "DYNAMIC",
+          "cf-ray": "a3adee01cf374da5-MAA",
+          "connection": "keep-alive",
+          "content-encoding": "br",
+          "content-type": "text/html; charset=UTF-8",
+          "date": "Mon, 14 Sep 2026 08:13:01 GMT",
+          "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+          "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=Kg%2BBkgxeDhp7DAkxNqr7feBG1kiplb5ntW%2FsOX29wNxjw3tvctvDUT%2FgA20acZP6IT7pSntY%2Fv3gwuylkgyWKFb%2FkW4VLwu35UeHDBSAov5yNyfJbzeDB8L%2Fdr%2FC3R5HbhngOshwKkM%3D\"}]}",
+          "server": "cloudflare",
+          "transfer-encoding": "chunked"
+        },
+        "html_bytes": 323074,
+        "html_sha256": "b35a60272739347cafd4ccd6bdf2d8cbebeb82443569703c21637cc32bbe6218",
+        "tech_stack": {
+          "cms": "wordpress",
+          "ecommerce": "woocommerce",
+          "page_builder": "elementor",
+          "page_builder_version": "3.35.6"
+        },
+        "currency": "USD",
+        "price_ladder": [
+          {
+            "regular_price": 299.95,
+            "sale_price": 128,
+            "discount_pct": 57.33
+          },
+          {
+            "regular_price": 229.95,
+            "sale_price": 114.97,
+            "discount_pct": 50
+          },
+          {
+            "regular_price": 229.95,
+            "sale_price": 114.97,
+            "discount_pct": 50
+          },
+          {
+            "regular_price": 229.95,
+            "sale_price": 114.97,
+            "discount_pct": 50
+          },
+          {
+            "regular_price": 99.95,
+            "sale_price": 69.97,
+            "discount_pct": 29.99
+          },
+          {
+            "regular_price": 299.95,
+            "sale_price": 128,
+            "discount_pct": 57.33
+          },
+          {
+            "regular_price": 99.95,
+            "sale_price": 69.97,
+            "discount_pct": 29.99
+          },
+          {
+            "regular_price": 99.95,
+            "sale_price": 69.97,
+            "discount_pct": 29.99
+          },
+          {
+            "regular_price": 99.95,
+            "sale_price": 69.97,
+            "discount_pct": 29.99
+          },
+          {
+            "regular_price": 129.95,
+            "sale_price": 84.47,
+            "discount_pct": 35
+          },
+          {
+            "regular_price": 59.95,
+            "sale_price": 44.96,
+            "discount_pct": 25
+          },
+          {
+            "regular_price": 59.95,
+            "sale_price": 44.96,
+            "discount_pct": 25
+          }
+        ],
+        "brand_mentions": 1849
+      }
+    },
+    {
+      "domain": "joola-thailand.com",
+      "match_kind": "prefix",
+      "discovery_source": "dns_permutation",
+      "classification": "suspect",
+      "is_live": true,
+      "resolved_ips": [
+        "104.21.70.126",
+        "172.67.223.138",
+        "2606:4700:3034::ac43:df8a",
+        "2606:4700:3035::6815:467e"
+      ],
+      "infrastructure": {
+        "registrar_name": "Vantage of Convergence (Chengdu) Technology Co., Ltd.",
+        "registrar_iana_id": 3869,
+        "registrar_abuse_email": "abuse@kh86.cn",
+        "registrar_abuse_phone": "+86.4000769938",
+        "registered_at": "2026-07-23",
+        "expires_at": "2027-07-23",
+        "domain_status": [
+          "active"
+        ],
+        "nameservers": [
+          "casey.ns.cloudflare.com",
+          "eloise.ns.cloudflare.com"
+        ],
+        "dns_provider": "cloudflare"
+      },
+      "snapshot": {
+        "http_status": 200,
+        "final_url": "https://www.joola-thailand.com/",
+        "response_headers": {
+          "alt-svc": "h3=\":443\"; ma=86400",
+          "cf-cache-status": "DYNAMIC",
+          "cf-ray": "a3adee022d597f19-MAA",
+          "connection": "keep-alive",
+          "content-encoding": "br",
+          "content-type": "text/html; charset=UTF-8",
+          "date": "Mon, 14 Sep 2026 08:13:02 GMT",
+          "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+          "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=v%2BXcSesq6ztiVsySZOMK%2Fys%2FuEql7FslqwevOaJYdWQgpagdwgNEGaaL7Ri1PkX%2BKhlwBGqscnofTlPuG8IoDf9yLAfiQtu%2BEPf9jzzG9RGR8Yugh%2Fscr56EiZBjOP0QVBYGl%2F46AOmd\"}]}",
+          "server": "cloudflare",
+          "transfer-encoding": "chunked"
+        },
+        "html_bytes": 323318,
+        "html_sha256": "02f06a5e8b6d4bc63f17a32790e5a4050814b8cacdd90a4b0bfd32466c6d7b28",
+        "tech_stack": {
+          "cms": "wordpress",
+          "ecommerce": "woocommerce",
+          "page_builder": "elementor",
+          "page_builder_version": "3.35.6"
+        },
+        "currency": "THB",
+        "price_ladder": [
+          {
+            "regular_price": 9755.54,
+            "sale_price": 4163.06,
+            "discount_pct": 57.33
+          },
+          {
+            "regular_price": 7478.87,
+            "sale_price": 3739.27,
+            "discount_pct": 50
+          },
+          {
+            "regular_price": 7478.87,
+            "sale_price": 3739.27,
+            "discount_pct": 50
+          },
+          {
+            "regular_price": 7478.87,
+            "sale_price": 3739.27,
+            "discount_pct": 50
+          },
+          {
+            "regular_price": 3250.76,
+            "sale_price": 2275.7,
+            "discount_pct": 29.99
+          },
+          {
+            "regular_price": 9755.54,
+            "sale_price": 4163.06,
+            "discount_pct": 57.33
+          },
+          {
+            "regular_price": 3250.76,
+            "sale_price": 2275.7,
+            "discount_pct": 29.99
+          },
+          {
+            "regular_price": 3250.76,
+            "sale_price": 2275.7,
+            "discount_pct": 29.99
+          },
+          {
+            "regular_price": 3250.76,
+            "sale_price": 2275.7,
+            "discount_pct": 29.99
+          },
+          {
+            "regular_price": 4226.48,
+            "sale_price": 2747.29,
+            "discount_pct": 35
+          },
+          {
+            "regular_price": 1949.81,
+            "sale_price": 1462.27,
+            "discount_pct": 25
+          },
+          {
+            "regular_price": 1949.81,
+            "sale_price": 1462.27,
+            "discount_pct": 25
+          }
+        ],
+        "brand_mentions": 1861
+      }
+    },
+    {
+      "domain": "joolafrance.com",
+      "match_kind": "prefix",
+      "discovery_source": "dns_permutation",
+      "classification": "suspect",
+      "is_live": true,
+      "resolved_ips": [
+        "2606:4700:3033::ac43:cbd2",
+        "2606:4700:3031::6815:5ab8",
+        "172.67.203.210",
+        "104.21.90.184"
+      ],
+      "infrastructure": {
+        "registrar_name": "Guizhou Zhongyu Zhike Network Technology Co., Ltd.",
+        "registrar_iana_id": 3814,
+        "registrar_abuse_email": "abuse3814@brandfocus.cn",
+        "registrar_abuse_phone": "+86.1065083477",
+        "registered_at": "2026-07-23",
+        "expires_at": "2027-07-23",
+        "domain_status": [
+          "active"
+        ],
+        "nameservers": [
+          "melinda.ns.cloudflare.com",
+          "pedro.ns.cloudflare.com"
+        ],
+        "dns_provider": "cloudflare"
+      },
+      "snapshot": {
+        "http_status": 200,
+        "final_url": "https://www.joolafrance.com/",
+        "response_headers": {
+          "alt-svc": "h3=\":443\"; ma=86400",
+          "cf-cache-status": "DYNAMIC",
+          "cf-ray": "a3adee337be6dcf0-MAA",
+          "connection": "keep-alive",
+          "content-encoding": "br",
+          "content-type": "text/html; charset=UTF-8",
+          "date": "Mon, 14 Sep 2026 08:13:08 GMT",
+          "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+          "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=AkriJPTEirGiwZnFJOYB43BgIHWphZqggrCPV6YLCKUjpxRAra8i8EH8hfCEj7dVriRfXTPH53rdKWCWT3N%2FjnH2bDg%2B6YQRBvp4tmQhxblVcLD4nUCymKc5p1o4UsD6%2FT5hXFMi\"}]}",
+          "server": "cloudflare",
+          "transfer-encoding": "chunked"
+        },
+        "html_bytes": 275326,
+        "html_sha256": "3f5361f2e9d4d24ad0e28b6548173b8a1c465392c4109734267a5ec1b58393fb",
+        "tech_stack": {
+          "cms": "wordpress",
+          "ecommerce": "woocommerce",
+          "page_builder": "elementor",
+          "page_builder_version": "3.35.6"
+        },
+        "currency": "EUR",
+        "price_ladder": [
+          {
+            "regular_price": 912.7,
+            "sale_price": 758.56,
+            "discount_pct": 16.89
+          },
+          {
+            "regular_price": 544.54,
+            "sale_price": 426.26,
+            "discount_pct": 21.72
+          },
+          {
+            "regular_price": 512.5,
+            "sale_price": 426.26,
+            "discount_pct": 16.83
+          },
+          {
+            "regular_price": 726.05,
+            "sale_price": 568.92,
+            "discount_pct": 21.64
+          },
+          {
+            "regular_price": 1195.88,
+            "sale_price": 853.38,
+            "discount_pct": 28.64
+          },
+          {
+            "regular_price": 1195.88,
+            "sale_price": 853.38,
+            "discount_pct": 28.64
+          },
+          {
+            "regular_price": 495.41,
+            "sale_price": 426.26,
+            "discount_pct": 13.96
+          },
+          {
+            "regular_price": 683.34,
+            "sale_price": 568.92,
+            "discount_pct": 16.74
+          },
+          {
+            "regular_price": 42.67,
+            "sale_price": 32,
+            "discount_pct": 25.01
+          },
+          {
+            "regular_price": 512.5,
+            "sale_price": 426.26,
+            "discount_pct": 16.83
+          },
+          {
+            "regular_price": 42.67,
+            "sale_price": 32,
+            "discount_pct": 25.01
+          },
+          {
+            "regular_price": 34.13,
+            "sale_price": 25.59,
+            "discount_pct": 25.02
+          }
+        ],
+        "brand_mentions": 1408
+      }
+    },
+    {
+      "domain": "joola-sports.com",
+      "match_kind": "prefix",
+      "discovery_source": "dns_permutation",
+      "classification": "suspect",
+      "is_live": true,
+      "resolved_ips": [
+        "23.227.38.65"
+      ],
+      "infrastructure": {
+        "registrar_name": "GoDaddy.com, LLC",
+        "registrar_iana_id": 146,
+        "registrar_abuse_email": "abuse@godaddy.com",
+        "registrar_abuse_phone": "480-624-2505",
+        "registered_at": "2026-07-30",
+        "expires_at": "2027-07-30",
+        "domain_status": [
+          "client delete prohibited",
+          "client renew prohibited",
+          "client transfer prohibited",
+          "client update prohibited"
+        ],
+        "nameservers": [
+          "ns05.domaincontrol.com",
+          "ns06.domaincontrol.com"
+        ],
+        "dns_provider": "domaincontrol"
+      },
+      "snapshot": {
+        "http_status": 423,
+        "final_url": "https://joola-sports.com/",
+        "response_headers": {
+          "alt-svc": "h3=\":443\"; ma=86400",
+          "cache-control": "private, no-store",
+          "cdn-cache-control": "no-cache, no-store",
+          "cf-cache-status": "DYNAMIC",
+          "cf-ray": "a3adee4b9a21426e-MAA",
+          "connection": "keep-alive",
+          "content-encoding": "gzip",
+          "content-language": "en",
+          "content-security-policy": "block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Mon, 14 Sep 2026 08:13:10 GMT",
+          "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}",
+          "powered-by": "Shopify",
+          "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=PcjhQPIRdUhpEm1qUh%2FbXY7gpthTSsKi07CilJxVbOpdwsmaBhY9iQi42h48dB4F7%2FkaZB%2Bc1AwlWnWIwGkfjVQCJ1CeMb83EdpW00WGExEJUCEi99oJrU14zPNscmGNlDI%3D\"}]}",
+          "server": "cloudflare",
+          "server-timing": "processing;dur=26;desc=\"gc:2\", db;dur=4, db_async;dur=2.248, asn;desc=\"24309\", edge;desc=\"MAA\", country;desc=\"IN\", pageType;desc=\"index\", servedBy;desc=\"jctj\", requestID;desc=\"15a1a749-e9ce-4f85-b2c5-4a71472488f3-1789373590\", _y;desc=\"c14c68ab-e1be-4dc9-84ac-6f8adc085001\", _s;desc=\"873e93f3-a556-41a6-9158-23d579403021\", _cmp;desc=\"3.AMPS_INKA_f_f_JY5QuuNIQCWHsq5uRxfXNg\"",
+          "set-cookie": "_shopify_essential=:AaCe-iueAAEAAAVNfgau2DrNlFV4F7FUxpwjJ86iF8PZzzxzjUD_jDkFFruD1zHPsZM-jQi_1qf4aC2MIHd3XXQk1HriaeQSahAHA5vKgcFag3pO9v57x0gr3O-S7rrqe7lg75bL0pa7EZouZ5FsGE0EnMw0-dehvVM7MUEeG-BisTQVWlfwbdHV8qNsO1bxGk_NPKezU5ylv6Ar7IKForOlCRhkp7kYOfUHgj1Dv2DASKmwUbgxApSSWB67g_7-pCJeROrhXRVm5j1-ZPk7zNok4mbYc4IEMHfuo3W_4FyORwWvkh40hbNX03YZFjMvNXG3IcD_3UaMbf1aAECVChVe2FOddNlDyViNijnZMeuWTcKg9z-5:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax",
+          "shopify-complexity-score": "440",
+          "shopify-complexity-score-v2": "44",
+          "strict-transport-security": "max-age=7889238",
+          "transfer-encoding": "chunked",
+          "vary": "Accept,accept-encoding",
+          "x-content-type-options": "nosniff",
+          "x-dc": "gcp-asia-southeast1,gcp-asia-southeast1,gcp-asia-southeast1",
+          "x-download-options": "noopen",
+          "x-frame-options": "DENY",
+          "x-permitted-cross-domain-policies": "none",
+          "x-request-id": "15a1a749-e9ce-4f85-b2c5-4a71472488f3-1789373590",
+          "x-xss-protection": "1; mode=block"
+        },
+        "html_bytes": 4635,
+        "html_sha256": "8fa9eb810a0a0db8e76454868220f87b76cb80fdaa59be9b088e15797154581d",
+        "tech_stack": {
+          "cms": null,
+          "ecommerce": null,
+          "page_builder": null,
+          "page_builder_version": null
+        },
+        "currency": null,
+        "price_ladder": [],
+        "brand_mentions": 0
+      }
+    },
+    {
+      "domain": "joola-pickleball.com",
+      "match_kind": "prefix",
+      "discovery_source": "dns_permutation",
+      "classification": "suspect",
+      "is_live": true,
+      "resolved_ips": [
+        "23.227.38.65"
+      ],
+      "infrastructure": {
+        "registrar_name": "NameCheap, Inc.",
+        "registrar_iana_id": 1068,
+        "registrar_abuse_email": "abuse@namecheap.com",
+        "registrar_abuse_phone": "+1.6613102107",
+        "registered_at": "2026-08-15",
+        "expires_at": "2027-08-15",
+        "domain_status": [
+          "client transfer prohibited"
+        ],
+        "nameservers": [
+          "dns1.registrar-servers.com",
+          "dns2.registrar-servers.com"
+        ],
+        "dns_provider": "registrar-servers"
+      },
+      "snapshot": {
+        "http_status": 200,
+        "final_url": "https://www.joola-pickleball.com/",
+        "response_headers": {
+          "accept-ch": "Sec-CH-Viewport-Width",
+          "alt-svc": "h3=\":443\"; ma=86400",
+          "cdn-cache-control": "no-cache, no-store",
+          "cf-cache-status": "DYNAMIC",
+          "cf-ray": "a3adee5138f07237-MAA",
+          "connection": "keep-alive",
+          "content-encoding": "br",
+          "content-language": "en-IN",
+          "content-length": "55222",
+          "content-security-policy": "block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Mon, 14 Sep 2026 08:13:11 GMT",
+          "etag": "\"page_cache:105570074784:IndexController:0e959a40dab4b3eb8f086ef696c470a4:fe629d0f2f2aaa2cb6a2c5cb2288af87\"",
+          "link": "<https://cdn.shopify.com>; rel=\"preconnect\", <https://cdn.shopify.com>; rel=\"preconnect\"; crossorigin, <https://fonts.googleapis.com>; rel=\"preconnect\", <https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200>; as=\"style\"; rel=\"preload\", <//www.joola-pickleball.com/cdn/shop/t/5/assets/base.css?v=72514207947921368001785775303>; as=\"style\"; rel=\"preload\", <https://www.joola-pickleball.com/cdn/shopifycloud/portable-wallets/latest/accelerated-checkout-backwards-compat.css>; as=\"style\"; rel=\"preload\"; crossorigin",
+          "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}",
+          "powered-by": "Shopify",
+          "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=RxkWdw3BDWBvbGYuzd152zyaSvZfWUMF5DzUbx5l3TuogOXQ%2BF5%2Bs4GQY8qewTcnPBSNoDorCRjRGT3dmps5xL2L0HDg0YE4fsWuaNdYb8DU1xumvYvzX8l4g%2BoT%2BVjVoZ7HCQP%2BxuFzUQ%3D%3D\"}]}",
+          "server": "cloudflare",
+          "server-timing": "processing;dur=71;desc=\"gc:7\", db;dur=28, db_async;dur=2.179, asn;desc=\"24309\", edge;desc=\"MAA\", country;desc=\"IN\", theme;desc=\"198441861280\", pageType;desc=\"index\", servedBy;desc=\"tnhk\", requestID;desc=\"7291957a-7bff-4cb6-9eb4-2486583f4877-1789373591\", _y;desc=\"932ea1d9-4fb7-4919-ba76-2ad246b3dfe0\", _s;desc=\"1deaac6f-2d4b-4ef0-a97c-6b9e79fe1c05\", _cmp;desc=\"3.AMPS_INKA_f_f_8tloFsz8S668PZ3wMdR7Ng\", compressionLevel;desc=\"5\"",
+          "set-cookie": "_shopify_marketing=:AaCe-i9VAAEA8_wrLO2a-V4wSrAU4NnMffC9fP9KkDUYgyegoNU-rue4iLgEt-qMnJUmDmNCa8Bu6PzbwcakjSQMUALpmi5PMo4n9dIhDNU1YdKBCUo7aHoio59D-kjuDALVkJ_uGju6Rkd2WdMNRjh8-js:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax",
+          "shopify-complexity-score": "640",
+          "shopify-complexity-score-v2": "64",
+          "strict-transport-security": "max-age=7889238",
+          "vary": "Accept, accept-encoding",
+          "x-content-type-options": "nosniff",
+          "x-dc": "gcp-asia-southeast1,gcp-asia-southeast1,gcp-asia-southeast1",
+          "x-download-options": "noopen",
+          "x-frame-options": "DENY",
+          "x-permitted-cross-domain-policies": "none",
+          "x-request-id": "7291957a-7bff-4cb6-9eb4-2486583f4877-1789373591",
+          "x-xss-protection": "1; mode=block"
+        },
+        "html_bytes": 373092,
+        "html_sha256": "f2a4fe7cf2b6612a03897690d2234ef1d5525f48742d85c2262594f173c0142a",
+        "tech_stack": {
+          "cms": "shopify",
+          "ecommerce": "shopify",
+          "page_builder": null,
+          "page_builder_version": null
+        },
+        "currency": "USD",
+        "price_ladder": [],
+        "brand_mentions": 137
+      }
+    },
+    {
+      "domain": "joola.store",
+      "match_kind": "exact_label",
+      "discovery_source": "dns_permutation",
+      "classification": "suspect",
+      "is_live": true,
+      "resolved_ips": [
+        "76.223.54.146",
+        "13.248.169.48"
+      ],
+      "infrastructure": {
+        "registrar_name": "GoDaddy.com, LLC",
+        "registrar_iana_id": 146,
+        "registrar_abuse_email": "abuse@godaddy.com",
+        "registrar_abuse_phone": "",
+        "registered_at": "2026-08-18",
+        "expires_at": "2027-08-18",
+        "domain_status": [
+          "client delete prohibited",
+          "client transfer prohibited",
+          "client renew prohibited",
+          "client update prohibited"
+        ],
+        "nameservers": [
+          "ns1.afternic.com",
+          "ns2.afternic.com",
+          "verification-m3erh32ujyoastvophjvuz.ns101.verify.hn"
+        ],
+        "dns_provider": "afternic"
+      },
+      "snapshot": {
+        "http_status": 200,
+        "final_url": "https://joola.store/",
+        "response_headers": {
+          "content-length": "114",
+          "content-type": "text/html",
+          "date": "Mon, 14 Sep 2026 08:13:12 GMT"
+        },
+        "html_bytes": 114,
+        "html_sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023",
+        "tech_stack": {
+          "cms": null,
+          "ecommerce": null,
+          "page_builder": null,
+          "page_builder_version": null
+        },
+        "currency": null,
+        "price_ladder": [],
+        "brand_mentions": 0
+      }
+    },
+    {
+      "domain": "joolasg.com",
+      "match_kind": "prefix",
+      "discovery_source": "dns_permutation",
+      "classification": "suspect",
+      "is_live": true,
+      "resolved_ips": [
+        "172.67.204.225",
+        "104.21.61.17",
+        "2606:4700:3031::ac43:cce1",
+        "2606:4700:3036::6815:3d11"
+      ],
+      "infrastructure": {
+        "registrar_name": "Guizhou Zhongyu Zhike Network Technology Co., Ltd.",
+        "registrar_iana_id": 3814,
+        "registrar_abuse_email": "abuse3814@brandfocus.cn",
+        "registrar_abuse_phone": "+86.1065083477",
+        "registered_at": "2026-08-27",
+        "expires_at": "2027-08-27",
+        "domain_status": [
+          "active"
+        ],
+        "nameservers": [
+          "henrik.ns.cloudflare.com",
+          "ingrid.ns.cloudflare.com"
+        ],
+        "dns_provider": "cloudflare"
+      },
+      "snapshot": {
+        "http_status": 200,
+        "final_url": "https://www.joolasg.com/",
+        "response_headers": {
+          "alt-svc": "h3=\":443\"; ma=86400",
+          "cf-cache-status": "DYNAMIC",
+          "cf-ray": "a3adee342cf217b3-MAA",
+          "connection": "keep-alive",
+          "content-encoding": "br",
+          "content-type": "text/html; charset=UTF-8",
+          "date": "Mon, 14 Sep 2026 08:13:08 GMT",
+          "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+          "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=8KwhcQuWbfPpokJVlinWjpVRMIvLaIj6K%2BBuE2TVxKan4Ci86xqBCGAQjHsfNNov32yXnwws12iPJYaqaa61fMxHBHswJw3JzIoGk81CT9lGpIhp%2B4tY26fydSleU%2BXP18c%3D\"}]}",
+          "server": "cloudflare",
+          "transfer-encoding": "chunked"
+        },
+        "html_bytes": 310814,
+        "html_sha256": "0a6ebbfca825fa6d8c89cc0d4c598bbaade59ea029b70f4360af48c480f92372",
+        "tech_stack": {
+          "cms": "wordpress",
+          "ecommerce": "woocommerce",
+          "page_builder": "elementor",
+          "page_builder_version": "3.35.6"
+        },
+        "currency": "SGD",
+        "price_ladder": [
+          {
+            "regular_price": 382.19,
+            "sale_price": 163.09,
+            "discount_pct": 57.33
+          },
+          {
+            "regular_price": 293,
+            "sale_price": 146.49,
+            "discount_pct": 50
+          },
+          {
+            "regular_price": 293,
+            "sale_price": 146.49,
+            "discount_pct": 50
+          },
+          {
+            "regular_price": 293,
+            "sale_price": 146.49,
+            "discount_pct": 50
+          },
+          {
+            "regular_price": 127.35,
+            "sale_price": 89.15,
+            "discount_pct": 30
+          },
+          {
+            "regular_price": 382.19,
+            "sale_price": 163.09,
+            "discount_pct": 57.33
+          },
+          {
+            "regular_price": 127.35,
+            "sale_price": 89.15,
+            "discount_pct": 30
+          },
+          {
+            "regular_price": 127.35,
+            "sale_price": 89.15,
+            "discount_pct": 30
+          },
+          {
+            "regular_price": 127.35,
+            "sale_price": 89.15,
+            "discount_pct": 30
+          },
+          {
+            "regular_price": 165.58,
+            "sale_price": 107.63,
+            "discount_pct": 35
+          },
+          {
+            "regular_price": 76.39,
+            "sale_price": 57.29,
+            "discount_pct": 25
+          },
+          {
+            "regular_price": 76.39,
+            "sale_price": 57.29,
+            "discount_pct": 25
+          }
+        ],
+        "brand_mentions": 1855
+      }
+    }
+  ]
+}

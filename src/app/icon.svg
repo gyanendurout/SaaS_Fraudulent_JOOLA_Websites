@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="JOOLA Brand Protection">
+  <rect width="32" height="32" rx="7" fill="#08090b"/>
+  <!-- Shield: brand protection. Outline only, so it reads at 16px. -->
+  <path d="M16 5.5 25 9v7.2c0 5.3-3.6 9.3-9 11.3-5.4-2-9-6-9-11.3V9l9-3.5Z"
+        fill="none" stroke="#e8eaed" stroke-width="2" stroke-linejoin="round"/>
+  <!-- Threat marker. -->
+  <circle cx="16" cy="15.5" r="3.1" fill="#ff4d4d"/>
+</svg>

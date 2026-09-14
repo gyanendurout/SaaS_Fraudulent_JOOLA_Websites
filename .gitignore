@@ -1,0 +1,38 @@
+# ---- secrets ----
+.env
+.env.local
+.env*.local
+*.pem
+*.key
+
+# ---- node / next ----
+node_modules/
+.next/
+out/
+build/
+dist/
+*.tsbuildinfo
+next-env.d.ts
+
+# ---- python (crawler service) ----
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# ---- evidence artefacts (large, regenerable; keep manifests only) ----
+evidence/**/*.html
+evidence/**/*.png
+evidence/**/*.warc
+evidence/**/*.zip
+!evidence/**/manifest.json
+!evidence/**/*.md
+
+# ---- tooling ----
+.vercel
+.DS_Store
+Thumbs.db
+coverage/
+test-results/
+playwright-report/
+.supabase/
