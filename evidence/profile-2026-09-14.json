@@ -1,0 +1,655 @@
+{
+  "generated_at": "2026-09-14T09:26:09.025Z",
+  "rows": [
+    {
+      "domain": "joolauk.com",
+      "reg": {
+        "registrar": "Hongkong Kouming International Limited",
+        "abuse": "abuse@kouming.com",
+        "registered": "2026-07-20",
+        "expires": "2027-07-20",
+        "nameservers": [
+          "lovisa.ns.cloudflare.com",
+          "memphis.ns.cloudflare.com"
+        ],
+        "dns": "cloudflare"
+      },
+      "site": {
+        "status": 200,
+        "finalUrl": "https://www.joolauk.com/",
+        "title": "JOOLA UK | JOOLA Pickleball Paddle Sale &amp; JOOLA Table Tennis",
+        "stack": {
+          "cms": "wordpress",
+          "ecommerce": "woocommerce",
+          "pageBuilder": "elementor",
+          "pageBuilderVersion": "3.35.6"
+        },
+        "discounts": [
+          57,
+          50,
+          30,
+          35,
+          25
+        ],
+        "brandMentions": 159,
+        "bytes": 303868
+      },
+      "ips": [
+        "104.160.5.144"
+      ]
+    },
+    {
+      "domain": "joola-malaysia.com",
+      "reg": {
+        "registrar": "Guizhou Zhongyu Zhike Network Technology Co., Ltd.",
+        "abuse": "abuse3814@brandfocus.cn",
+        "registered": "2026-07-21",
+        "expires": "2027-07-21",
+        "nameservers": [
+          "arely.ns.cloudflare.com",
+          "guss.ns.cloudflare.com"
+        ],
+        "dns": "cloudflare"
+      },
+      "site": {
+        "status": 200,
+        "finalUrl": "https://www.joola-malaysia.com/",
+        "title": "JOOLA Malaysia | JOOLA Pickleball Paddle Sale &amp; JOOLA Perseus Hyperion 16mm",
+        "stack": {
+          "cms": "wordpress",
+          "ecommerce": "woocommerce",
+          "pageBuilder": "elementor",
+          "pageBuilderVersion": "3.35.6"
+        },
+        "discounts": [
+          57,
+          50,
+          30,
+          35,
+          25
+        ],
+        "brandMentions": 1833,
+        "bytes": 323783
+      },
+      "ips": [
+        "172.67.153.166",
+        "104.21.90.64"
+      ]
+    },
+    {
+      "domain": "joola-philippines.com",
+      "reg": {
+        "registrar": "Hongkong Kouming International Limited",
+        "abuse": "abuse@kouming.com",
+        "registered": "2026-07-22",
+        "expires": "2027-07-22",
+        "nameservers": [
+          "diva.ns.cloudflare.com",
+          "osmar.ns.cloudflare.com"
+        ],
+        "dns": "cloudflare"
+      },
+      "site": {
+        "status": 200,
+        "finalUrl": "https://www.joola-philippines.com/",
+        "title": "JOOLA Philippines | JOOLA Pickleball Paddle &amp; Table Tennis Sale",
+        "stack": {
+          "cms": "wordpress",
+          "ecommerce": "woocommerce",
+          "pageBuilder": "elementor",
+          "pageBuilderVersion": "3.35.6"
+        },
+        "discounts": [
+          57,
+          50,
+          30,
+          35,
+          25
+        ],
+        "brandMentions": 1735,
+        "bytes": 318437
+      },
+      "ips": [
+        "172.67.180.188",
+        "104.21.31.231"
+      ]
+    },
+    {
+      "domain": "joola-india.com",
+      "reg": {
+        "registrar": "Hongkong Kouming International Limited",
+        "abuse": "abuse@kouming.com",
+        "registered": "2026-07-22",
+        "expires": "2027-07-22",
+        "nameservers": [
+          "lloyd.ns.cloudflare.com",
+          "shubhi.ns.cloudflare.com"
+        ],
+        "dns": "cloudflare"
+      },
+      "site": {
+        "status": 200,
+        "finalUrl": "https://www.joola-india.com/",
+        "title": "JOOLA India | JOOLA Pickle Ball Paddle Sale &amp; JOOLA Racket",
+        "stack": {
+          "cms": "wordpress",
+          "ecommerce": "woocommerce",
+          "pageBuilder": "elementor",
+          "pageBuilderVersion": "3.35.6"
+        },
+        "discounts": [
+          57,
+          50,
+          30,
+          35,
+          25
+        ],
+        "brandMentions": 1850,
+        "bytes": 318315
+      },
+      "ips": [
+        "172.67.147.203",
+        "104.21.87.227"
+      ]
+    },
+    {
+      "domain": "joolanz.com",
+      "reg": {
+        "registrar": "CNOBIN INFORMATION TECHNOLOGY LIMITED",
+        "abuse": "abuse@ordertld.com",
+        "registered": "2026-07-22",
+        "expires": "2027-07-22",
+        "nameservers": [
+          "connie.ns.cloudflare.com",
+          "quinton.ns.cloudflare.com"
+        ],
+        "dns": "cloudflare"
+      },
+      "site": {
+        "status": 200,
+        "finalUrl": "https://www.joolanz.com/",
+        "title": "JOOLA NZ | JOOLA Pickleball Paddle &amp; Table Tennis Table",
+        "stack": {
+          "cms": "wordpress",
+          "ecommerce": "woocommerce",
+          "pageBuilder": "elementor",
+          "pageBuilderVersion": "3.35.6"
+        },
+        "discounts": [
+          57,
+          50,
+          30,
+          35,
+          25
+        ],
+        "brandMentions": 142,
+        "bytes": 311016
+      },
+      "ips": [
+        "172.67.206.168",
+        "104.21.85.143"
+      ]
+    },
+    {
+      "domain": "joola-singapore.com",
+      "reg": {
+        "registrar": "Hongkong Kouming International Limited",
+        "abuse": "abuse@kouming.com",
+        "registered": "2026-07-22",
+        "expires": "2027-07-22",
+        "nameservers": [
+          "heidi.ns.cloudflare.com",
+          "weston.ns.cloudflare.com"
+        ],
+        "dns": "cloudflare"
+      },
+      "site": null,
+      "ips": []
+    },
+    {
+      "domain": "joolaindonesia.com",
+      "reg": {
+        "registrar": "Vantage of Convergence (Chengdu) Technology Co., Ltd.",
+        "abuse": "abuse@kh86.cn",
+        "registered": "2026-07-23",
+        "expires": "2027-07-23",
+        "nameservers": [
+          "arvind.ns.cloudflare.com",
+          "romina.ns.cloudflare.com"
+        ],
+        "dns": "cloudflare"
+      },
+      "site": {
+        "status": 200,
+        "finalUrl": "https://www.joolaindonesia.com/",
+        "title": "JOOLA Indonesia | JOOLA Pickleball Sale",
+        "stack": {
+          "cms": "wordpress",
+          "ecommerce": "woocommerce",
+          "pageBuilder": "elementor",
+          "pageBuilderVersion": "3.35.6"
+        },
+        "discounts": [
+          57,
+          50,
+          30,
+          35,
+          25
+        ],
+        "brandMentions": 139,
+        "bytes": 323026
+      },
+      "ips": [
+        "172.67.178.148",
+        "104.21.35.183"
+      ]
+    },
+    {
+      "domain": "joola-vietnam.com",
+      "reg": {
+        "registrar": "Vantage of Convergence (Chengdu) Technology Co., Ltd.",
+        "abuse": "abuse@kh86.cn",
+        "registered": "2026-07-23",
+        "expires": "2027-07-23",
+        "nameservers": [
+          "dell.ns.cloudflare.com",
+          "syeef.ns.cloudflare.com"
+        ],
+        "dns": "cloudflare"
+      },
+      "site": {
+        "status": 200,
+        "finalUrl": "https://www.joola-vietnam.com/",
+        "title": "Joola Vietnam | Vợt Pickleball &amp; Thiết Bị Bóng Bàn Chính Hãng",
+        "stack": {
+          "cms": "wordpress",
+          "ecommerce": "woocommerce",
+          "pageBuilder": "elementor",
+          "pageBuilderVersion": "3.35.6"
+        },
+        "discounts": [
+          57,
+          50,
+          30,
+          35,
+          25
+        ],
+        "brandMentions": 1824,
+        "bytes": 323074
+      },
+      "ips": [
+        "104.21.72.95",
+        "172.67.179.200"
+      ]
+    },
+    {
+      "domain": "joola-thailand.com",
+      "reg": {
+        "registrar": "Vantage of Convergence (Chengdu) Technology Co., Ltd.",
+        "abuse": "abuse@kh86.cn",
+        "registered": "2026-07-23",
+        "expires": "2027-07-23",
+        "nameservers": [
+          "casey.ns.cloudflare.com",
+          "eloise.ns.cloudflare.com"
+        ],
+        "dns": "cloudflare"
+      },
+      "site": {
+        "status": 200,
+        "finalUrl": "https://www.joola-thailand.com/",
+        "title": "JOOLA Thailand | JOOLA Pickleball Paddle Thailand &amp; Perseus",
+        "stack": {
+          "cms": "wordpress",
+          "ecommerce": "woocommerce",
+          "pageBuilder": "elementor",
+          "pageBuilderVersion": "3.35.6"
+        },
+        "discounts": [
+          57,
+          50,
+          30,
+          35,
+          25
+        ],
+        "brandMentions": 1834,
+        "bytes": 323318
+      },
+      "ips": [
+        "104.21.70.126",
+        "172.67.223.138"
+      ]
+    },
+    {
+      "domain": "joolafrance.com",
+      "reg": {
+        "registrar": "Guizhou Zhongyu Zhike Network Technology Co., Ltd.",
+        "abuse": "abuse3814@brandfocus.cn",
+        "registered": "2026-07-23",
+        "expires": "2027-07-23",
+        "nameservers": [
+          "melinda.ns.cloudflare.com",
+          "pedro.ns.cloudflare.com"
+        ],
+        "dns": "cloudflare"
+      },
+      "site": {
+        "status": 200,
+        "finalUrl": "https://www.joolafrance.com/",
+        "title": "JOOLA France | JOOLA Tennis De Table &amp; Raquette De Pickleball",
+        "stack": {
+          "cms": "wordpress",
+          "ecommerce": "woocommerce",
+          "pageBuilder": "elementor",
+          "pageBuilderVersion": "3.35.6"
+        },
+        "discounts": [
+          17,
+          22,
+          17,
+          22,
+          29,
+          14,
+          17,
+          25
+        ],
+        "brandMentions": 142,
+        "bytes": 275326
+      },
+      "ips": [
+        "104.21.90.184",
+        "172.67.203.210"
+      ]
+    },
+    {
+      "domain": "joolasg.com",
+      "reg": {
+        "registrar": "Guizhou Zhongyu Zhike Network Technology Co., Ltd.",
+        "abuse": "abuse3814@brandfocus.cn",
+        "registered": "2026-08-27",
+        "expires": "2027-08-27",
+        "nameservers": [
+          "henrik.ns.cloudflare.com",
+          "ingrid.ns.cloudflare.com"
+        ],
+        "dns": "cloudflare"
+      },
+      "site": {
+        "status": 200,
+        "finalUrl": "https://www.joolasg.com/",
+        "title": "JOOLA Singapore | JOOLA Essentials Pickleball Paddle Price",
+        "stack": {
+          "cms": "wordpress",
+          "ecommerce": "woocommerce",
+          "pageBuilder": "elementor",
+          "pageBuilderVersion": "3.35.6"
+        },
+        "discounts": [
+          57,
+          50,
+          30,
+          35,
+          25
+        ],
+        "brandMentions": 140,
+        "bytes": 310814
+      },
+      "ips": [
+        "104.21.61.17",
+        "172.67.204.225"
+      ]
+    },
+    {
+      "domain": "joolaindia.com",
+      "reg": {
+        "registrar": "HOSTINGER operations, UAB",
+        "abuse": "abuse-tracker@hostinger.com",
+        "registered": "2025-07-03",
+        "expires": "2027-07-03",
+        "nameservers": [
+          "ns1.dns-parking.com",
+          "ns2.dns-parking.com"
+        ],
+        "dns": "dns-parking"
+      },
+      "site": {
+        "status": 200,
+        "finalUrl": "https://sportsnextdoor.com/collections/pickleball-paddle/?filter_brand=joola&orderby=price-desc&query_type_brand=or",
+        "title": "Pickleball Paddle\n &ndash; Sports Next Door",
+        "stack": {
+          "cms": "shopify",
+          "ecommerce": "shopify",
+          "pageBuilder": null,
+          "pageBuilderVersion": null
+        },
+        "discounts": [],
+        "brandMentions": 476,
+        "bytes": 1085272
+      },
+      "ips": [
+        "2.57.91.91"
+      ]
+    },
+    {
+      "domain": "joolaphilippines.com",
+      "reg": {
+        "registrar": "GoDaddy.com, LLC",
+        "abuse": "abuse@godaddy.com",
+        "registered": "2024-09-10",
+        "expires": "2027-09-10",
+        "nameservers": [
+          "ns47.domaincontrol.com",
+          "ns48.domaincontrol.com"
+        ],
+        "dns": "domaincontrol"
+      },
+      "site": {
+        "status": 200,
+        "finalUrl": "https://www.pickleballph.com/",
+        "title": "PickleballPH | Free Shipping Nationwide | Official Webstore",
+        "stack": {
+          "cms": "shopify",
+          "ecommerce": "shopify",
+          "pageBuilder": null,
+          "pageBuilderVersion": null
+        },
+        "discounts": [],
+        "brandMentions": 545,
+        "bytes": 2007596
+      },
+      "ips": [
+        "3.33.251.168",
+        "15.197.225.128"
+      ]
+    },
+    {
+      "domain": "joolaph.com",
+      "reg": {
+        "registrar": "GoDaddy.com, LLC",
+        "abuse": "abuse@godaddy.com",
+        "registered": "2024-09-10",
+        "expires": "2027-09-10",
+        "nameservers": [
+          "ns47.domaincontrol.com",
+          "ns48.domaincontrol.com"
+        ],
+        "dns": "domaincontrol"
+      },
+      "site": {
+        "status": 200,
+        "finalUrl": "https://www.pickleballph.com/",
+        "title": "PickleballPH | Free Shipping Nationwide | Official Webstore",
+        "stack": {
+          "cms": "shopify",
+          "ecommerce": "shopify",
+          "pageBuilder": null,
+          "pageBuilderVersion": null
+        },
+        "discounts": [],
+        "brandMentions": 545,
+        "bytes": 2007596
+      },
+      "ips": [
+        "3.33.251.168",
+        "15.197.225.128"
+      ]
+    },
+    {
+      "domain": "joolasport.store",
+      "reg": {
+        "registrar": "NameCheap, Inc.",
+        "abuse": "abuse@namecheap.com",
+        "registered": "2026-06-08",
+        "expires": "2027-06-08",
+        "nameservers": [
+          "dns1.registrar-servers.com",
+          "dns2.registrar-servers.com"
+        ],
+        "dns": "registrar-servers"
+      },
+      "site": {
+        "status": 404,
+        "finalUrl": "https://joolasport.store/",
+        "title": "404 Not Found\n &ndash; Joola-Sport",
+        "stack": {
+          "cms": "shopify",
+          "ecommerce": "shopify",
+          "pageBuilder": null,
+          "pageBuilderVersion": null
+        },
+        "discounts": [],
+        "brandMentions": 81,
+        "bytes": 361492
+      },
+      "ips": [
+        "23.227.38.65"
+      ]
+    },
+    {
+      "domain": "joolaau.com",
+      "reg": {
+        "registrar": "Name.com, Inc.",
+        "abuse": "abuse@name.com",
+        "registered": "2025-10-09",
+        "expires": "2027-10-09",
+        "nameservers": [
+          "ns1dnx.name.com",
+          "ns2fkr.name.com",
+          "ns3jnr.name.com",
+          "ns4bfy.name.com"
+        ],
+        "dns": "name"
+      },
+      "site": {
+        "status": 200,
+        "finalUrl": "https://joolaau.com/",
+        "title": "Store Test VN",
+        "stack": {
+          "cms": "shopify",
+          "ecommerce": "shopify",
+          "pageBuilder": null,
+          "pageBuilderVersion": null
+        },
+        "discounts": [],
+        "brandMentions": 0,
+        "bytes": 832701
+      },
+      "ips": [
+        "23.227.38.65"
+      ]
+    },
+    {
+      "domain": "joolaonline.shop",
+      "reg": {
+        "registrar": "Dynadot Inc.",
+        "abuse": "abuse@dynadot.com",
+        "registered": "2026-05-20",
+        "expires": "2027-05-20",
+        "nameservers": [
+          "arturo.ns.cloudflare.com",
+          "surina.ns.cloudflare.com"
+        ],
+        "dns": "cloudflare"
+      },
+      "site": {
+        "status": 200,
+        "finalUrl": "https://joolaonline.shop/",
+        "title": "Erstklassiges Tischtennis-Equipment für Profi- und Hobbyspieler | JOOLA",
+        "stack": {
+          "cms": null,
+          "ecommerce": "woocommerce",
+          "pageBuilder": null,
+          "pageBuilderVersion": null
+        },
+        "discounts": [],
+        "brandMentions": 155,
+        "bytes": 287611
+      },
+      "ips": [
+        "23.252.79.157"
+      ]
+    },
+    {
+      "domain": "joola-pickleball.com",
+      "reg": {
+        "registrar": "NameCheap, Inc.",
+        "abuse": "abuse@namecheap.com",
+        "registered": "2026-08-15",
+        "expires": "2027-08-15",
+        "nameservers": [
+          "dns1.registrar-servers.com",
+          "dns2.registrar-servers.com"
+        ],
+        "dns": "registrar-servers"
+      },
+      "site": {
+        "status": 200,
+        "finalUrl": "https://www.joola-pickleball.com/",
+        "title": "Joola Sport",
+        "stack": {
+          "cms": "shopify",
+          "ecommerce": "shopify",
+          "pageBuilder": null,
+          "pageBuilderVersion": null
+        },
+        "discounts": [],
+        "brandMentions": 131,
+        "bytes": 374274
+      },
+      "ips": [
+        "23.227.38.65"
+      ]
+    },
+    {
+      "domain": "joolashop.shop",
+      "reg": {
+        "registrar": "Dynadot Inc.",
+        "abuse": "abuse@dynadot.com",
+        "registered": "2026-04-17",
+        "expires": "2027-04-17",
+        "nameservers": [
+          "bradley.ns.cloudflare.com",
+          "lana.ns.cloudflare.com"
+        ],
+        "dns": "cloudflare"
+      },
+      "site": {
+        "status": 200,
+        "finalUrl": "https://joolashop.shop/",
+        "title": "JOOLA – Erstklassiges Tischtennis-Equipment für Profi- und Hobbyspieler | Joola",
+        "stack": {
+          "cms": null,
+          "ecommerce": "woocommerce",
+          "pageBuilder": null,
+          "pageBuilderVersion": null
+        },
+        "discounts": [],
+        "brandMentions": 176,
+        "bytes": 230302
+      },
+      "ips": [
+        "162.222.90.3"
+      ]
+    }
+  ]
+}
