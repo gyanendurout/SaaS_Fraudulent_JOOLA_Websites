@@ -1,5 +1,5 @@
 import { describe, test, expect } from 'vitest';
-import { isoDay } from './dates';
+import { isoDay, monthSpan } from './dates';
 
 describe('isoDay', () => {
   test('returns the stored calendar day of a UTC timestamp', () => {
@@ -39,5 +39,24 @@ describe('isoDay', () => {
 
   test('honours a caller-supplied fallback', () => {
     expect(isoDay(null, 'never')).toBe('never');
+  });
+});
+
+describe('monthSpan', () => {
+  test('names a single month when every date falls in it', () => {
+    expect(monthSpan(['2026-07-20', '2026-07-23'])).toBe('Jul 2026');
+  });
+
+  test('spans first to latest month, ignoring input order', () => {
+    expect(monthSpan(['2026-09-28', '2026-07-20', '2026-08-27'])).toBe('Jul–Sep 2026');
+  });
+
+  test('includes both years when the span crosses a year', () => {
+    expect(monthSpan(['2025-12-01', '2026-02-10'])).toBe('Dec 2025–Feb 2026');
+  });
+
+  test('skips missing or unusable dates rather than inventing one', () => {
+    expect(monthSpan(['2026-07-20', null, 'junk'])).toBe('Jul 2026');
+    expect(monthSpan([null])).toBeNull();
   });
 });

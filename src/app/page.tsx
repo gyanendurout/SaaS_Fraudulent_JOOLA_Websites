@@ -2,6 +2,10 @@ import Link from 'next/link';
 import { getDataset } from '@/data/repository';
 import { VerdictBadge, RiskMeter, SectionHeading, DomainLink, Stat } from '@/components/primitives';
 import { ScanForm } from '@/components/scan-form';
+import { SortableTable } from '@/components/sortable-table';
+import { SECTION_HELP } from '@/lib/section-help';
+import { isoDay } from '@/lib/dates';
+import { noLongerActive, scanFreshness } from '@/lib/scan-status';
 import type { DomainRecord } from '@/lib/types';
 
 export const dynamic = 'force-dynamic';
@@ -22,6 +26,8 @@ export default async function OverviewPage() {
   const clusterLive = clusterMembers.filter((d) => d.isLive);
   const legitimate = ds.domains.filter((d) => d.classification === 'legitimate');
   const triage = live.filter((d) => !d.clusterSlug).slice(0, 12);
+  const gone = noLongerActive(ds.domains);
+  const freshness = scanFreshness(ds.runs, ds.source);
 
   // "What came newly into the market" — ordered by registration recency.
   const newest = [...ds.domains]
@@ -60,7 +66,7 @@ export default async function OverviewPage() {
           <div className="relative px-5 py-5 sm:px-7 sm:py-6">
             <div className="flex flex-wrap items-start justify-between gap-4">
               <div className="min-w-0">
-                <div className="mono text-[10px] uppercase tracking-[0.18em] text-[var(--color-critical)]">
+                <div className="mono text-[11px] uppercase tracking-[0.18em] text-[var(--color-critical)]">
                   Active campaign
                 </div>
                 <h2
@@ -72,7 +78,7 @@ export default async function OverviewPage() {
               </div>
               <Link
                 href={`/cluster/${cluster.slug}`}
-                className="shrink-0 cursor-pointer rounded border border-[var(--color-line-bright)] px-3 py-1.5 text-[12px] font-medium text-[var(--color-ink)] transition-colors duration-150 hover:border-[var(--color-critical)] hover:bg-[var(--color-critical-dim)]"
+                className="inline-flex min-h-10 shrink-0 cursor-pointer items-center rounded border border-[var(--color-line-bright)] px-3 text-[12px] font-medium text-[var(--color-ink)] transition-colors duration-150 hover:border-[var(--color-critical)] hover:bg-[var(--color-critical-dim)]"
               >
                 Open campaign →
               </Link>
@@ -100,7 +106,7 @@ export default async function OverviewPage() {
 
       {/* Newly registered --------------------------------------------- */}
       <section aria-labelledby="new-heading">
-        <SectionHeading count={newest.length}>
+        <SectionHeading count={newest.length} help={{ title: 'Newest registrations', content: SECTION_HELP.newest }}>
           <span id="new-heading">Newest registrations</span>
         </SectionHeading>
         <ul className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
@@ -115,7 +121,7 @@ export default async function OverviewPage() {
                   <DomainLink domain={d.domain} className="text-[13px]" />
                   <VerdictBadge verdict={d.verdict} />
                 </div>
-                <dl className="mt-3 flex flex-wrap gap-x-6 gap-y-2 text-[11px]">
+                <dl className="mt-3 flex flex-wrap gap-x-6 gap-y-2 text-[12px]">
                   <div>
                     <dt className="inline text-[var(--color-ink-faint)]">Registered </dt>
                     <dd className="mono inline text-[var(--color-ink-dim)]">
@@ -137,7 +143,10 @@ export default async function OverviewPage() {
 
       {/* Triage queue -------------------------------------------------- */}
       <section aria-labelledby="triage-heading">
-        <SectionHeading count={live.filter((d) => !d.clusterSlug).length}>
+        <SectionHeading
+          count={live.filter((d) => !d.clusterSlug).length}
+          help={{ title: 'Triage queue', content: SECTION_HELP.triage }}
+        >
           <span id="triage-heading">Triage queue — live, outside the known campaign</span>
         </SectionHeading>
         {triage.length ? (
@@ -149,9 +158,30 @@ export default async function OverviewPage() {
         )}
       </section>
 
+      {/* No longer active ---------------------------------------------- */}
+      <section aria-labelledby="gone-heading">
+        <SectionHeading count={gone.length} help={{ title: 'No longer active', content: SECTION_HELP.gone }}>
+          <span id="gone-heading">No longer active — recorded live, now offline</span>
+        </SectionHeading>
+        {gone.length ? (
+          <GoneTable rows={gone} />
+        ) : (
+          <p className="rounded border border-[var(--color-line)] bg-[var(--color-surface)] px-4 py-8 text-center text-[13px] text-[var(--color-ink-faint)]">
+            No tracked domain has gone offline yet.
+          </p>
+        )}
+        <p className="mt-3 max-w-3xl text-[12px] leading-relaxed text-[var(--color-ink-faint)]">
+          Offline means the domain stopped resolving or serving. A takedown, an expiry and a
+          deliberate pause look identical from outside, and this page cannot tell who caused it.
+          If a domain comes back online it returns to the live lists. &ldquo;Detected offline&rdquo; is
+          the first scan that saw it down; it may have gone down at any point since the scan before
+          that, so do not quote it as the takedown date.
+        </p>
+      </section>
+
       {/* Estate -------------------------------------------------------- */}
       <section aria-labelledby="estate-heading">
-        <SectionHeading count={legitimate.length}>
+        <SectionHeading count={legitimate.length} help={{ title: 'Verified JOOLA estate', content: SECTION_HELP.estate }}>
           <span id="estate-heading">Verified JOOLA estate — excluded from reporting</span>
         </SectionHeading>
         <ul className="flex flex-wrap gap-2">
@@ -169,59 +199,114 @@ export default async function OverviewPage() {
         </ul>
       </section>
 
-      <p className="mono border-t border-[var(--color-line)] pt-4 text-[11px] text-[var(--color-ink-faint)]">
-        {ds.domains.length} domains tracked · source: {ds.source} · generated{' '}
-        {new Date(ds.generatedAt).toISOString().slice(0, 16).replace('T', ' ')}Z
+      <p className="mono border-t border-[var(--color-line)] pt-4 text-[12px] text-[var(--color-ink-faint)]">
+        {ds.domains.length} domains tracked · source: {ds.source} · last scan{' '}
+        {isoDay(freshness.lastScanAt)}
       </p>
     </div>
   );
 }
 
+function GoneTable({ rows }: { rows: DomainRecord[] }) {
+  return (
+    <SortableTable
+      caption="Domains recorded live that are now offline"
+      minWidth="880px"
+      columns={[
+        { label: 'Domain' },
+        { label: 'Added to DB' },
+        { label: 'Registered' },
+        { label: 'Detected offline' },
+        { label: 'Days since' },
+        { label: 'Registrar' },
+      ]}
+      rows={rows.map((d) => ({
+        id: d.domain,
+        values: [
+          d.domain,
+          isoDay(d.firstSeenAt, '') || null,
+          d.infrastructure?.registeredAt ?? null,
+          isoDay(d.takenDownAt, '') || null,
+          daysSince(d.takenDownAt),
+          d.infrastructure?.registrarName ?? null,
+        ],
+        cells: (
+          <>
+            <td className="px-4 py-3">
+              <DomainLink domain={d.domain} className="text-[13px]" />
+              {d.clusterSlug && (
+                <span className="mono ml-2 rounded bg-[var(--color-critical-dim)] px-1.5 py-0.5 text-[12px] text-[var(--color-critical)]">
+                  campaign
+                </span>
+              )}
+            </td>
+            <td className="mono px-4 py-3 text-[12px] text-[var(--color-ink-dim)]">
+              {isoDay(d.firstSeenAt)}
+            </td>
+            <td className="mono px-4 py-3 text-[12px] text-[var(--color-ink-dim)]">
+              {d.infrastructure?.registeredAt ?? '—'}
+            </td>
+            <td className="mono px-4 py-3 text-[12px] text-[var(--color-ink)]">
+              {isoDay(d.takenDownAt)}
+            </td>
+            <td className="mono px-4 py-3 text-[12px] tabular-nums text-[var(--color-ink-dim)]">
+              {daysSince(d.takenDownAt) ?? '—'}
+            </td>
+            <td className="px-4 py-3 text-[12px] text-[var(--color-ink-dim)]">
+              <span className="block max-w-[220px] truncate" title={d.infrastructure?.registrarName ?? ''}>
+                {d.infrastructure?.registrarName ?? '—'}
+              </span>
+            </td>
+          </>
+        ),
+      }))}
+    />
+  );
+}
+
 function DomainTable({ rows }: { rows: DomainRecord[] }) {
   return (
-    <div className="overflow-x-auto rounded border border-[var(--color-line)]">
-      <table className="w-full min-w-[720px] border-collapse text-left">
-        <caption className="sr-only">Domains awaiting manual triage</caption>
-        <thead>
-          <tr className="border-b border-[var(--color-line)] bg-[var(--color-surface)]">
-            {['Domain', 'Registered', 'Platform', 'Registrar', 'Risk'].map((h) => (
-              <th
-                key={h}
-                scope="col"
-                className="mono px-4 py-2.5 text-[10px] font-medium uppercase tracking-[0.14em] text-[var(--color-ink-faint)]"
-              >
-                {h}
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {rows.map((d) => (
-            <tr
-              key={d.domain}
-              className="border-b border-[var(--color-line)] last:border-0 transition-colors duration-150 hover:bg-[var(--color-surface)]"
-            >
-              <td className="px-4 py-3">
-                <DomainLink domain={d.domain} className="text-[13px]" />
-              </td>
-              <td className="mono px-4 py-3 text-[12px] text-[var(--color-ink-dim)]">
-                {d.infrastructure?.registeredAt ?? '—'}
-              </td>
-              <td className="px-4 py-3 text-[12px] text-[var(--color-ink-dim)]">
-                {d.snapshot?.techStack.ecommerce ?? d.snapshot?.techStack.cms ?? '—'}
-              </td>
-              <td className="px-4 py-3 text-[12px] text-[var(--color-ink-dim)]">
-                <span className="block max-w-[220px] truncate" title={d.infrastructure?.registrarName ?? ''}>
-                  {d.infrastructure?.registrarName ?? '—'}
-                </span>
-              </td>
-              <td className="px-4 py-3">
-                <RiskMeter score={d.riskScore} />
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+    <SortableTable
+      caption="Domains awaiting manual triage"
+      minWidth="760px"
+      columns={[
+        { label: 'Domain' },
+        { label: 'Registered' },
+        { label: 'Platform' },
+        { label: 'Registrar' },
+        { label: 'Risk' },
+      ]}
+      rows={rows.map((d) => ({
+        id: d.domain,
+        values: [
+          d.domain,
+          d.infrastructure?.registeredAt ?? null,
+          d.snapshot?.techStack.ecommerce ?? d.snapshot?.techStack.cms ?? null,
+          d.infrastructure?.registrarName ?? null,
+          d.riskScore,
+        ],
+        cells: (
+          <>
+            <td className="px-4 py-3">
+              <DomainLink domain={d.domain} className="text-[13px]" />
+            </td>
+            <td className="mono px-4 py-3 text-[12px] text-[var(--color-ink-dim)]">
+              {d.infrastructure?.registeredAt ?? '—'}
+            </td>
+            <td className="px-4 py-3 text-[12px] text-[var(--color-ink-dim)]">
+              {d.snapshot?.techStack.ecommerce ?? d.snapshot?.techStack.cms ?? '—'}
+            </td>
+            <td className="px-4 py-3 text-[12px] text-[var(--color-ink-dim)]">
+              <span className="block max-w-[220px] truncate" title={d.infrastructure?.registrarName ?? ''}>
+                {d.infrastructure?.registrarName ?? '—'}
+              </span>
+            </td>
+            <td className="px-4 py-3">
+              <RiskMeter score={d.riskScore} />
+            </td>
+          </>
+        ),
+      }))}
+    />
   );
 }

@@ -1,13 +1,13 @@
-name: Weekly discovery scan
+name: Daily discovery scan
 
-# Monday 08:00 IST. GitHub cron is UTC-only and has no DST handling, but IST has
+# Daily 08:00 IST. GitHub cron is UTC-only and has no DST handling, but IST has
 # no DST either, so 02:30 UTC is 08:00 IST all year round.
 #
 # Scheduled runs can start late when GitHub is busy — treat the timestamp inside
 # the report as authoritative, not the schedule.
 on:
   schedule:
-    - cron: '30 2 * * 1'
+    - cron: '30 2 * * *'
   workflow_dispatch:
     inputs:
       dry_run:

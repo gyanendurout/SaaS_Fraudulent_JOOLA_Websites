@@ -17,8 +17,11 @@
   --color-line-bright: #333a45;
 
   --color-ink: #e8eaed;
-  --color-ink-dim: #9aa3af;
-  --color-ink-faint: #646c78;
+  /* Secondary and tertiary text are deliberately the same white as body text:
+     grey on near-black was reported as hard to read. Hierarchy is carried by
+     size, weight and letter-case instead. (Was #9aa3af and #7e8692.) */
+  --color-ink-dim: #e8eaed;
+  --color-ink-faint: #e8eaed;
 
   /* Semantic threat states. Never used decoratively. */
   --color-critical: #ff4d4d;
