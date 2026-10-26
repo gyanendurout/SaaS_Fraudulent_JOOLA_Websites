@@ -1,9 +1,34 @@
 import { getDataset } from '@/data/repository';
-import { VerdictBadge, RiskMeter, DomainLink, SectionHeading } from '@/components/primitives';
+import { VerdictBadge, RiskMeter, DomainLink, SectionHeading, VisitSiteLink } from '@/components/primitives';
+import { SortableTable } from '@/components/sortable-table';
 import { isoDay } from '@/lib/dates';
+import { SECTION_HELP } from '@/lib/section-help';
+import type { Verdict } from '@/lib/fingerprint';
 
 export const dynamic = 'force-dynamic';
 export const metadata = { title: 'All domains — JOOLA Brand Protection' };
+
+/** Sort order for the Status column: higher is more severe. */
+const VERDICT_RANK: Record<Verdict, number> = {
+  confirmed_fraud: 5,
+  high_risk: 4,
+  suspicious: 3,
+  low_risk: 2,
+  unreachable: 1,
+  legitimate: 0,
+};
+
+const COLUMNS = [
+  { label: 'Domain' },
+  { label: 'Website', sortable: false },
+  { label: 'Added to DB' },
+  { label: 'Registered' },
+  { label: 'Platform' },
+  { label: 'Builder' },
+  { label: 'Abuse contact' },
+  { label: 'Status' },
+  { label: 'Risk' },
+];
 
 export default async function DomainsPage() {
   const ds = await getDataset();
@@ -12,25 +37,38 @@ export default async function DomainsPage() {
     {
       key: 'campaign',
       title: 'Known campaign',
+      help: SECTION_HELP.campaign,
       rows: ds.domains.filter((d) => d.clusterSlug),
     },
     {
       key: 'triage',
       title: 'Awaiting triage',
+      help: SECTION_HELP.domainsTriage,
       rows: ds.domains.filter(
         (d) => !d.clusterSlug && d.classification !== 'legitimate' && d.isLive
       ),
     },
     {
-      key: 'offline',
-      title: 'Not serving traffic',
+      // takenDownAt is stamped only on a recorded live -> offline transition.
+      key: 'gone',
+      title: 'No longer active (was live)',
+      help: SECTION_HELP.domainsGone,
       rows: ds.domains.filter(
-        (d) => !d.clusterSlug && d.classification !== 'legitimate' && !d.isLive
+        (d) => !d.clusterSlug && d.classification !== 'legitimate' && !d.isLive && d.takenDownAt
+      ),
+    },
+    {
+      key: 'never',
+      title: 'Never served',
+      help: SECTION_HELP.domainsNever,
+      rows: ds.domains.filter(
+        (d) => !d.clusterSlug && d.classification !== 'legitimate' && !d.isLive && !d.takenDownAt
       ),
     },
     {
       key: 'estate',
       title: 'Verified JOOLA estate',
+      help: SECTION_HELP.domainsEstate,
       rows: ds.domains.filter((d) => d.classification === 'legitimate'),
     },
   ].filter((g) => g.rows.length > 0);
@@ -48,85 +86,75 @@ export default async function DomainsPage() {
 
       {groups.map((g) => (
         <section key={g.key} aria-labelledby={`${g.key}-heading`}>
-          <SectionHeading count={g.rows.length}>
+          <SectionHeading count={g.rows.length} help={{ title: g.title, content: g.help }}>
             <span id={`${g.key}-heading`}>{g.title}</span>
           </SectionHeading>
-          <div className="overflow-x-auto rounded border border-[var(--color-line)]">
-            <table className="w-full min-w-[980px] border-collapse text-left">
-              <caption className="sr-only">{g.title}</caption>
-              <thead>
-                <tr className="border-b border-[var(--color-line)] bg-[var(--color-surface)]">
-                  {[
-                    'Domain',
-                    'Added to DB',
-                    'Registered',
-                    'Platform',
-                    'Builder',
-                    'Abuse contact',
-                    'Status',
-                    'Risk',
-                  ].map((h) => (
-                    <th
-                      key={h}
-                      scope="col"
-                      className="mono px-4 py-2.5 text-[10px] font-medium uppercase tracking-[0.14em] text-[var(--color-ink-faint)]"
-                    >
-                      {h}
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {g.rows.map((d) => (
-                  <tr
-                    key={d.domain}
-                    className="border-b border-[var(--color-line)] last:border-0 transition-colors duration-150 hover:bg-[var(--color-surface)]"
+          <SortableTable
+            caption={g.title}
+            columns={COLUMNS}
+            minWidth="1180px"
+            rows={g.rows.map((d) => ({
+              id: d.domain,
+              values: [
+                d.domain,
+                null,
+                isoDay(d.firstSeenAt, '') || null,
+                d.infrastructure?.registeredAt ?? null,
+                d.snapshot?.techStack.ecommerce ?? d.snapshot?.techStack.cms ?? null,
+                d.snapshot?.techStack.pageBuilderVersion ?? null,
+                d.infrastructure?.registrarAbuseEmail ?? null,
+                VERDICT_RANK[d.verdict],
+                d.riskScore,
+              ],
+              cells: (
+                <>
+                  <td className="px-4 py-3">
+                    <DomainLink domain={d.domain} className="text-[13px]" />
+                  </td>
+                  <td className="px-2 py-1">
+                    <VisitSiteLink domain={d.domain} />
+                  </td>
+                  <td className="mono px-4 py-3 text-[12px] text-[var(--color-ink-dim)]">
+                    {isoDay(d.firstSeenAt)}
+                  </td>
+                  <td className="mono px-4 py-3 text-[12px] text-[var(--color-ink-dim)]">
+                    {d.infrastructure?.registeredAt ?? '—'}
+                  </td>
+                  <td className="px-4 py-3 text-[12px] text-[var(--color-ink-dim)]">
+                    {d.snapshot?.techStack.ecommerce ?? d.snapshot?.techStack.cms ?? '—'}
+                  </td>
+                  <td
+                    className={`mono px-4 py-3 text-[12px] ${
+                      d.snapshot?.techStack.pageBuilderVersion === '3.35.6'
+                        ? 'text-[var(--color-critical)]'
+                        : 'text-[var(--color-ink-dim)]'
+                    }`}
                   >
-                    <td className="px-4 py-3">
-                      <DomainLink domain={d.domain} className="text-[13px]" />
-                    </td>
-                    <td className="mono px-4 py-3 text-[12px] text-[var(--color-ink-dim)]">
-                      {isoDay(d.firstSeenAt)}
-                    </td>
-                    <td className="mono px-4 py-3 text-[12px] text-[var(--color-ink-dim)]">
-                      {d.infrastructure?.registeredAt ?? '—'}
-                    </td>
-                    <td className="px-4 py-3 text-[12px] text-[var(--color-ink-dim)]">
-                      {d.snapshot?.techStack.ecommerce ?? d.snapshot?.techStack.cms ?? '—'}
-                    </td>
-                    <td
-                      className={`mono px-4 py-3 text-[12px] ${
-                        d.snapshot?.techStack.pageBuilderVersion === '3.35.6'
-                          ? 'text-[var(--color-critical)]'
-                          : 'text-[var(--color-ink-dim)]'
-                      }`}
+                    {d.snapshot?.techStack.pageBuilderVersion ?? '—'}
+                  </td>
+                  <td className="mono px-4 py-3 text-[12px] text-[var(--color-ink-dim)]">
+                    <span
+                      className="block max-w-[190px] truncate"
+                      title={d.infrastructure?.registrarAbuseEmail ?? ''}
                     >
-                      {d.snapshot?.techStack.pageBuilderVersion ?? '—'}
-                    </td>
-                    <td className="mono px-4 py-3 text-[11px] text-[var(--color-ink-dim)]">
-                      <span
-                        className="block max-w-[190px] truncate"
-                        title={d.infrastructure?.registrarAbuseEmail ?? ''}
-                      >
-                        {d.infrastructure?.registrarAbuseEmail ?? '—'}
+                      {d.infrastructure?.registrarAbuseEmail ?? '—'}
+                    </span>
+                  </td>
+                  <td className="px-4 py-3">
+                    <VerdictBadge verdict={d.verdict} />
+                    {d.takenDownAt && (
+                      <span className="mono mt-1 block text-[11px] text-[var(--color-ink-faint)]">
+                        offline since {isoDay(d.takenDownAt)}
                       </span>
-                    </td>
-                    <td className="px-4 py-3">
-                      <VerdictBadge verdict={d.verdict} />
-                      {d.takenDownAt && (
-                        <span className="mono mt-1 block text-[10px] text-[var(--color-ink-faint)]">
-                          offline since {isoDay(d.takenDownAt)}
-                        </span>
-                      )}
-                    </td>
-                    <td className="px-4 py-3">
-                      <RiskMeter score={d.riskScore} />
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+                    )}
+                  </td>
+                  <td className="px-4 py-3">
+                    <RiskMeter score={d.riskScore} />
+                  </td>
+                </>
+              ),
+            }))}
+          />
         </section>
       ))}
     </div>

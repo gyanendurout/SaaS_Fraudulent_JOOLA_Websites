@@ -1,6 +1,10 @@
 import type { Metadata } from 'next';
 import { Inter, JetBrains_Mono } from 'next/font/google';
 import Link from 'next/link';
+import { getDataset } from '@/data/repository';
+import { scanFreshness } from '@/lib/scan-status';
+import { NavLink } from '@/components/nav-link';
+import { ScanStatus } from '@/components/primitives';
 import './globals.css';
 
 const inter = Inter({
@@ -16,13 +20,20 @@ const jetbrains = JetBrains_Mono({
   display: 'swap',
 });
 
+// The header shows the last scan time, so no page may be prerendered with a
+// build-time copy of it (the 404 page otherwise would be).
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: 'JOOLA Brand Protection',
   description: 'Impersonation domain discovery, investigation and takedown evidence.',
   robots: { index: false, follow: false },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const ds = await getDataset();
+  const freshness = scanFreshness(ds.runs, ds.source);
+
   return (
     <html lang="en" className={`${inter.variable} ${jetbrains.variable}`}>
       <body className="min-h-dvh antialiased">
@@ -34,12 +45,26 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </a>
 
         <header className="sticky top-0 z-30 border-b border-[var(--color-line)] bg-[var(--color-void)]/95 backdrop-blur">
+          {/* Not dismissible: it must be in view whenever someone acts on this page. */}
+          <div
+            role="note"
+            aria-label="Disclaimer"
+            className="border-b border-[var(--color-warn)]/40 bg-[var(--color-warn-dim)]"
+          >
+            <p className="mx-auto max-w-[1400px] px-4 py-2 text-[12px] leading-snug text-[var(--color-ink)] sm:px-6">
+              <strong className="font-semibold text-[var(--color-warn)]">For reference only.</strong>{' '}
+              Automated risk indicators, not legal determinations. Verify each domain independently
+              before taking any action. Do not report, file or contact anyone based on this page
+              alone.
+            </p>
+          </div>
+
           <div className="mx-auto flex max-w-[1400px] flex-wrap items-center gap-x-6 gap-y-3 px-4 py-3 sm:px-6">
             <Link href="/" className="group flex items-baseline gap-2.5">
               <span className="mono text-[15px] font-bold tracking-tight text-[var(--color-ink)]">
                 JOOLA
               </span>
-              <span className="mono text-[11px] uppercase tracking-[0.18em] text-[var(--color-ink-faint)] transition-colors group-hover:text-[var(--color-ink-dim)]">
+              <span className="mono text-[12px] uppercase tracking-[0.18em] text-[var(--color-ink-faint)] transition-colors group-hover:text-[var(--color-ink-dim)]">
                 Brand Protection
               </span>
             </Link>
@@ -49,6 +74,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <NavLink href="/domains">Domains</NavLink>
               <NavLink href="/cluster/joola-impersonation-2026-07">Campaign</NavLink>
             </nav>
+
+            <div className="ml-auto">
+              <ScanStatus freshness={freshness} />
+            </div>
           </div>
         </header>
 
@@ -57,7 +86,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </main>
 
         <footer className="border-t border-[var(--color-line)] px-4 py-6 sm:px-6">
-          <p className="mx-auto max-w-[1400px] text-[11px] leading-relaxed text-[var(--color-ink-faint)]">
+          <p className="mx-auto max-w-[1400px] text-[12px] leading-relaxed text-[var(--color-ink-faint)]">
             Internal brand-protection tooling. Findings are evidence-based risk indicators, not
             legal determinations. Only domains with transactional evidence are recorded as confirmed
             fraud.
@@ -65,16 +94,5 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </footer>
       </body>
     </html>
-  );
-}
-
-function NavLink({ href, children }: { href: string; children: React.ReactNode }) {
-  return (
-    <Link
-      href={href}
-      className="cursor-pointer rounded px-2.5 py-1.5 text-[var(--color-ink-dim)] transition-colors duration-150 hover:bg-[var(--color-raised)] hover:text-[var(--color-ink)]"
-    >
-      {children}
-    </Link>
   );
 }

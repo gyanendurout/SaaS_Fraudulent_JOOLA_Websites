@@ -3,9 +3,9 @@
  *
  * Answers "what came newly into the market": runs a discovery sweep, diffs the
  * result against what is already in Supabase, records genuinely new domains,
- * and reports them. Runs weekly (Monday 08:00 IST) via
- * .github/workflows/weekly-scan.yml — the campaign registered ten domains in
- * four days, so a week is the longest gap that is still defensible.
+ * and reports them. Runs daily (08:00 IST) via .github/workflows/weekly-scan.yml
+ * — the campaign registered ten domains in four days, and the dashboard flags
+ * its data as stale after two days without a completed scan.
  *
  * Also re-checks known domains so a takedown (live -> dead) or a resurrection
  * (dead -> live) is noticed rather than silently missed, and stamps
@@ -22,6 +22,7 @@
 
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { spawn } from 'node:child_process';
+import { tmpdir } from 'node:os';
 import path from 'node:path';
 
 const DRY_RUN = process.argv.includes('--dry-run');
@@ -72,9 +73,9 @@ function client({ url, key }) {
 
 /* ---------- recon ---------- */
 
-function runRecon(outPath) {
+function runRecon(outPath, trackPath) {
   return new Promise((resolve, reject) => {
-    const child = spawn(process.execPath, ['scripts/recon.mjs', '--out', outPath], {
+    const child = spawn(process.execPath, ['scripts/recon.mjs', '--out', outPath, '--track', trackPath], {
       stdio: ['ignore', 'inherit', 'inherit'],
     });
     child.on('exit', (code) =>
@@ -84,10 +85,68 @@ function runRecon(outPath) {
   });
 }
 
-/* ---------- weekly report ---------- */
+/* ---------- persistence ---------- */
 
 /**
- * The artefact a human reads on Monday morning. Deliberately leads with change,
+ * Store the registry and site observation for a domain, in the same shape
+ * seed-supabase.mjs writes. Both tables are append-only evidence history.
+ */
+async function persistObservation(db, domainId, d, observedAt) {
+  const insert = (table, rows) =>
+    db.req('POST', table, rows, { Prefer: 'return=representation' });
+
+  if (d.infrastructure) {
+    await insert('bp_domain_infrastructure', [
+      {
+        domain_id: domainId,
+        ...d.infrastructure,
+        resolved_ips: d.resolved_ips ?? null,
+        is_proxied: d.infrastructure.dns_provider === 'cloudflare',
+        observed_at: observedAt,
+      },
+    ]);
+  }
+
+  if (!d.snapshot) return;
+  const [snap] = await insert('bp_snapshots', [
+    {
+      domain_id: domainId,
+      captured_at: observedAt,
+      http_status: d.snapshot.http_status,
+      final_url: d.snapshot.final_url,
+      response_headers: d.snapshot.response_headers,
+      html_sha256: d.snapshot.html_sha256,
+      html_bytes: d.snapshot.html_bytes,
+      tech_stack: d.snapshot.tech_stack,
+      signals: {
+        brand_mentions: d.snapshot.brand_mentions,
+        currency: d.snapshot.currency,
+        discount_ladder: (d.snapshot.price_ladder ?? []).map((p) => p.discount_pct),
+      },
+    },
+  ]);
+
+  const ladder = d.snapshot.price_ladder ?? [];
+  if (ladder.length) {
+    await insert(
+      'bp_observed_products',
+      ladder.map((p) => ({
+        snapshot_id: snap.id,
+        domain_id: domainId,
+        currency: d.snapshot.currency,
+        regular_price: p.regular_price,
+        sale_price: p.sale_price,
+        discount_pct: p.discount_pct,
+        captured_at: observedAt,
+      }))
+    );
+  }
+}
+
+/* ---------- scan report ---------- */
+
+/**
+ * The artefact a human reads each morning. Deliberately leads with change,
  * not with the full watchlist — the full list is in the app.
  */
 function renderMarkdown({ report, brandNew, wentLive, wentDark, notReSwept, trackedTotal }) {
@@ -95,7 +154,7 @@ function renderMarkdown({ report, brandNew, wentLive, wentDark, notReSwept, trac
   const L = [];
   const changed = brandNew.length + wentLive.length + wentDark.length;
 
-  L.push(`# Weekly scan — ${stamp}`);
+  L.push(`# Discovery scan — ${stamp}`);
   L.push('');
   L.push(
     `**Swept:** ${report.candidates_tested} candidate domains · ` +
@@ -106,7 +165,7 @@ function renderMarkdown({ report, brandNew, wentLive, wentDark, notReSwept, trac
   L.push(
     changed === 0
       ? '**No change since the previous scan.** No new domains, none taken down, none resurrected.'
-      : `**${changed} change${changed === 1 ? '' : 's'} this week.**`
+      : `**${changed} change${changed === 1 ? '' : 's'} since the previous scan.**`
   );
   L.push('');
   L.push('| | Count |');
@@ -140,7 +199,7 @@ function renderMarkdown({ report, brandNew, wentLive, wentDark, notReSwept, trac
   };
 
   table(
-    'New this week',
+    'New since the previous scan',
     brandNew,
     'Domains that were not in the database before this scan. A builder version of ' +
       '**3.35.6** matches the known July 2026 campaign fingerprint.'
@@ -173,7 +232,7 @@ function renderMarkdown({ report, brandNew, wentLive, wentDark, notReSwept, trac
     L.push('');
     L.push(
       'Recorded as live but not produced by the current candidate list, so their status ' +
-        'is unverified this week rather than confirmed.'
+        'is unverified by this scan rather than confirmed.'
     );
     L.push('');
     for (const k of notReSwept) L.push(`- \`${k.domain}\` (added ${day(k.first_seen_at)})`);
@@ -214,7 +273,11 @@ async function main() {
   const stamp = new Date().toISOString().slice(0, 10);
   const reconPath = path.join('evidence', `recon-${stamp}.json`);
   await mkdir('evidence', { recursive: true });
-  await runRecon(reconPath);
+  // Every tracked domain is re-checked, so one that disappears is recorded as
+  // offline instead of falling out of the sweep unnoticed.
+  const trackPath = path.join(tmpdir(), `joola-tracked-${process.pid}.json`);
+  await writeFile(trackPath, JSON.stringify(known.map((k) => k.domain)), 'utf8');
+  await runRecon(reconPath, trackPath);
   const report = JSON.parse(await readFile(reconPath, 'utf8'));
 
   // 3. Diff.
@@ -323,7 +386,7 @@ async function main() {
   );
 
   for (const d of brandNew) {
-    await db.req(
+    const [row] = await db.req(
       'POST',
       'bp_domains?on_conflict=domain',
       [
@@ -341,6 +404,13 @@ async function main() {
         },
       ],
       { Prefer: 'resolution=merge-duplicates,return=representation' }
+    );
+    // Without these the dashboard has a name and nothing else: no registrar, no
+    // build fingerprint, so a new campaign member could never join the cluster.
+    // Logged rather than thrown, so one failed insert does not skip the
+    // liveness updates for every other domain below.
+    await persistObservation(db, row.id, d, report.finished_at).catch((e) =>
+      console.error(`[discover] details not stored for ${d.domain}: ${e.message}`)
     );
   }
 

@@ -42,7 +42,7 @@ npm run dev                        # http://localhost:3000
 | 0 | Schema, env, migrations | ✅ applied to Supabase |
 | 1 | Discovery + passive enrichment | ✅ 50 domains tracked, 11-domain campaign found |
 | 1b | Supabase persistence | ✅ seeded, RLS verified |
-| 1c | Weekly scheduled scan (Mon 08:00 IST) | ✅ GitHub Actions, change report per run |
+| 1c | Daily scheduled scan (08:00 IST) | ✅ GitHub Actions, change report per run |
 | 2 | Evidence capture (Playwright) | ✅ 10/10 live sites captured with hashes |
 | 3 | Next.js 16 UI | ✅ built, 30 E2E tests passing |
 | 4 | Claude risk scoring | ⏸️ deterministic scoring live; LLM layer behind `ANTHROPIC_API_KEY` |
@@ -126,11 +126,11 @@ Until then `scripts/discover.mjs` provides the same *outcome* on a schedule:
 sweep, diff against the database, report new domains, domains that came back
 online, and domains that stopped resolving.
 
-### The weekly scan
+### The daily scan
 
-`.github/workflows/weekly-scan.yml` runs the sweep **every Monday at 08:00 IST**
-(`30 2 * * 1` UTC — IST observes no DST, so the local time does not drift), and
-on demand via *Actions → Weekly discovery scan → Run workflow*.
+`.github/workflows/weekly-scan.yml` runs the sweep **every day at 08:00 IST**
+(`30 2 * * *` UTC — IST observes no DST, so the local time does not drift), and
+on demand via *Actions → Daily discovery scan → Run workflow*.
 
 Each run writes `docs/scans/SCAN-<date>.md`: what is new, what went offline, what
 came back, each with **the date we added it** alongside the date it was

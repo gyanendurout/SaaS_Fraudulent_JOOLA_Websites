@@ -9,10 +9,15 @@
  * or query string. Enforced in classifyMatch() — we only ever inspect hostname
  * labels, so `example.com/?ref=joola` can never match by construction.
  *
- * Usage:  node scripts/recon.mjs [--out evidence/recon-YYYY-MM-DD.json]
+ * Usage:  node scripts/recon.mjs [--out evidence/recon-YYYY-MM-DD.json] [--track tracked.json]
+ *
+ * --track takes a JSON array of domains already in the database. They are
+ * checked every run even if the candidate list no longer generates them, and
+ * one that no longer resolves is reported as offline rather than silently
+ * dropped — otherwise a takedown is indistinguishable from "not checked".
  */
 
-import { writeFile, mkdir } from 'node:fs/promises';
+import { writeFile, mkdir, readFile } from 'node:fs/promises';
 import { resolve4, resolve6 } from 'node:dns/promises';
 import { dirname } from 'node:path';
 import { createHash } from 'node:crypto';
@@ -21,9 +26,14 @@ const BRAND = 'joola';
 const UA =
   'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0 Safari/537.36';
 
-// Known-good JOOLA properties. Anything here is never reported as a threat.
+// Known-good JOOLA properties, confirmed by JOOLA. Anything here is never
+// reported as a threat. Keep in sync with src/data/repository.ts — the estate
+// test fails if the two lists diverge.
 // joola.com is already tracked in the existing `sites` table (platform=shopify).
-const KNOWN_LEGITIMATE = new Set(['joola.com', 'joolausa.com', 'joola.de']);
+export const KNOWN_LEGITIMATE = new Set([
+  'joola.com', 'joolausa.com', 'joola.de',
+  'joola.ca', 'joola.com.au', 'joola.in', 'joola.com.br', 'joola.co.jp', 'joola.tw',
+]);
 
 const GEO = [
   'singapore','malaysia','indonesia','vietnam','thailand','philippines','cambodia',
@@ -50,7 +60,7 @@ export function classifyMatch(hostname) {
   const labels = hostname.toLowerCase().replace(/\.$/, '').split('.');
   // Drop the public suffix. Two-part suffixes (co.uk, com.my) handled coarsely;
   // production swaps this for the full Public Suffix List.
-  const TWO_PART = new Set(['co.uk', 'com.au', 'com.my', 'com.sg', 'co.id', 'co.th', 'com.vn']);
+  const TWO_PART = new Set(['co.uk', 'com.au', 'com.my', 'com.sg', 'co.id', 'co.th', 'com.vn', 'com.br', 'co.jp']);
   const suffix2 = labels.slice(-2).join('.');
   const sld = TWO_PART.has(suffix2) ? labels[labels.length - 3] : labels[labels.length - 2];
   if (!sld || !sld.includes(BRAND)) return null;
@@ -256,21 +266,58 @@ async function main() {
       ? process.argv[outFlag + 1]
       : `evidence/recon-${new Date().toISOString().slice(0, 10)}.json`;
 
+  const trackFlag = process.argv.indexOf('--track');
+  const tracked =
+    trackFlag > -1 ? JSON.parse(await readFile(process.argv[trackFlag + 1], 'utf8')) : [];
+
   const started = new Date().toISOString();
-  const candidates = buildCandidates();
+  const candidates = [...new Set([...buildCandidates(), ...tracked])];
   console.log(`[recon] testing ${candidates.length} candidate domains...`);
 
-  const resolved = (
-    await mapLimit(candidates, 60, async (d) => {
+  const lookup = (list, limit) =>
+    mapLimit(list, limit, async (d) => {
       const ips = await resolveHost(d);
       return ips.length ? { domain: d, ips } : null;
-    })
-  ).filter(Boolean);
+    }).then((r) => r.filter(Boolean));
 
-  console.log(`[recon] ${resolved.length} resolve. Enriching...`);
+  const resolved = await lookup(candidates, 60);
 
-  const domains = await mapLimit(resolved, 8, async ({ domain, ips }) => {
-    const [rdap, site] = await Promise.all([fetchRdap(domain), probeSite(domain)]);
+  // DNS errors are indistinguishable from NXDOMAIN here, so with no network every
+  // tracked domain would be reported offline. joola.com always resolves; if it
+  // does not, the sweep is measuring the runner, not the domains.
+  if (!resolved.some((r) => r.domain === 'joola.com')) {
+    throw new Error('joola.com did not resolve — DNS unavailable, refusing to report');
+  }
+
+  // A resolver blip must not read as a takedown: re-check before declaring a
+  // tracked domain gone.
+  const seen = new Set(resolved.map((r) => r.domain));
+  const missing = tracked.filter((d) => !seen.has(d));
+  const recovered = await lookup(missing, 20);
+  resolved.push(...recovered);
+  const gone = missing.filter((d) => !recovered.some((r) => r.domain === d));
+
+  console.log(
+    `[recon] ${resolved.length} resolve, ${gone.length} tracked no longer resolve. Enriching...`
+  );
+
+  const offline = gone.map((domain) => ({
+    domain,
+    match_kind: classifyMatch(domain),
+    discovery_source: 'dns_permutation',
+    classification: 'suspect',
+    is_live: false,
+    resolved_ips: [],
+    infrastructure: null,
+    snapshot: null,
+  }));
+
+  const trackedSet = new Set(tracked);
+  const enriched = await mapLimit(resolved, 8, async ({ domain, ips }) => {
+    const [rdap, first] = await Promise.all([fetchRdap(domain), probeSite(domain)]);
+    // A tracked domain that fails to serve is about to be stamped as taken
+    // down. One timeout is not evidence of that, so probe once more first.
+    const site = first ?? (trackedSet.has(domain) ? await probeSite(domain) : null);
     return {
       domain,
       match_kind: classifyMatch(domain),
@@ -282,6 +329,7 @@ async function main() {
       snapshot: site,
     };
   });
+  const domains = [...enriched, ...offline];
 
   const report = {
     generated_at: started,

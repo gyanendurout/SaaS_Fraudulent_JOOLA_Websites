@@ -14,10 +14,15 @@ import path from 'node:path';
 import { createClient } from '@supabase/supabase-js';
 import { matchBrandDomain, matchPriority } from '@/lib/domain-match';
 import { evaluateSignals, riskScore, verdictFor, dedupeLadder } from '@/lib/fingerprint';
+import { monthSpan } from '@/lib/dates';
 import type { Cluster, Dataset, DomainRecord, DiscoveryRun, Infrastructure, Snapshot } from '@/lib/types';
 
 const CLUSTER_BUILDER_VERSION = '3.35.6';
-const KNOWN_LEGITIMATE = new Set(['joola.com', 'joolausa.com', 'joola.de']);
+/** Confirmed by JOOLA as its own properties. Mirrored in scripts/recon.mjs. */
+export const KNOWN_LEGITIMATE = new Set([
+  'joola.com', 'joolausa.com', 'joola.de',
+  'joola.ca', 'joola.com.au', 'joola.in', 'joola.com.br', 'joola.co.jp', 'joola.tw',
+]);
 const CONFIRMED_FRAUD = new Set(['joola-singapore.com']);
 
 /* ------------------------------------------------------------------ *
@@ -175,10 +180,18 @@ function buildClusters(domains: DomainRecord[]): Cluster[] {
     ...new Set(members.map((m) => m.infrastructure?.registrarAbuseEmail).filter(Boolean)),
   ] as string[];
 
+  // The campaign keeps adding domains, so its name and summary are derived
+  // from the members rather than fixed at the month it was first seen.
+  const byRegistration = members
+    .filter((m) => m.infrastructure?.registeredAt)
+    .sort((a, b) => a.infrastructure!.registeredAt!.localeCompare(b.infrastructure!.registeredAt!));
+  const latest = byRegistration.at(-1);
+  const span = monthSpan(byRegistration.map((m) => m.infrastructure?.registeredAt));
+
   return [
     {
       slug: 'joola-impersonation-2026-07',
-      label: 'JOOLA impersonation cluster (Jul 2026 wave)',
+      label: `JOOLA impersonation cluster (${span ?? 'Jul 2026'})`,
       firstSeenAt:
         members
           .map((m) => m.infrastructure?.registeredAt)
@@ -195,9 +208,14 @@ function buildClusters(domains: DomainRecord[]): Cluster[] {
         registrar_abuse_contacts: registrars,
       },
       notes:
-        'Registered in a four-day burst 20-23 Jul 2026 across four Chinese/HK registrars, all on ' +
-        'Cloudflare DNS. Single USD source catalogue, FX-converted per market. joola-singapore.com ' +
-        'was taken down late Aug 2026; the operator re-registered Singapore as joolasg.com on 27 Aug 2026.',
+        'The first ten domains were registered in a four-day burst 20-23 Jul 2026 across four ' +
+        'Chinese/HK registrars, all on Cloudflare DNS. Single USD source catalogue, FX-converted per ' +
+        'market. joola-singapore.com was taken down late Aug 2026; the operator re-registered ' +
+        'Singapore as joolasg.com on 27 Aug 2026.' +
+        (latest
+          ? ` Still active: the most recent member, ${latest.domain}, was registered on ` +
+            `${latest.infrastructure!.registeredAt}.`
+          : ''),
       memberDomains: members.map((m) => m.domain),
     },
   ];

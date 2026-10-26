@@ -58,7 +58,7 @@ export function TakedownPack({ drafts }: { drafts: TakedownDraft[] }) {
               >
                 <span
                   aria-hidden
-                  className={`mono text-[11px] transition-transform duration-150 ${isOpen ? 'rotate-90' : ''}`}
+                  className={`mono text-[12px] transition-transform duration-150 ${isOpen ? 'rotate-90' : ''}`}
                 >
                   ▸
                 </span>
@@ -66,7 +66,7 @@ export function TakedownPack({ drafts }: { drafts: TakedownDraft[] }) {
                   {draft.title}
                 </span>
                 <span
-                  className={`mono text-[10px] uppercase tracking-[0.14em] ${style.badge}`}
+                  className={`mono text-[11px] uppercase tracking-[0.14em] ${style.badge}`}
                 >
                   {style.label}
                 </span>
@@ -134,7 +134,7 @@ export function TakedownPack({ drafts }: { drafts: TakedownDraft[] }) {
         );
       })}
 
-      <p className="text-[11px] leading-relaxed text-[var(--color-ink-faint)]">
+      <p className="text-[12px] leading-relaxed text-[var(--color-ink-faint)]">
         Drafts state only what the stored evidence supports. Confirmed-fraud language is used solely
         where transactional evidence exists; everything else is reported as trademark infringement
         and impersonation. Add trademark registration numbers before sending.

@@ -35,7 +35,7 @@ These are live constraints from the project owner, not historical notes.
 | Vercel project | `gyan-joola/saas-fraudulent-joola-websites` (git-connected, auto-deploys from `main`) |
 | Database | Supabase project `vbyaqzkagzhatdqitfko`, tables prefixed `bp_*` in `public` |
 | Local secrets | `.env.local` — gitignored, exists nowhere else in the repo. Never commit it. |
-| Weekly scan | `.github/workflows/weekly-scan.yml` — Mondays 08:00 IST |
+| Daily scan | `.github/workflows/weekly-scan.yml` — daily 08:00 IST (file name kept for run history) |
 | Scan reports | `docs/scans/SCAN-<date>.md` — **gitignored**; CI keeps 90-day artefacts |
 | Durable scan history | `bp_discovery_runs` in Supabase (run id, counts, per-run stats) |
 
@@ -51,7 +51,7 @@ The Supabase project is shared with the JOOLA Pulse product-intel schema
 
 | # | Item | Why it is blocked |
 |---|---|---|
-| 1 | **Add repo secrets** `NEXT_PUBLIC_SUPABASE_URL`, `SUPABASE_SECRET_KEY` (Settings → Secrets and variables → Actions) | PAT returns `HTTP 403` on the secrets API. **Until done, the Monday scan fires and fails at the first database read.** |
+| 1 | **Add repo secrets** `NEXT_PUBLIC_SUPABASE_URL`, `SUPABASE_SECRET_KEY` (Settings → Secrets and variables → Actions) | PAT returns `HTTP 403` on the secrets API. **Until done, the daily scan fires and fails at the first database read.** |
 | 2 | **Rotate `SUPABASE_SECRET_KEY`** | It was transmitted over chat. **Rotate before item 1**, then set the new value — rotating afterwards breaks the scheduled run. |
 | 3 | **Make the repository private** | PAT lacks `Administration: write`. Repo Settings → Danger Zone. The app is also publicly reachable with no auth. |
 | 4 | **Verify Group B against the authorised distributor list** | Only JOOLA's distributor records can settle it; registry and hosting data cannot. |

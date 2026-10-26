@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getDataset } from '@/data/repository';
 import { VerdictBadge, SectionHeading, Stat, DomainLink } from '@/components/primitives';
+import { SECTION_HELP } from '@/lib/section-help';
 
 export const dynamic = 'force-dynamic';
 
@@ -31,12 +32,12 @@ export default async function ClusterPage({ params }: { params: Promise<{ slug: 
         <nav aria-label="Breadcrumb" className="mb-4">
           <Link
             href="/"
-            className="mono cursor-pointer text-[11px] text-[var(--color-ink-faint)] transition-colors duration-150 hover:text-[var(--color-ink-dim)]"
+            className="mono cursor-pointer text-[12px] text-[var(--color-ink-faint)] transition-colors duration-150 hover:text-[var(--color-ink-dim)]"
           >
             ← Overview
           </Link>
         </nav>
-        <div className="mono text-[10px] uppercase tracking-[0.18em] text-[var(--color-critical)]">
+        <div className="mono text-[11px] uppercase tracking-[0.18em] text-[var(--color-critical)]">
           Coordinated campaign
         </div>
         <h1 className="mt-2 text-[24px] font-semibold leading-tight sm:text-[30px]">
@@ -60,7 +61,7 @@ export default async function ClusterPage({ params }: { params: Promise<{ slug: 
 
       {/* Timeline — the re-registration story reads clearly here. */}
       <section aria-labelledby="timeline-heading">
-        <SectionHeading count={members.length}>
+        <SectionHeading help={{ title: 'Registration timeline', content: SECTION_HELP.timeline }} count={members.length}>
           <span id="timeline-heading">Registration timeline</span>
         </SectionHeading>
         <ol className="relative space-y-0 border-l border-[var(--color-line)] pl-6">
@@ -81,12 +82,12 @@ export default async function ClusterPage({ params }: { params: Promise<{ slug: 
                   <DomainLink domain={d.domain} className="text-[13px]" />
                   <VerdictBadge verdict={d.verdict} />
                   {isReplacement && (
-                    <span className="rounded bg-[var(--color-critical-dim)] px-2 py-0.5 text-[11px] font-medium text-[var(--color-critical)]">
+                    <span className="rounded bg-[var(--color-critical-dim)] px-2 py-0.5 text-[12px] font-medium text-[var(--color-critical)]">
                       registered after Singapore takedown
                     </span>
                   )}
                 </div>
-                <div className="mono mt-1 text-[11px] text-[var(--color-ink-faint)]">
+                <div className="mono mt-1 text-[12px] text-[var(--color-ink-faint)]">
                   {d.infrastructure?.registrarName ?? 'registrar unknown'}
                 </div>
               </li>
@@ -97,7 +98,7 @@ export default async function ClusterPage({ params }: { params: Promise<{ slug: 
 
       {/* Registrar grouping — how to actually file the complaints. */}
       <section aria-labelledby="registrar-heading">
-        <SectionHeading count={registrars.size}>
+        <SectionHeading help={{ title: 'Complaint routing by registrar', content: SECTION_HELP.registrars }} count={registrars.size}>
           <span id="registrar-heading">Complaint routing by registrar</span>
         </SectionHeading>
         <ul className="space-y-3">
@@ -113,7 +114,7 @@ export default async function ClusterPage({ params }: { params: Promise<{ slug: 
                 >
                   {email}
                 </a>
-                <span className="mono text-[11px] text-[var(--color-ink-faint)]">
+                <span className="mono text-[12px] text-[var(--color-ink-faint)]">
                   {domains.length} domain{domains.length === 1 ? '' : 's'}
                 </span>
               </div>
@@ -131,7 +132,7 @@ export default async function ClusterPage({ params }: { params: Promise<{ slug: 
 
       {/* Fingerprint */}
       <section aria-labelledby="fp-heading">
-        <SectionHeading>
+        <SectionHeading help={{ title: 'Shared fingerprint', content: SECTION_HELP.fingerprint }}>
           <span id="fp-heading">Shared fingerprint — what proves coordination</span>
         </SectionHeading>
         <pre className="mono overflow-x-auto rounded border border-[var(--color-line)] bg-[var(--color-surface)] p-4 text-[12px] leading-relaxed text-[var(--color-ink-dim)]">

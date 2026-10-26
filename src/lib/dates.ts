@@ -24,3 +24,22 @@ export function isoDay(ts: string | null | undefined, fallback = '—'): string 
   const match = ISO_DAY.exec(ts.trim());
   return match ? match[0] : fallback;
 }
+
+const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+/**
+ * The month range a set of dates covers, e.g. `Jul–Sep 2026`. Read straight
+ * from the ISO strings, so it cannot shift across a timezone boundary.
+ */
+export function monthSpan(dates: Array<string | null | undefined>): string | null {
+  const days = dates.map((d) => isoDay(d, '')).filter(Boolean).sort();
+  const firstDay = days[0];
+  const lastDay = days[days.length - 1];
+  if (!firstDay || !lastDay) return null;
+  const [fy, fm] = firstDay.split('-');
+  const [ly, lm] = lastDay.split('-');
+  const first = MONTHS[Number(fm) - 1];
+  const last = MONTHS[Number(lm) - 1];
+  if (fy !== ly) return `${first} ${fy}–${last} ${ly}`;
+  return fm === lm ? `${first} ${fy}` : `${first}–${last} ${fy}`;
+}
